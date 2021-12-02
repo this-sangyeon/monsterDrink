@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+header{
+    margin:0;
+    background-color:none;
+    position: fixed;z-index: 9999;left: 0; top:3%;width: 80%;height: 7%;
+    display: flex; flex-direction: row; 
+    align-items: center; justify-content: space-between;
+}
+header .logo{
+    height: 100%; margin-left:5%; 
+}
+header .logo > a {
+    height: 100%;  display:flex; align-items: center;  justify-content:center; 
+}
+header .logo > a > img {
+    width: 60px;
+}
+header .monster-nav{
+    width: 80%; height: 100%; 
+}
+
+header .monster-nav ul{
+   padding:0;position: absolute; top: 25%;  transform: translateY(-25%);
+    display: flex; flex-direction: row; right: 0; align-items: center;  
+}
+header .monster-nav ul li {
+    width: 100%;
+    margin-left: 10%; margin-right: 10%;
+}
+
+header .monster-nav ul li > a{
+    font-family: 'Orbitron', sans-serif; cursor: pointer;
+    font-weight: 500;font-size: 1rem; color:#ffffff; letter-spacing: 2px;
+    text-decoration: none; text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+}
+
