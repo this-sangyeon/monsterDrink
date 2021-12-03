@@ -1,0 +1,62 @@
+section:nth-of-type(3){
+    width: 100%; height: 100%; position: fixed;
+    background: black; 
+}
+
+.sponser-container{
+    width: 100%; height: 100%; position: relative;
+}
+.sponser-container .sponser-content{
+    width: 100%; height: 100%; display: flex; position: relative;
+}
+.sponser-container .sponser-content .sponser-nav{
+    width: 30%; height: 100%; display: flex; position: absolute;
+    background-color: rgb(43, 226, 189); 
+}
+.sponser-container .sponser-content .sponser-nav .nav-area{
+    width: 50%; height: 70%;  position: absolute;
+    display: flex; flex-direction: column; top:40%; right: 10%;transform: translateY(-40%);
+}
+
+.sponser-container .sponser-content .sponser-nav .nav-area h1{
+    font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 3rem; text-transform: uppercase;
+}
+.sponser-container .sponser-content .sponser-nav .nav-area nav{
+     margin-top:10%;
+}
+.sponser-container .sponser-content .sponser-nav .nav-area nav li{
+    font-family: 'Orbitron', sans-serif; font-weight: 100; font-size: 1.5rem; margin-bottom:7%;text-transform: uppercase; letter-spacing: 1px;
+}
+.sponser-container .sponser-content .sponser-area{
+    width: 70%;height: 100%; background-color: burlywood;position: absolute;
+    right: 0;
+}
+.sponser-container .sponser-content .sponser-area .sponser-kind{
+    width: 90%;height: 100%; position: relative; background-color: cadetblue; left:50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; top:15%;
+}
+.sponser-container .sponser-content .sponser-area .sponser-kind .musician-title{
+    width: 100%;height: 10%; background-color: rgb(71, 158, 14);
+    display: flex; flex-direction: column; 
+}
+.sponser-container .sponser-content .sponser-area .sponser-kind .musician-title h2{
+    font-family: 'Orbitron', sans-serif; font-size: 2rem; margin-bottom:3%;
+}
+.sponser-container .sponser-content .sponser-area .musician-list{
+    width: 100%;height: 1000px;  background-color: rgb(14, 50, 158);
+    position: relative;overflow-y: scroll;
+}
+.sponser-container .sponser-content .sponser-area .musician-list ul{
+    width: 100%;  height: 1000px;background-color: rgb(14, 50, 158);position: absolute;
+    display: flex; flex-wrap: wrap; justify-content: center; 
+}
+.sponser-container .sponser-content .sponser-area .musician-list li{
+    width:30%;   flex-direction: row; padding: 0; margin-bottom:2%;
+    align-items: flex-start;
+}
+.sponser-container .sponser-content .sponser-area .musician-list li figure{
+  
+}
+.sponser-container .sponser-content .sponser-area .musician-list li figure img{
+    width: 100%; object-fit: cover; 
+ }
