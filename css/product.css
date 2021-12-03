@@ -121,3 +121,67 @@ section:nth-of-type(2){
     font-family: 'Orbitron', sans-serif; font-size: 0.8rem; text-align: center;
     color:black; font-weight: 500; text-transform: uppercase;
 }
+.product-container .product-content .product-drink-nav{
+    width: 25%; height: 100%;  position: relative;
+}
+.product-container .product-content .product-drink-nav ul{
+    width: 40%;  position: absolute;top:50%; left: 50%;transform: translate(-60%, -50%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.product-container .product-content .product-drink-nav ul li{
+    width: 100%;height: 100%; display: flex; list-style: none; margin-bottom:3%;cursor: pointer;
+}
+.product-container .product-content .product-drink-nav ul li span{
+   width: 70px; height: 70px; border-radius: 50%;  position: absolute;
+   visibility: hidden; opacity: 0; transition: 0.3s ease-in;
+}
+.product-container .product-content .product-drink-nav ul li:hover span{
+    visibility: visible; opacity: 1; transition: 0.3s ease-in;
+ }
+.product-container .product-content .product-drink-nav ul li:first-of-type:hover span{
+     background-color: #95ff00;
+ }
+.product-container .product-content .product-drink-nav ul li:nth-of-type(2):hover span{
+    background-color: #00aeff;
+}
+.product-container .product-content .product-drink-nav ul li:nth-of-type(3):hover span{
+    background-color: #ff0059;
+}
+.product-container .product-content .product-drink-nav ul li:nth-of-type(4):hover span{
+    background-color: #ffffff;
+}
+.product-container .product-content .product-drink-nav ul li:nth-of-type(5):hover span{
+    background-color: #ffe100;
+}
+.product-container .product-content .product-drink-nav ul li:last-of-type:hover span{
+    background-color: #e5ff00;
+}
+.product-container .product-content .product-drink-nav ul li p{
+    font-family: 'Orbitron', sans-serif; font-size: 0.8rem; font-weight: 500; text-transform:capitalize; letter-spacing: 1px;
+    visibility: hidden; opacity: 0; transition: 0.3s ease-in;
+}
+.product-container .product-content .product-drink-nav ul li:hover p{
+    font-family: 'Orbitron', sans-serif; font-size: 0.8rem; font-weight: 500; text-transform:capitalize; letter-spacing: 1px;
+    visibility: visible; opacity: 1; transition: 0.3s ease-in;
+}
+.product-container .product-content .product-drink-nav ul li img{
+    height: 100px; position: relative; z-index: 500;
+}
+.product-container .product-content .product-drink-nav ul .drink-left{
+    width: 100%;height: 100%; display: flex; flex-direction: row-reverse; align-items: center; justify-content: space-between;  
+}
+.product-container .product-content .product-drink-nav ul .drink-left > p{
+   margin-right: 50px;
+}
+.product-container .product-content .product-drink-nav ul .drink-left img{
+    transform: rotate(15deg);
+}
+.product-container .product-content .product-drink-nav ul .drink-right{
+    width: 100%;height: 100%; display: flex;  align-items: center; justify-content: space-between;
+}
+.product-container .product-content .product-drink-nav ul .drink-right img{
+    transform: rotate(-15deg);
+}
+.product-container .product-content .product-drink-nav ul .drink-right p{
+    margin-left: 70px; 
+}
