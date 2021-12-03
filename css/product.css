@@ -7,31 +7,29 @@ section:nth-of-type(2){
     width: 100%; height: 100%; position: fixed;
 }
 .product-container .product-content{
-    width: 100%; height: 100%; 
-    display: flex;position: relative;
+    width: 100%; height: 100%; display: flex;position: relative;
 }
 .product-container .product-content .product-text {
-    position:relative; background-color: cadetblue;
-    width: 40%; height: 100%; display: flex; flex-direction: column;
+    position:relative;width: 40%; height: 100%; display: flex; flex-direction: column;
 }
 .product-container .product-content .product-text .text-wrap{
-    width: 70%; height: 70%; position: absolute; margin-left:5%;
-    top:30%; left: 50%; transform: translate(-50%, -30%);
+    width: 70%; height: 70%; position: absolute; margin-left:5%;top:30%; left: 50%; transform: translate(-50%, -25%);
 }
 
 .product-container .product-content .product-text .text-wrap h1{
-    font-family: 'Orbitron', sans-serif; font-size: 4rem; text-transform: uppercase;
-    margin-bottom:5%;
+    font-family: 'Orbitron', sans-serif; font-size: 4rem; text-transform: uppercase;margin-bottom:5%;
 }
 .product-container .product-content .product-text .text-wrap p{
-    font-family: 'Noto Sans KR', sans-serif; font-size: 1rem; font-weight: 100;
-    margin-bottom:5%; line-height: 1.5rem; text-align: justify;
+    font-family: 'Noto Sans KR', sans-serif; font-size: 1rem; font-weight: 100; margin-bottom:5%; line-height: 1.5rem; text-align: justify;
 }
 .product-container .product-content .product-text .text-wrap p:first-of-type{
-    font-family: 'Orbitron', sans-serif; margin-bottom:10%;
+    font-family: 'Orbitron', sans-serif; margin-bottom:5%;
 }
 .product-container .product-content .product-text .text-wrap p:nth-of-type(2) > span{
     font-family: 'Orbitron', sans-serif; font-size: 1rem; font-weight: 300;
+}
+.product-container .product-content .product-text .text-wrap p:nth-of-type(3){
+    width: 100%; height: 25%;
 }
 .product-container .product-content .product-text .text-wrap p:nth-of-type(4){
      font-weight: 400;
@@ -43,12 +41,10 @@ section:nth-of-type(2){
     width: 100%; height: 30%; margin-top: 5%;
 }
 .product-container .product-content .product-text .text-wrap .calculation-area .product-num{
-    width: 100%; height: 20%; background-color: blueviolet;
-    display: flex; justify-content: space-between;
+    width: 100%; height: 20%; display: flex; justify-content: space-between;
 }
 .product-container .product-content .product-text .text-wrap .calculation-area .product-num .num-area{
-    width: 30%; height: 100%; background-color:none;
-    border: solid 1px white; display: flex; justify-content: space-between;
+    width: 30%; height: 100%; background-color:none; border: solid 1px white; display: flex; justify-content: space-between;
 }
 .product-container .product-content .product-text .text-wrap .calculation-area .product-num .num-area .drink-num{
     width: 50%; height: auto;  position: relative;
@@ -60,16 +56,68 @@ section:nth-of-type(2){
    width: 25%; height: auto;  position: relative; outline: none; background: none; border: none;
 }
 .product-container .product-content .product-text .text-wrap .calculation-area .product-num .num-area .minus-btn span{
-    position: absolute; top:50%; left: 50%;transform: translate(-50%, -50%);
-    border-bottom: solid 1px white; width: 60%;
+    position: absolute; top:50%; left: 50%;transform: translate(-50%, -50%); border-bottom: solid 1px white; width: 60%;
 }
 .product-container .product-content .product-text .text-wrap .calculation-area .product-num .num-area .plus-btn{
     width: 25%; height: auto;  position: relative;outline: none; background: none; border: none;
  }
  .product-container .product-content .product-text .text-wrap .calculation-area .product-num .num-area .plus-btn span{
-     position: absolute; top:50%; left: 50%;transform: translate(-50%, -50%);
-     border-bottom: solid 1px white; width: 60%;
+     position: absolute; top:50%; left: 50%;transform: translate(-50%, -50%); border-bottom: solid 1px white; width: 60%;
  }
  .product-container .product-content .product-text .text-wrap .calculation-area .product-num .num-area .plus-btn span:last-of-type{
     transform: translate(-50%, -50%) rotate(90deg);
+}
+.product-container .product-content .product-text .text-wrap .calculation-area .product-num .drink-price{
+    width: 30%;height: 100%; display: flex; justify-content: end; align-items: center; 
+}
+.product-container .product-content .product-text .text-wrap .calculation-area .product-num .drink-price span{
+    font-family: 'Orbitron', sans-serif; font-size: 1.5rem;  
+}
+.product-container .product-content .product-text .text-wrap .calculation-area .product-num .drink-price span:first-of-type{
+    font-family: 'Orbitron', sans-serif; font-size: 1.5rem;  margin-right:5%;
+}
+
+.product-container .product-content .product-text .text-wrap .calculation-area .cart-area{
+    width: 100%; height: 20%; display: flex; justify-content: space-between; margin-top:3%;
+}
+.product-container .product-content .product-text .text-wrap .calculation-area .cart-area button{
+   width: 49%; height: auto; background:none; border: solid 1px white; display: flex; justify-content: center; align-self: center; justify-items: center;padding: 1%;
+}
+.product-container .product-content .product-text .text-wrap .calculation-area .cart-area button p{
+  color:white; margin:0; padding: 0; font-family: 'Orbitron', sans-serif; font-weight: 700;letter-spacing: 1px;
+ }
+ .product-container .product-content .product-text .text-wrap .calculation-area .drink-info{
+    width: 100%; height: 20%; display: flex; margin-top:3%;
+ }
+ .product-container .product-content .product-text .text-wrap .calculation-area .drink-info div{
+    margin-right:5%;
+ }
+ .product-container .product-content .product-text .text-wrap .calculation-area .drink-info div p{
+    letter-spacing: 1px;
+ }
+
+.product-container .product-content .product-images {
+   width: 35%; height: 100%;
+}
+.product-container .product-content .product-images .image-area{
+    position:relative;width: 100%; height: 100%; 
+}
+.product-container .product-content .product-images .image-area img{
+    position: absolute;
+}
+.product-container .product-content .product-images .image-area img:first-of-type{
+   z-index: 500;height: auto;width: 40%; top:50%; left: 40%;transform: translate(-50%, -50%);
+}
+.product-container .product-content .product-images .image-area img:nth-of-type(2){
+   top:45%; left: 5%; width:170px; transform: translate(-50%, -50%) rotate(20deg);
+}
+
+.product-container .product-content .product-images .image-area .monster-sticker{
+    width: 100px; height: 100px; background-color: #B9FF00; border-radius: 50%;
+    position: absolute; bottom:30%; right:15%;
+}
+.product-container .product-content .product-images .image-area .monster-sticker p{
+    position: absolute; top:50%; left: 50%;transform: translate(-50%, -50%) rotate(25deg);
+    font-family: 'Orbitron', sans-serif; font-size: 0.8rem; text-align: center;
+    color:black; font-weight: 500; text-transform: uppercase;
 }
