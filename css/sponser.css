@@ -26,6 +26,7 @@ section:nth-of-type(3){
 }
 .sponser-container .sponser-content .sponser-nav .nav-area nav li{
     font-family: 'Orbitron', sans-serif; font-weight: 100; font-size: 1.5rem; margin-bottom:7%;text-transform: uppercase; letter-spacing: 1px;
+    cursor: pointer;
 }
 .sponser-container .sponser-content .sponser-area{
     width: 70%;height: 100%;position: absolute;
@@ -98,17 +99,17 @@ section:nth-of-type(3){
     display: flex;  align-items: center;
 } 
 .musician-container .musician-content .musician-image{
-    width: 40%; height: 80%; 
+    width: 40%; height: 50%; 
    position: relative;
 } 
 
 .musician-container .musician-content .musician-image img{
    position: absolute; top: 40%; left: 50%; transform: translate(-50%,-40% );
-   width: 400px; height: 400px;z-index: 700;
+   width: 90%; height: auto;z-index: 700;
 } 
 .musician-container .musician-content .musician-image span {
-    border: solid 1px #95ff00; width: 400px; height: 400px;
-    position: absolute; top:50%; left: 50%; transform: translate(-45%,-55% );
+    border: solid 1px #95ff00; width: 90%; height: 90%;
+    position: absolute; top:50%; left: 50%; transform: translate(-45%,-45% );
 }
 .musician-container .musician-content .musician-text{
    width: 50%; height: 80%; margin-left: 2%;
@@ -132,14 +133,16 @@ section:nth-of-type(3){
  }
  .musician-container .musician-content .musician-text .musician-title .musician-btn button span{
     position: absolute; clip-path: polygon(100% 0, 0 50%, 100% 100%);
-    background-color: white;  width: 40%; height: 100%; top:0;
+    background-color: white;  width: 50%; height: 100%; top:0;transition: 0.3s ease-in-out;
+  }
+  .musician-container .musician-content .musician-text .musician-title .musician-btn button:hover span{
+    background-color: #95ff00;transition: 0.3s ease-in-out;
   }
  .musician-container .musician-content .musician-text .musician-title .musician-btn button:last-of-type span{
     transform: scale(-1);
   }
 .musician-container .musician-content .musician-text .musician-title h3{
-    font-family: 'Orbitron', sans-serif; font-size: 2rem;
-}
+    font-family: 'Orbitron', sans-serif; font-size: 2rem; color:#95ff00;}
 .musician-container .musician-content .musician-text .musician-info{
     width: 100%; height: 50%; display: flex; flex-direction: column;
     margin-top:2%;
@@ -149,7 +152,8 @@ section:nth-of-type(3){
     margin-bottom:2%;
 }
 .musician-container .musician-content .musician-text .musician-info p{
-    font-family: 'Noto Sans KR', sans-serif; font-size: 1rem; font-weight: 100; line-height: 1.2rem;
+    font-family: 'Noto Sans KR', sans-serif; font-size: 0.9rem; font-weight: 100; line-height: 1.2rem;
+    text-align: justify;
 }
 .musician-container .musician-content .musician-text .musician-sns h4{
     font-family: 'Orbitron', sans-serif; font-size: 1.2rem; font-weight: 300;
@@ -159,6 +163,6 @@ section:nth-of-type(3){
     height: 20%;
 }
 .musician-container .musician-content .musician-text .musician-sns .sns-imgs img{
-    width: 40px; margin-right: 2%;
+    width: 40px; margin-right: 5%; cursor: pointer;
 }
 
