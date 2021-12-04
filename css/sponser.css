@@ -32,67 +32,71 @@ section:nth-of-type(3){
     width: 70%;height: 100%;position: absolute;
     right: 0;
 }
+.sponser-container .sponser-content .sponser-area.music{
+    width: 70%;height: 100%;position: absolute;
+    right: 0; 
+}
+
 .sponser-container .sponser-content .sponser-area .sponser-kind{
     width: 100%;height: 100%; position: relative;  left:50%; transform: translateX(-50%);
-    display: flex; flex-direction: column; margin-top:10%;
+    display: flex; flex-direction: column; margin-top:10%; 
 }
-.sponser-container .sponser-content .sponser-area .sponser-kind .musician-title{
+.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-title{
     width: 100%;  margin-left:3%;
     display: flex; flex-direction: row; position: relative; z-index: 600; align-items: center;
 }
-.sponser-container .sponser-content .sponser-area .sponser-kind .musician-title h2{
+.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-title h2{
     font-family: 'Orbitron', sans-serif; font-size: 1.5rem; margin-right:3%; font-weight: 400;
 }
-.sponser-container .sponser-content .sponser-area .sponser-kind .musician-title p{
+.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-title p{
     font-family: 'Noto Sans KR', sans-serif; font-size: 1rem; font-weight: 100;
 }
-.sponser-container .sponser-content .sponser-area .sponser-kind .musician-list{
+.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list{
     width: 100%;height: 100%;   
     position: relative; overflow-y: scroll;top:3%;
 }
-.sponser-container .sponser-content .sponser-area .sponser-kind .musician-list ul{
-    width: 100%; height: 1000px; position: relative;  
+.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list ul{
+    width: 100%; height: 1000px; position: relative;   
     display: flex; flex-wrap: wrap; justify-content: center;  flex-direction: row; 
-   
 }
-.sponser-container .sponser-content .sponser-area .sponser-kind .musician-list li{
+.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list li{
     width:350px;  height: 350px;  padding: 0; list-style: none;
     margin-right:1%;margin-left:1%; border: solid 1px #95ff00; background: none; cursor: pointer;
 }
-.sponser-container .sponser-content .sponser-area .sponser-kind .musician-list li:nth-of-type(4){
-   margin-top: -10%;
+.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list li:nth-of-type(4){
+    margin-top: -80px; 
 }
-.sponser-container .sponser-content .sponser-area .sponser-kind .musician-list li:nth-of-type(5){
-    margin-top: -10%;
+.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list li:nth-of-type(5){
+    margin-top: -80px; 
  }
- .sponser-container .sponser-content .sponser-area .sponser-kind .musician-list li:nth-of-type(6){
-    margin-top: -10%;
+ .sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list li:nth-of-type(6){
+    margin-top: -80px; 
  }
- .sponser-container .sponser-content .sponser-area .sponser-kind .musician-list li figure{
+ .sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list li figure{
     width:100%;height: 100%; position: relative; display: flex; justify-content: center;align-items: center; justify-items: center;
 }
-.sponser-container .sponser-content .sponser-area .sponser-kind .musician-list li figure img{
+.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list li figure img{
     width: 90%; object-fit: cover; transition: 0.3s ease-in-out;
     filter: grayscale(100%) blur(2px); 
 }
 
-.sponser-container .sponser-content .sponser-area .sponser-kind .musician-list li:hover figure img{
+.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list li:hover figure img{
     width: 100%; object-fit: cover; transition: 0.3s ease-in-out;
     filter: grayscale(0) blur(0); 
 }
 
-.sponser-container .sponser-content .sponser-area .sponser-kind .musician-list li figure figcaption{
+.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list li figure figcaption{
      position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); width: 70%;
      font-family: 'Orbitron', sans-serif; font-size: 1.5rem; text-align: center; line-height: 2rem;
      text-transform: uppercase;letter-spacing: 1px; visibility:visible; opacity: 1; transition: 0.3s ease-in-out;
 }
-.sponser-container .sponser-content .sponser-area .musician-list li:hover figure figcaption{
+.sponser-container .sponser-content .sponser-area .sponser-list li:hover figure figcaption{
     visibility:hidden; opacity: 0; transition: 0.3s ease-in-out;
 }
 
 .musician-container{
     width: 70%; height: 100%; position: absolute; z-index: 10000;
-    background: rgb(0, 0, 0);right:0;
+    background: rgb(0, 0, 0);right:0; display: none;
 }
 .musician-content{
     width: 100%; height: 100%; position: relative;
@@ -166,3 +170,35 @@ section:nth-of-type(3){
     width: 40px; margin-right: 5%; cursor: pointer;
 }
 
+
+.sponser-container .sponser-content .sponser-area.game{
+    width: 70%;height: 100%;position: absolute;
+    right: 0; background: black; display: none;
+}
+
+.sponser-container .sponser-content .sponser-area.game .sponser-kind .sponser-list ul{
+    width: 100%; height: 1400px; position: relative;   
+    display: flex; flex-wrap: wrap; justify-content: center;  flex-direction: row; 
+}
+.sponser-container .sponser-content .sponser-area.game .sponser-kind .sponser-list li{
+    width:350px;  height: 350px;  padding: 0; list-style: none;
+    margin-right:1%;margin-left:1%; border: solid 1px #95ff00; background: none; cursor: pointer;
+}
+.sponser-container .sponser-content .sponser-area.game .sponser-kind .sponser-list li:nth-of-type(4){
+    margin-top: -80px; 
+}
+.sponser-container .sponser-content .sponser-area.game .sponser-kind .sponser-list li:nth-of-type(5){
+    margin-top: -80px; 
+ }
+ .sponser-container .sponser-content .sponser-area.game .sponser-kind .sponser-list li:nth-of-type(6){
+    margin-top: -80px; 
+ }
+ .sponser-container .sponser-content .sponser-area.game .sponser-kind .sponser-list li:nth-of-type(7){
+    margin-top: -80px; 
+}
+.sponser-container .sponser-content .sponser-area.game .sponser-kind .sponser-list li:nth-of-type(8){
+    margin-top: -80px; 
+ }
+ .sponser-container .sponser-content .sponser-area.game .sponser-kind .sponser-list li:nth-of-type(9){
+    margin-top: -80px; 
+ }
