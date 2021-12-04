@@ -34,7 +34,7 @@ section:nth-of-type(3){
 }
 .sponser-container .sponser-content .sponser-area.music{
     width: 70%;height: 100%;position: absolute;
-    right: 0; 
+    right: 0; display: none;
 }
 
 .sponser-container .sponser-content .sponser-area .sponser-kind{
@@ -173,7 +173,7 @@ section:nth-of-type(3){
 
 .sponser-container .sponser-content .sponser-area.game{
     width: 70%;height: 100%;position: absolute;
-    right: 0; background: black; display: none;
+    right: 0; background: black;
 }
 
 .sponser-container .sponser-content .sponser-area.game .sponser-kind .sponser-list ul{
@@ -202,3 +202,21 @@ section:nth-of-type(3){
  .sponser-container .sponser-content .sponser-area.game .sponser-kind .sponser-list li:nth-of-type(9){
     margin-top: -80px; 
  }
+
+ .sponser-container .sponser-content .sponser-area.game .sponser-kind .sponser-list li figure img{
+    width: 80%; object-fit: cover; transition: 0.3s ease-in-out;
+    filter: grayscale(100%) blur(2px); 
+}
+
+.sponser-container .sponser-content .sponser-area.game .sponser-kind .sponser-list li figure img:first-of-type{
+    width: 90%; object-fit: cover; transition: 0.3s ease-in-out;
+    filter: grayscale(100%) blur(2px); 
+}
+.sponser-container .sponser-content .sponser-area.game .sponser-kind .sponser-list li:hover figure img{
+    width: 90%; object-fit: cover; transition: 0.3s ease-in-out;
+    filter: grayscale(0) blur(0); 
+}
+.sponser-container .sponser-content .sponser-area.game .sponser-kind .sponser-list li:hover figure img:first-of-type{
+    width: 100%; object-fit: cover; transition: 0.3s ease-in-out;
+    filter: grayscale(0) blur(0); 
+}
