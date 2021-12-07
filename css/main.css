@@ -4,10 +4,12 @@ body{
     margin:0; padding:0;
     background: rgb(140, 13, 13); 
     color:white; 
+    
 }
 .wrap{
     width: 100%; height: 100%;position: relative;
     background: black;
+   
 }
 
 section{
@@ -38,17 +40,20 @@ section:first-of-type{
 .main-container .bg-section .marquee .loop-holder__text{
     white-space: nowrap;
     will-change: transform;
-    animation:marquee 15s linear infinite;
+    animation:marquee 10s linear infinite;
     font-size: 10rem;
     height: auto;
-    padding-right: 1.3em;
-    
+    padding-right: 1.3em; 
+    display: flex;
 }
 .main-container .bg-section .marquee .loop-holder__text  > p{
    color:white;
    font-size: 10rem;
    font-family: 'Orbitron', sans-serif; font-weight: 500;
    
+}
+.main-container .bg-section .marquee .loop-holder__text > p > img{
+     width: 150px; height: auto;
 }
 .main-container .bg-section .marquee:nth-of-type(2) .loop-holder__text{
     animation:marquee2 15s linear infinite;
@@ -78,8 +83,12 @@ section:first-of-type{
 }
 .main-container .main-scroll .monster-main-area .monster-main-images img{
     position: fixed; width: 250px; height: auto;
-    top:50%; left: 50%; transform: translate(-50%, -50%);
-    z-index: 300;
+    top:50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg);
+    z-index: 300; transition: 0.3s ease-in; 
+}
+.main-container .main-scroll .monster-main-area .monster-main-images img.active{
+   animation: move 2s infinite linear;left: 10%;
+   transition: 0.3s ease-in; transform: translate(-10%, -50%) rotate(10deg);
 }
 
  .monster-about-area{
@@ -91,14 +100,69 @@ section:first-of-type{
     width: 45%; height: 100%; 
     position: relative;
 }
-.monster-about-area .monster-about-images img{
-   position: absolute; top:50%; left:50%; transform: translate(-50%, -50%);
+.monster-about-area .monster-about-images .svg-stars svg{
+    position: absolute;
 }
+
+.monster-about-area .monster-about-images .svg-stars svg:first-of-type{
+    width: 30px; fill:#C2FF21; top:20%; left: 30%; transform: rotate(-10deg);animation: rotate 3s infinite linear;
+    visibility: hidden; opacity: 0; transition: 0.3s ease-in;
+ }
+ .monster-about-area .monster-about-images .svg-stars svg:nth-of-type(2){
+    width: 60px; fill:white; bottom:25%; left: 20%; animation: rotate 3s infinite linear;
+    visibility: hidden; opacity: 0; transition: 0.3s ease-in;
+}
+.monster-about-area .monster-about-images .svg-stars svg:nth-of-type(3){
+    width: 80px; fill:#00FF89; bottom:15%; right: -5%;animation: rotate 5s infinite linear;
+    visibility: hidden; opacity: 0; transition: 0.3s ease-in;
+}
+.monster-about-area .monster-about-images .svg-stars svg:first-of-type.active{
+    width: 30px; fill:#C2FF21; top:20%; left: 30%; transform: rotate(-10deg);animation: rotate 3s infinite linear;
+    visibility: visible; opacity: 1; transition: 0.3s ease-in;
+}
+ .monster-about-area .monster-about-images .svg-stars svg:nth-of-type(2).active{
+    width: 60px; fill:white; bottom:25%; left: 20%; animation: rotate 3s infinite linear;
+    visibility: visible; opacity: 1; transition: 0.3s ease-in;
+}
+.monster-about-area .monster-about-images .svg-stars svg:nth-of-type(3).active{
+    width: 80px; fill:#00FF89; bottom:15%; right: -5%;animation: rotate 5s infinite linear;
+    visibility: visible; opacity: 1; transition: 0.3s ease-in;
+}
+
+@keyframes rotate{
+    from { transform: rotate(0deg); }
+    from { transform: rotate(360deg); }
+}
+.monster-about-area .monster-about-images img:first-of-type{
+    position: absolute; top:70%; left:50%; transform: translate(-50%, -50%) rotate(-0deg);
+    transition: 0.3s ease-in;
+    visibility: hidden; opacity: 0;
+ }
+.monster-about-area .monster-about-images img:first-of-type.active{
+    position: absolute; top:70%; left:40%; transform: translate(-50%, -50%) rotate(-25deg);
+    transition: 0.3s ease-in;
+    visibility:visible; opacity: 1;
+ }
+ .monster-about-area .monster-about-images img:last-of-type{
+    position: absolute; top:40%; left:65%; transform: translate(-50%, -50%) rotate(-0deg);
+    transition: 0.3s ease-in;
+    visibility: hidden; opacity: 0;
+ }
+ .monster-about-area .monster-about-images img:last-of-type.active{
+    position: absolute; top:40%; left:95%; transform: translate(-50%, -50%) rotate(15deg);
+    transition: 0.3s ease-in; 
+    visibility:visible; opacity: 1;
+ }
 .monster-about-area .monster-about-content{
     width: 55%; height: 100%; position: relative;
 }
 .monster-about-area .monster-about-content .about-content-text{
-    width: 65%; position: absolute; top:50%; left:50%; transform: translate(-50%, -50%);
+    width: 65%; position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); transition: 0.3s ease-in;
+    visibility: hidden; opacity: 0; 
+}
+.monster-about-area .monster-about-content .about-content-text.active{
+    transform: translate(-50%, -60%);transition: 0.3s ease-in;
+    visibility: hidden; opacity: 0;visibility: visible; opacity: 1;
 }
 .monster-about-area .monster-about-content .about-content-text .about-text-area{
    width: 100%; height: 100%; display: flex; flex-direction: column;
@@ -111,6 +175,18 @@ section:first-of-type{
  }
 
 
+
+@keyframes move{
+    0% {
+        transform: translate(-50%, -50%)  rotate(-10deg) 
+    }
+    50% {
+        transform: translate(-50%, -47%)  rotate(-10deg) 
+    }
+    100% {
+        transform: translate(-50%, -50%)  rotate(-10deg) 
+    }
+}
 
 
 

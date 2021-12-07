@@ -1,20 +1,41 @@
 const mainContainer = document.querySelector('.main-container');
 const monsterMainImg = document.querySelector('.monster-main-images > img');
+const aboutContentText = document.querySelector('.about-content-text');
+const aboutContentImages = document.querySelectorAll('.monster-about-images > img');
+const aboutContentSvgs  = document.querySelectorAll('.svg-stars > svg');
 
 mainContainer.addEventListener('scroll',()=>{
     value = mainContainer.scrollTop;
     console.log(value);
     if(value >= 0 && value < 500){
-        monsterMainImg.style.left = '50%';
-        monsterMainImg.style.transform='translate(-50%, -50%) rotate(0deg)';
-        monsterMainImg.style.transition ='0.3s ease-in';
-
+        monsterMainImg.classList.remove('active');
+        aboutContentImages[0].classList.remove('active');
+        aboutContentImages[1].classList.remove('active');
+    }
+    if(value >= 700 && value < 800){
+        monsterMainImg.classList.remove('active');
+        aboutContentText.classList.remove('active');
+        aboutContentImages[0].classList.remove('active');
+        aboutContentImages[1].classList.remove('active');
+        aboutContentSvgs[0].classList.remove('active');
+        aboutContentSvgs[1].classList.remove('active');
+        aboutContentSvgs[2].classList.remove('active');
     }
     if(value >= 800 && value < 1000){
-       
-        monsterMainImg.style.left='10%';
-        monsterMainImg.style.transform='translate(-50%, -50%) rotate(-10deg)';
-        monsterMainImg.style.transition ='0.3s ease-in';
+        aboutContentText.classList.add('active');
+        monsterMainImg.classList.add('active');
+        setTimeout(()=>{
+            aboutContentImages[0].classList.add('active');
+        }, 500)
+        setTimeout(()=>{
+            aboutContentImages[1].classList.add('active');
+        }, 500)
+        setTimeout(()=>{
+            aboutContentSvgs[0].classList.add('active');
+            aboutContentSvgs[1].classList.add('active');
+            aboutContentSvgs[2].classList.add('active');
+        }, 1000)
+      
     }
 
 })
