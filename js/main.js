@@ -1,3 +1,5 @@
+const monsterNavList = document.querySelectorAll('.monster-nav > ul > li > a');
+let section = document.querySelectorAll('section');
 const mainContainer = document.querySelector('.main-container');
 const monsterMainImg = document.querySelector('.monster-main-images > img');
 const aboutContentText = document.querySelector('.about-content-text');
@@ -11,6 +13,9 @@ mainContainer.addEventListener('scroll',()=>{
         monsterMainImg.classList.remove('active');
         aboutContentImages[0].classList.remove('active');
         aboutContentImages[1].classList.remove('active');
+        aboutContentSvgs[0].classList.remove('active');
+        aboutContentSvgs[1].classList.remove('active');
+        aboutContentSvgs[2].classList.remove('active');
     }
     if(value >= 700 && value < 800){
         monsterMainImg.classList.remove('active');
@@ -34,8 +39,19 @@ mainContainer.addEventListener('scroll',()=>{
             aboutContentSvgs[0].classList.add('active');
             aboutContentSvgs[1].classList.add('active');
             aboutContentSvgs[2].classList.add('active');
-        }, 1000)
+        }, 500)
       
     }
 
 })
+
+for(let i = 0; i < monsterNavList.length; i++){
+    monsterNavList[i].addEventListener('click',(e)=>{
+        e.preventDefault();
+        console.log(e.target);
+        for(let i = 0; i < section.length; i++){
+            section[i].classList.remove('active');
+        }
+        section[i].classList.add('active');
+    })
+}

@@ -14,14 +14,19 @@ body{
 
 section{
     width: 100%; height: 100%; position: absolute;
-    background: black; 
+    background-color: black; z-index: 400;
+    visibility: hidden; opacity: 0; transition: 0.5s ease-in;
 }
-section:first-of-type{
+/* section:first-of-type {
     width: 100%; height: 100%; position: absolute;
-    background: black;
+    background-color: black; z-index: 400;
+    visibility: hidden; opacity: 0; transition: 0.5s ease-in;
+} */
+section.active {
+    width: 100%; height: 100%; position: absolute;
+    background-color: black; z-index: 400;
+    visibility: visible; opacity: 1; transition: 0.5s ease-in;
 }
-
-
 
 .main-container {
     width: 100%; height:100vh; position: absolute;
