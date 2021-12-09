@@ -1,15 +1,23 @@
 let productDrinkNavList = document.querySelectorAll('.product-drink-nav > ul > li')
 const productName = document.querySelector('.product-text > .text-wrap > h1');
 const productFlavor = document.querySelector('.product-text > .text-wrap > p:nth-of-type(2) > span');
-console.log(productFlavor);
 const productInfoText = document.querySelector('.product-text > .text-wrap > p:nth-of-type(3)');
-console.log(productInfoText);
 const productSubInfo = document.querySelector('.product-text > .text-wrap > p:nth-of-type(4)');
-console.log(productSubInfo);
 const productDrinkImages = document.querySelector('.product-images > .image-area > img:first-of-type')
+const addMinusBtn = document.querySelector('.num-area > .minus-btn');
+const addPlusBtn = document.querySelector('.num-area > .plus-btn');
+const addDrinkNum = document.querySelector('.num-area > drink-num > p')
+const cartButton = document.querySelector('.cart-area > button:first-of-type');
+const buyButton = document.querySelector('.cart-area > button:last-of-type');
+const cartPopupSection = document.querySelector('.addcart-popup');
+const cartPopupCloseBtn = document.querySelector('.addcart-popup > .popup-area > .popup-x-btn > .x-btn-area');
+const cartContinueBtn = document.querySelector('.addcart-popup > .popup-area > .addcart-btn > button:first-of-type');
+const cartGoingBtn = document.querySelector('.addcart-popup > .popup-area > .addcart-btn > button:last-of-type');
+const buyPopupSection = document.querySelector('.buyit-popup');
+const buyPopupCloseBtn = document.querySelector('.buyit-popup > .popup-area > .popup-x-btn > .x-btn-area');
+const buyGoingBtn = document.querySelector('.buyit-popup > .popup-area > .addcart-btn > button:first-of-type');
 
 productDrinkNavList = Array.prototype.slice.call(productDrinkNavList);
-let space = document.createElement
 let productInfoLink =[
     {
         name: 'monster energy',
@@ -55,8 +63,6 @@ let productInfoLink =[
     }
 ]
 
-console.log(productInfoLink);
-// productName.style.textTransform ="uppercase";
 
 for(let i = 0; i < productDrinkNavList.length; i++){
     productDrinkNavList[i].addEventListener('click',(e)=>{
@@ -71,9 +77,42 @@ for(let i = 0; i < productDrinkNavList.length; i++){
             productSubInfo.innerText = productInfoLink[productIndex].sub;
             productDrinkImages.setAttribute('src', productInfoLink[productIndex].img);
         }
-        // productName.innerText = productInfoLink[productIndex].name;
     })
 }
 
 
 
+cartButton.addEventListener('click', ()=>{
+    console.log('cartButton');
+    cartPopupSection.classList.add('active');
+
+})
+buyButton.addEventListener('click', ()=>{
+    console.log('buyButton');
+    buyPopupSection.classList.add('active');
+})
+addMinusBtn.addEventListener('click', ()=>{
+    console.log('addMinusBtn');
+})
+addPlusBtn.addEventListener('click', ()=>{
+    console.log('addPlusBtn');
+})
+cartPopupCloseBtn.addEventListener('click', ()=>{
+    console.log('cartPopupCloseBtn');
+    cartPopupSection.classList.remove('active');
+})
+cartContinueBtn.addEventListener('click', ()=>{
+    console.log('cartPopupCloseBtn');
+    cartPopupSection.classList.remove('active');
+})
+cartGoingBtn.addEventListener('click', ()=>{
+    console.log('cartGoingBtn');
+})
+buyPopupCloseBtn.addEventListener('click', ()=>{
+    console.log('buyPopupCloseBtn');
+    buyPopupSection.classList.remove('active');
+})
+buyGoingBtn.addEventListener('click', ()=>{
+    console.log('buyGoingBtn');
+    buyPopupSection.classList.remove('active');
+})
