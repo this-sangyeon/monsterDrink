@@ -6,10 +6,32 @@ const musicianPrevBtn = document.querySelector('.musician-btn > button.prev');
 const musicianNextBtn = document.querySelector('.musician-btn > button.next');
 const musicianName = document.querySelector('.musician-title > h3');
 const musicianInfo = document.querySelector('.musician-info > p');
-let musicianSns = document.querySelectorAll('.musician-sns > .sns-imgs > img');
+const musicianImage = document.querySelector('.musician-image > img');
+let musicianSns = document.querySelectorAll('.musician-sns > .sns-imgs > ul > li > a');
 
 musicianList = Array.prototype.slice.call(musicianList);
 musicianSns = Array.prototype.slice.call(musicianSns);
+
+let musicianSnsLInk =[
+    {
+        link:['https://www.facebook.com/ItsAyanis/','https://twitter.com/itsayanis','https://www.youtube.com/channel/UCub1pJJMovgpKBGrjJiIVNA','https://www.instagram.com/ayanis/']
+    },
+    {
+        link:['https://www.facebook.com/thebloodybeetroots','https://twitter.com/bloodybeetroots','https://www.youtube.com/channel/UCVpnCPbd_jmm2c4WGg9qzqg','https://www.instagram.com/thebloodybeetrootsofficial/']
+    },
+    {
+        link:['https://www.facebook.com/fivefingerdeathpunch/','https://twitter.com/FFDP','https://www.youtube.com/channel/UCQjw3b3Ay5zMmEHUAxL93Rw','https://www.instagram.com/ayanis/']
+    },
+    {
+        link:['https://www.facebook.com/madballNYC/','https://twitter.com/madballnyc','https://www.youtube.com/channel/UCyzNMY8kAe2ujNisB4_GNOg','https://www.instagram.com/madballnyc/']
+    },
+    {
+        link:['https://www.facebook.com/triberizenet/','https://twitter.com/RIZE_official','https://www.youtube.com/user/RizeVEVO/videos','https://instagram.com/rize_official/']
+    },
+    {
+        link:['https://www.facebook.com/suicidaltendencies/','https://twitter.com/officialSTIG','https://www.youtube.com/channel/UCZdqIc7pGX_STMKbvFr01fQ','https://instagram.com/suicidaltendencies?utm_medium=copy_link']
+    },
+]
 
 let musicianInfoLInk =[
     {
@@ -29,21 +51,25 @@ let musicianInfoLInk =[
     },
     {
         name:'Madball',
-        img:'img/musician/TheBloodyBeetroots.jpg',
+        img:'img/musician/Madball.jpg',
         info:'When you talk about New York Hardcore ( NYHC ) one name comes to your mind, MADBALL. They are one of the most respected band on the hardcore scene, performing allover the world for more than two decades. Frontman Freddy Cricien who`s little brother of AGNOSTIC FRONT Roger Miret has an incredible energy on stage, a real beast! This is a band you must see live. Europe is lucky enough to have the Rebellion tour every year hosted by MADBALL themself. The band is also oftne seen performing in every main European festivals, playing in front of thousands of fans. They are the heavy weight belt of hardcore music!',
     },
     {
         name:'RIZE',
-        img:'img/musician/Ayanis.jpg',
+        img:'img/musician/RIZE.jpg',
         info:'A Japanese rock band consisting of members; Jesse (Vo, G), Kaneko Nobuaki (Dr) and KenKen (Ba, Vo). Formed in 1997, their major debut in single "Kaminari" released in 2000. That attitude that expresses the present (now) of Rock is supported by many listeners. They continue to show off their live performances to domestic and foreign rock fans alike, including his own tour, appearances in numerous domestic festivals, success in the national tour abroad, participating in events in various parts of Asia. In 2017 they hit their 20 years anniversary and performed 40 domestic tours as well as their first Japanese Budokan performance.'
     },
     {
         name:'Suicidal Tendencies',
-        img:'img/musician/Ayanis.jpg',
+        img:'img/musician/SuicidalTendencies.jpg',
         info:'Judging from their name, Suicidal Tendencies were never afraid of a little controversy. Formed in Venice, CA, during the early `80s, the group`s leader from the beginning was outspoken vocalist Mike Muir. The outfit specialized in vicious hardcore early on -- building a huge following among skateboarders, lending a major hand in the creation of skatepunk -- before turning their focus eventually to thrash metal. Early on, the group (whose original lineup included Muir, guitarist Grant Estes, bassist Louiche Mayorga, and drummer Amery Smith) found it increasingly difficult to book shows, due to rumors of its members` affiliation with local gangs and consistent violence at their performances. The underground buzz regarding Suicidal Tendencies grew too loud for labels to ignore though, as the quartet signed on with the indie label Frontier; issuing Muir and company`s classic self-titled debut in 1983. The album quickly became the best-selling hardcore album up to that point; its best-known track, "Institutionalized," was one of the first hardcore punk videos to receive substantial airplay on MTV, and was eventually used in the Emilio Estevez cult classic movie Repo Man, as well as in an episode for the hit TV show Miami Vice (for which the group made a cameo appearance).'
     },
     
 ]
+
+let musicIndex = 0;
+let musicianInfoLInkIndex = 0;
+let musicianLength = musicianInfoLInk.length;
 
 for(let i = 0; i < sponserNavList.length; i++){
     sponserNavList[i].addEventListener('click',()=>{
@@ -59,8 +85,32 @@ for(let i = 0; i < musicianList.length; i++){
         musicIndex = musicianList.indexOf(musicianEl);
         console.log('musicIndex', musicIndex);
         musicianContainer.classList.add('active');
-        for(let i = 0; i < musicianInfoLInk)
-    })
+        for(let i = 0; i < musicianInfoLInk.length; i++){
+            musicianName.innerText = musicianInfoLInk[musicIndex].name;
+            musicianInfo.innerText = musicianInfoLInk[musicIndex].info;
+            musicianImage.setAttribute('src', musicianInfoLInk[musicIndex].img);
+            musicianSns[i].setAttribute('href', musicianSnsLInk[musicIndex].link[i]);
+
+            // trailerLinkEls[i].setAttribute('href',trailerLink[currentIndex].link[i]);
+        }
+        musicianPrevBtn.addEventListener('click', ()=>{
+            musicIndex = musicIndex - 1;
+            musicIndex < 0 && (musicIndex = musicianLength - 1);
+            musicianName.innerText = musicianInfoLInk[musicIndex].name;
+            musicianInfo.innerText = musicianInfoLInk[musicIndex].info;
+            musicianImage.setAttribute('src', musicianInfoLInk[musicIndex].img);
+            musicianSns[i].setAttribute('href', musicianSnsLInk[musicIndex].link[i]);
+        })
+        musicianNextBtn.addEventListener('click', ()=>{
+            musicIndex = musicIndex + 1;
+            musicIndex > musicianLength - 1 && (musicIndex = 0);
+
+            musicianName.innerText = musicianInfoLInk[musicIndex].name;
+            musicianInfo.innerText = musicianInfoLInk[musicIndex].info;
+            musicianImage.setAttribute('src', musicianInfoLInk[musicIndex].img);
+            musicianSns[i].setAttribute('href', musicianSnsLInk[musicIndex].link[i]);
+        
+        })
+
+    }) 
 }
-// console.log(musicianList);
-// console.log(musicianContainer);
