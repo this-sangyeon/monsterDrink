@@ -1,6 +1,7 @@
 const sponserNavList = document.querySelectorAll('.sponser-content>.sponser-nav > .nav-area > nav > ul > li');
 const sponserArea = document.querySelectorAll('.sponser-area');
 const musicianContainer = document.querySelector('.musician-container');
+const musiciancontentBtn = document.querySelector('.musician-text > .musician-btn-area');
 let musicianList = document.querySelectorAll('.sponser-area > .sponser-kind  > .music > ul > li ');
 const musicianPrevBtn = document.querySelector('.musician-btn > button.prev');
 const musicianNextBtn = document.querySelector('.musician-btn > button.next');
@@ -89,28 +90,36 @@ for(let i = 0; i < musicianList.length; i++){
             musicianName.innerText = musicianInfoLInk[musicIndex].name;
             musicianInfo.innerText = musicianInfoLInk[musicIndex].info;
             musicianImage.setAttribute('src', musicianInfoLInk[musicIndex].img);
-            musicianSns[i].setAttribute('href', musicianSnsLInk[musicIndex].link[i]);
-
-            // trailerLinkEls[i].setAttribute('href',trailerLink[currentIndex].link[i]);
+            musicianSnsLink();
         }
-        musicianPrevBtn.addEventListener('click', ()=>{
-            musicIndex = musicIndex - 1;
-            musicIndex < 0 && (musicIndex = musicianLength - 1);
-            musicianName.innerText = musicianInfoLInk[musicIndex].name;
-            musicianInfo.innerText = musicianInfoLInk[musicIndex].info;
-            musicianImage.setAttribute('src', musicianInfoLInk[musicIndex].img);
-            musicianSns[i].setAttribute('href', musicianSnsLInk[musicIndex].link[i]);
-        })
-        musicianNextBtn.addEventListener('click', ()=>{
-            musicIndex = musicIndex + 1;
-            musicIndex > musicianLength - 1 && (musicIndex = 0);
-
-            musicianName.innerText = musicianInfoLInk[musicIndex].name;
-            musicianInfo.innerText = musicianInfoLInk[musicIndex].info;
-            musicianImage.setAttribute('src', musicianInfoLInk[musicIndex].img);
-            musicianSns[i].setAttribute('href', musicianSnsLInk[musicIndex].link[i]);
-        
-        })
 
     }) 
+}
+
+musiciancontentBtn.addEventListener('click',()=>{
+    musicianContainer.classList.remove('active');
+})
+musicianPrevBtn.addEventListener('click', ()=>{
+    musicIndex = musicIndex - 1;
+    musicIndex < 0 && (musicIndex = musicianLength - 1);
+    musicianName.innerText = musicianInfoLInk[musicIndex].name;
+    musicianInfo.innerText = musicianInfoLInk[musicIndex].info;
+    musicianImage.setAttribute('src', musicianInfoLInk[musicIndex].img);
+    musicianSnsLink();
+})
+musicianNextBtn.addEventListener('click', ()=>{
+    musicIndex = musicIndex + 1;
+    musicIndex > musicianLength - 1 && (musicIndex = 0);
+
+    musicianName.innerText = musicianInfoLInk[musicIndex].name;
+    musicianInfo.innerText = musicianInfoLInk[musicIndex].info;
+    musicianImage.setAttribute('src', musicianInfoLInk[musicIndex].img);
+    musicianSnsLink();
+
+})
+
+function musicianSnsLink(){
+    for(let i = 0; i < musicianSnsLInk.length; i++){
+        musicianSns[i].setAttribute('href', musicianSnsLInk[musicIndex].link[i]);
+    }
 }
