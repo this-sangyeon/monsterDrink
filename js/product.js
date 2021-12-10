@@ -6,7 +6,8 @@ const productSubInfo = document.querySelector('.product-text > .text-wrap > p:nt
 const productDrinkImages = document.querySelector('.product-images > .image-area > img:first-of-type')
 const addMinusBtn = document.querySelector('.num-area > .minus-btn');
 const addPlusBtn = document.querySelector('.num-area > .plus-btn');
-const addDrinkNum = document.querySelector('.num-area > drink-num > p')
+const addDrinkNum = document.querySelector('.num-area > .drink-num > p');
+const addPriceNum = document.querySelector('.drink-price > span:last-of-type');
 const cartButton = document.querySelector('.cart-area > button:first-of-type');
 const buyButton = document.querySelector('.cart-area > button:last-of-type');
 const cartPopupSection = document.querySelector('.addcart-popup');
@@ -63,6 +64,8 @@ let productInfoLink =[
     }
 ]
 
+let price = 2200;
+
 
 for(let i = 0; i < productDrinkNavList.length; i++){
     productDrinkNavList[i].addEventListener('click',(e)=>{
@@ -91,12 +94,7 @@ buyButton.addEventListener('click', ()=>{
     console.log('buyButton');
     buyPopupSection.classList.add('active');
 })
-addMinusBtn.addEventListener('click', ()=>{
-    console.log('addMinusBtn');
-})
-addPlusBtn.addEventListener('click', ()=>{
-    console.log('addPlusBtn');
-})
+
 cartPopupCloseBtn.addEventListener('click', ()=>{
     console.log('cartPopupCloseBtn');
     cartPopupSection.classList.remove('active');
@@ -115,4 +113,27 @@ buyPopupCloseBtn.addEventListener('click', ()=>{
 buyGoingBtn.addEventListener('click', ()=>{
     console.log('buyGoingBtn');
     buyPopupSection.classList.remove('active');
+})
+
+
+addMinusBtn.addEventListener('click', ()=>{
+    console.log('addMinusBtn');
+    if(Number(addDrinkNum.textContent > 1)){
+        let minus = Number(addDrinkNum.textContent);
+        let PriceResult = Number(addPriceNum.textContent);
+       minus--;
+       addDrinkNum.textContent = minus;
+       addPriceNum.textContent = PriceResult  - price;
+
+    }
+})
+
+addPlusBtn.addEventListener('click', ()=>{
+    console.log('addPlusBtn');
+    let plus = Number(addDrinkNum.textContent);
+    let PriceResult  = Number(addPriceNum.textContent);
+    plus++;
+    // PriceValue++;
+    addDrinkNum.textContent = plus;
+    addPriceNum.textContent = PriceResult + price;
 })

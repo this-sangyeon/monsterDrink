@@ -119,7 +119,7 @@ musicianNextBtn.addEventListener('click', ()=>{
 })
 
 function musicianSnsLink(){
-    for(let i = 0; i < musicianSnsLInk.length; i++){
+    for(let i = 0; i < musicianSns.length; i++){
         musicianSns[i].setAttribute('href', musicianSnsLInk[musicIndex].link[i]);
     }
 }

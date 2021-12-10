@@ -1,6 +1,6 @@
 section:nth-of-type(3){
     width: 100%; height: 100%; position: fixed;
-    background: black; 
+    background: black;  pointer-events: none;
 }
 
 .sponser-container{
@@ -26,7 +26,7 @@ section:nth-of-type(3){
 }
 .sponser-container .sponser-content .sponser-nav .nav-area nav li{
     font-family: 'Orbitron', sans-serif; font-weight: 100; font-size: 1.5rem; margin-bottom:7%;text-transform: uppercase; letter-spacing: 1px;
-    cursor: pointer;
+    cursor: pointer;pointer-events: auto;
 }
 .sponser-container .sponser-content .sponser-area{
     width: 70%;height: 100%;position: absolute;opacity: 0; visibility: hidden;
@@ -35,7 +35,7 @@ section:nth-of-type(3){
 .sponser-container .sponser-content .sponser-area.active{
     width: 70%;height: 100%;position: absolute;
     right: 0; opacity: 1; visibility: visible; 
-    z-index: 1000;
+    z-index: 1000;pointer-events: auto;
 }
 /* .sponser-container .sponser-content .sponser-area.music{
     width: 70%;height: 100%;position: absolute;
@@ -153,12 +153,12 @@ section:nth-of-type(3){
 
 
 .musician-container{
-    width: 70%; height: 100%; position: absolute; z-index: 1200;
-    background: rgb(0, 0, 0);right:0; opacity: 0; visibility: hidden;
+    width: 70%; height: 100%; position: absolute;z-index: 1600;
+    background: rgb(0, 0, 0);right:0; opacity: 0; visibility: hidden; pointer-events: none;
 }
 .musician-container.active{
-    width: 70%; height: 100%; position: absolute; z-index: 1200;
-    background: rgb(0, 0, 0);right:0; opacity: 1; visibility: visible;
+    width: 70%; height: 100%; position: absolute;z-index: 1600;
+    background: rgb(0, 0, 0);right:0; opacity: 1; visibility: visible; pointer-events: auto;
 }
 .musician-content{
     width: 100%; height: 100%; position: relative;
