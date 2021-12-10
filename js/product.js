@@ -119,8 +119,8 @@ buyGoingBtn.addEventListener('click', ()=>{
 addMinusBtn.addEventListener('click', ()=>{
     console.log('addMinusBtn');
     if(Number(addDrinkNum.textContent > 1)){
-        let minus = Number(addDrinkNum.textContent);
-        let PriceResult = Number(addPriceNum.textContent);
+        let minus = Number(addDrinkNum.innerText);
+        let PriceResult = Number(addPriceNum.innerText);
        minus--;
        addDrinkNum.textContent = minus;
        addPriceNum.textContent = PriceResult  - price;
@@ -130,8 +130,8 @@ addMinusBtn.addEventListener('click', ()=>{
 
 addPlusBtn.addEventListener('click', ()=>{
     console.log('addPlusBtn');
-    let plus = Number(addDrinkNum.textContent);
-    let PriceResult  = Number(addPriceNum.textContent);
+    let plus = Number(addDrinkNum.innerText);
+    let PriceResult  = Number(addPriceNum.innerText);
     plus++;
     // PriceValue++;
     addDrinkNum.textContent = plus;

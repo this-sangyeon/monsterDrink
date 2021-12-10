@@ -1,17 +1,34 @@
 const sponserNavList = document.querySelectorAll('.sponser-content>.sponser-nav > .nav-area > nav > ul > li');
 const sponserArea = document.querySelectorAll('.sponser-area');
-const musicianContainer = document.querySelector('.musician-container');
-const musiciancontentBtn = document.querySelector('.musician-text > .musician-btn-area');
+
+
 let musicianList = document.querySelectorAll('.sponser-area > .sponser-kind  > .music > ul > li ');
-const musicianPrevBtn = document.querySelector('.musician-btn > button.prev');
-const musicianNextBtn = document.querySelector('.musician-btn > button.next');
-const musicianName = document.querySelector('.musician-title > h3');
-const musicianInfo = document.querySelector('.musician-info > p');
-const musicianImage = document.querySelector('.musician-image > img');
-let musicianSns = document.querySelectorAll('.musician-sns > .sns-imgs > ul > li > a');
+const musicianContainer = document.querySelector('.musician-container');
+const musiciancontentBtn = document.querySelector('.musician-container > .support-content > .support-text > .support-btn-area');
+const musicianPrevBtn = document.querySelector('.musician-container > .support-content > .support-text > .support-title > .support-btn > button.prev');
+const musicianNextBtn = document.querySelector('.musician-container > .support-content > .support-text > .support-title > .support-btn > button.next');
+const musicianName = document.querySelector('.musician-container > .support-content > .support-text > .support-title > h3');
+const musicianInfo = document.querySelector('.musician-container > .support-content > .support-text > .support-info > p');
+const musicianImage = document.querySelector('.musician-container > .support-content > .support-image > img');
+let musicianSns = document.querySelectorAll('.musician-container > .support-content > .support-text > .support-sns > .sns-imgs > ul > li > a');
+
+
+let gamerist = document.querySelectorAll('.sponser-area > .sponser-kind  > .game > ul > li ');
+const gamerContainer = document.querySelector('.gamer-container');
+const gamerContentBtn = document.querySelector('.gamer-container > .support-content > .support-text > .support-btn-area');
+const gamerPrevBtn = document.querySelector('.gamer-container > .support-content > .support-text > .support-title > .support-btn > button.prev');
+const gamerNextBtn = document.querySelector('.gamer-container > .support-content > .support-text > .support-title > .support-btn > button.next');
+const gamerName = document.querySelector('.gamer-container > .support-content > .support-text > .support-title > h3');
+const gamerInfo = document.querySelector('.gamer-container > .support-content > .support-text > .support-info > p');
+const gamerImage = document.querySelector('.gamer-container > .support-content > .support-image > img');
+let gamerSns = document.querySelectorAll('.gamer-container > .support-content > .support-text > .support-sns > .sns-imgs > ul > li > a');
+
+
 
 musicianList = Array.prototype.slice.call(musicianList);
 musicianSns = Array.prototype.slice.call(musicianSns);
+gamerist = Array.prototype.slice.call(gamerist);
+gamerSns = Array.prototype.slice.call(gamerSns);
 
 let musicianSnsLInk =[
     {
@@ -68,9 +85,92 @@ let musicianInfoLInk =[
     
 ]
 
+let gamerSnsLInk =[
+    {
+        link:['https://www.facebook.com/ItsAyanis/','https://twitter.com/itsayanis','https://www.youtube.com/channel/UCub1pJJMovgpKBGrjJiIVNA','https://www.instagram.com/ayanis/']
+    },
+    {
+        link:['https://www.facebook.com/thebloodybeetroots','https://twitter.com/bloodybeetroots','https://www.youtube.com/channel/UCVpnCPbd_jmm2c4WGg9qzqg','https://www.instagram.com/thebloodybeetrootsofficial/']
+    },
+    {
+        link:['https://www.facebook.com/fivefingerdeathpunch/','https://twitter.com/FFDP','https://www.youtube.com/channel/UCQjw3b3Ay5zMmEHUAxL93Rw','https://www.instagram.com/ayanis/']
+    },
+    {
+        link:['https://www.facebook.com/madballNYC/','https://twitter.com/madballnyc','https://www.youtube.com/channel/UCyzNMY8kAe2ujNisB4_GNOg','https://www.instagram.com/madballnyc/']
+    },
+    {
+        link:['https://www.facebook.com/triberizenet/','https://twitter.com/RIZE_official','https://www.youtube.com/user/RizeVEVO/videos','https://instagram.com/rize_official/']
+    },
+    {
+        link:['https://www.facebook.com/suicidaltendencies/','https://twitter.com/officialSTIG','https://www.youtube.com/channel/UCZdqIc7pGX_STMKbvFr01fQ','https://instagram.com/suicidaltendencies?utm_medium=copy_link']
+    },
+    {
+        link:['https://www.facebook.com/suicidaltendencies/','https://twitter.com/officialSTIG','https://www.youtube.com/channel/UCZdqIc7pGX_STMKbvFr01fQ','https://instagram.com/suicidaltendencies?utm_medium=copy_link']
+    },
+    {
+        link:['https://www.facebook.com/suicidaltendencies/','https://twitter.com/officialSTIG','https://www.youtube.com/channel/UCZdqIc7pGX_STMKbvFr01fQ','https://instagram.com/suicidaltendencies?utm_medium=copy_link']
+    },
+    {
+        link:['https://www.facebook.com/suicidaltendencies/','https://twitter.com/officialSTIG','https://www.youtube.com/channel/UCZdqIc7pGX_STMKbvFr01fQ','https://instagram.com/suicidaltendencies?utm_medium=copy_link']
+    }
+]
+
+let gamerInfoLink = [
+    {
+        name:'Sc0ut',
+        img: 'img/gaming/Sc0ut.png',
+        info:'Ruling like a true warrior, Sc0ut`s dedication towards the game is real. Often referred to as one of the best Indian players. Sc0ut mainly is a Scouter, flanker, and assaulter. He is one of the biggest influencers in the Indian gaming community - he knows his objective, he knows his skills, he knows the way and he knows how to conquer!'
+    },
+    {
+        name:'Alliance',
+        img: 'img/gaming/Alliance.png',
+        info:'We are Alliance, a Swedish based esports team comprised of many of the strongest and most accomplished Swedish players in the world. These individuals share one common goal – to win. While each individual is strong in their own right, when they join together we’re truly a force to be reckoned with. Alliance began in April 2013 with Sweden’s elite. However, as time goes on, Alliance will only become more powerful as the world’s best join our ranks.'
+    },
+    {
+        name:'Evil Geniuses',
+        img: 'img/gaming/Evil-Geniuses.png',
+        info:'Founded in 1999, Evil Geniuses is the world’s best video game team. With championships from nearly every major tournament circuit in esports history, the players featured on EG are the most storied and influential pro gamers within the e-sports industry. Monster Energy, T-Mobile, and Papa Johns are just a few of the many consumer brands who’ve aligned with the pro players and teams on Evil Geniuses in order to connect with the gamer demographic around the globe.'
+    },
+    {
+        name:'Fnatic',
+        img: 'img/gaming/Fnatic.png',
+        info:'Fnatic - Founded in 2004, Fnatic is a world-leading organization in eSports, with professional teams in six of the popular games such as: League of Legends, Dota 2, Counter-Strike: Global Offensive and more. Our players attend more than 75 international events per year whilst representing our brand in every corner of the world. With over 6,000,000 followers across the globe following our organization’s teams and performance, Fnatic stands as a heavyweight in the world of eSports. Over the years our players have achieved incredible success and won numerous world championships across multiple games. In both 2006 and 2009 Fnatic were awarded Team of the Year.'
+    },
+    {
+        name:'Team Liquid',
+        img: 'img/gaming/TeamLiquid.png',
+        info:'Team Liquid is synonymous with success, both as a competitive team and as an organization. Their reputation as one of the most recognizable names in esports over the past 15 years has been built through championships and their commitment to their fans and the gaming community. With over 50 players and champions in StarCraft 2, League of Legends, Dota 2, Super Smash Bros., Hearthstone, and other titles, they have made their mark across the entire esports landscape. Power by Monster, Team Liquid is one of the organizations shaping the future of competitive gaming.'
+    },
+    {
+        name:'Natus Vincere',
+        img: 'img/gaming/NatusVincere.png',
+        info:'Natus Vincere was created in 2009, and quickly became iconic due to its legendary victories. Na`Vi is the first team to get $1,000,000, the biggest prize in the e-sports history at that time. It’s also the first team to win all world championships in one year, and the first e-sports organization to get 1,000,000 YouTube subscribers and their list of achievements keeps getting longer. Na`Vi’s mission is to encourage esports development all over the world, inspire more people to get involved, rally and support a community of esports lovers who share their values, like the winner’s mindset and healthy lifestyle.'
+    },
+    {
+        name:'Jericho',
+        img: 'img/gaming/Jericho.png',
+        info:'Tucker, or Jericho as he`s known by viewers, started creating gaming content for YouTube in 2009, and Twitch in 2010. Beginning with Call of Duty, and branching out to other FPS titles like CS:GO, he continues to push the idea of having fun over taking things seriously. His energy, enthusiasm, and positivity helped grow his community to over one million subscribers on YouTube, and one become of the most followed channels on Twitch.'
+    },
+    {
+        name:'Renée',
+        img: 'img/gaming/lolRenee.png',
+        info:'Renée started out as a YouTuber in 2008, uploading content primarily geared towards the Call of Duty community under the pseudonym "MissDoesntMiss." After a year of growing and learning, she decided to branch out into other games and started her variety channel, lolRenaynay. With the launch of Twitch.TV in 2011, Renée began broadcasting part-time, eventually leading to a partnership in February of 2012. Soon after, the potential of playing games for a living became a reality. In August of 2012, Renée quit her "real life" job and made gaming her career. However, splitting her focus and time between YouTube and Twitch became increasingly overwhelming. In 2013, Renée made the switch to being a full-time broadcaster on Twitch.'
+    },
+    {
+        name:'Wizzite',
+        img: 'img/gaming/Wizzite.png',
+        info:'Wizzite is a YouTube gaming personality with a love for shooters. Over the past two years he has built a reputation within the Call of Duty and Destiny communities as a fiercely honest and passionate gamer with a deep connection to his fans. These games the driving force of his channel and he doesn`t plan to stop there. Wizzite has never been shy of presenting and hosted some of the biggest gaming launches to date. Whether it be his shooting skills or passion for the game, as long as he has fun playing, his fans are guaranteed to have fun watching!'
+    }
+
+]
+
 let musicIndex = 0;
 let musicianInfoLInkIndex = 0;
 let musicianLength = musicianInfoLInk.length;
+
+let gamerIndex = 0;
+let gamerInfoLInkIndex = 0;
+let gamerLength = gamerInfoLink.length;
 
 for(let i = 0; i < sponserNavList.length; i++){
     sponserNavList[i].addEventListener('click',()=>{
@@ -121,5 +221,50 @@ musicianNextBtn.addEventListener('click', ()=>{
 function musicianSnsLink(){
     for(let i = 0; i < musicianSns.length; i++){
         musicianSns[i].setAttribute('href', musicianSnsLInk[musicIndex].link[i]);
+    }
+}
+
+
+
+for(let i = 0; i < gamerist.length; i++){
+    gamerist[i].addEventListener('click', (e)=>{
+        let gameristEl = e.currentTarget;
+        gamerIndex = gamerist.indexOf(gameristEl);
+        console.log('gamerIndex', gamerIndex);
+        gamerContainer.classList.add('active');
+        for(let i = 0; i < gamerInfoLink.length; i++){
+            gamerName.innerText = gamerInfoLink[gamerIndex].name;
+            gamerInfo.innerText = gamerInfoLink[gamerIndex].info;
+            gamerImage.setAttribute('src', gamerInfoLink[gamerIndex].img);
+            gamerSnsLink();
+        }
+
+    }) 
+}
+gamerContentBtn.addEventListener('click',()=>{
+    gamerContainer.classList.remove('active');
+})
+gamerPrevBtn.addEventListener('click', ()=>{
+    gamerIndex = gamerIndex - 1;
+    gamerIndex < 0 && (gamerIndex = gamerLength - 1);
+    gamerName.innerText = gamerInfoLink[gamerIndex].name;
+    gamerInfo.innerText = gamerInfoLink[gamerIndex].info;
+    gamerImage.setAttribute('src', gamerInfoLink[gamerIndex].img);
+    gamerSnsLink();
+})
+gamerNextBtn.addEventListener('click', ()=>{
+    gamerIndex = gamerIndex + 1;
+    gamerIndex > gamerLength - 1 && (gamerIndex = 0);
+
+    gamerName.innerText = gamerInfoLink[gamerIndex].name;
+    gamerInfo.innerText = gamerInfoLink[gamerIndex].info;
+    gamerImage.setAttribute('src', gamerInfoLink[gamerIndex].img);
+    gamerSnsLink();
+
+})
+
+function gamerSnsLink(){
+    for(let i = 0; i < gamerSns.length; i++){
+        gamerSns[i].setAttribute('href', gamerSnsLInk[gamerIndex].link[i]);
     }
 }
