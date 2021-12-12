@@ -3,12 +3,12 @@ body{
     width: 100%; height: 100%;
     margin:0; padding:0;
     background: rgb(140, 13, 13); 
-    color:white; 
+    color:white; overflow: hidden; 
     
 }
 .wrap{
     width: 100%; height: 100%;position: relative;
-    background: black;
+    background: black;overflow: hidden; 
    
 }
 

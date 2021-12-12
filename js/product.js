@@ -18,6 +18,14 @@ const buyPopupSection = document.querySelector('.buyit-popup');
 const buyPopupCloseBtn = document.querySelector('.buyit-popup > .popup-area > .popup-x-btn > .x-btn-area');
 const buyGoingBtn = document.querySelector('.buyit-popup > .popup-area > .addcart-btn > button:first-of-type');
 
+const cartMainBtn = document.querySelector('.monster-nav > .cartMainBtn > a');
+const cartContainer = document.querySelector('.cart-container');
+const cartCloseBtn = document.querySelector('.cart-close-btn');
+const productBuyBtn = document.querySelector('.product-buy-btn');
+const totalPrice = document.querySelector('.total-right > span:last-of-type');
+const buyCompletionPopup = document.querySelector('.buy-Completion-popup');
+const popupCloseBtn = document.querySelector('.buy-Completion-popup > .popup-area > button');
+
 productDrinkNavList = Array.prototype.slice.call(productDrinkNavList);
 let productInfoLink =[
     {
@@ -88,6 +96,7 @@ for(let i = 0; i < productDrinkNavList.length; i++){
 cartButton.addEventListener('click', ()=>{
     console.log('cartButton');
     cartPopupSection.classList.add('active');
+    
 
 })
 buyButton.addEventListener('click', ()=>{
@@ -105,6 +114,8 @@ cartContinueBtn.addEventListener('click', ()=>{
 })
 cartGoingBtn.addEventListener('click', ()=>{
     console.log('cartGoingBtn');
+    cartContainer.classList.add('active');
+    cartPopupSection.classList.remove('active');
 })
 buyPopupCloseBtn.addEventListener('click', ()=>{
     console.log('buyPopupCloseBtn');
@@ -113,8 +124,28 @@ buyPopupCloseBtn.addEventListener('click', ()=>{
 buyGoingBtn.addEventListener('click', ()=>{
     console.log('buyGoingBtn');
     buyPopupSection.classList.remove('active');
+    cartContainer.classList.add('active');
 })
 
+
+
+cartMainBtn.addEventListener('click',()=>{
+    cartContainer.classList.add('active');
+    console.log('click');
+})
+cartCloseBtn.addEventListener('click', ()=>{
+    cartContainer.classList.remove('active');
+})
+
+productBuyBtn.addEventListener('click', ()=>{
+    buyCompletionPopup.classList.add('active');
+    setTimeout(()=>{
+        buyCompletionPopup.classList.remove('active');
+    },3000)
+})
+popupCloseBtn.addEventListener('click',()=>{
+    buyCompletionPopup.classList.remove('active');
+})
 
 addMinusBtn.addEventListener('click', ()=>{
     console.log('addMinusBtn');
@@ -133,7 +164,6 @@ addPlusBtn.addEventListener('click', ()=>{
     let plus = Number(addDrinkNum.innerText);
     let PriceResult  = Number(addPriceNum.innerText);
     plus++;
-    // PriceValue++;
     addDrinkNum.textContent = plus;
     addPriceNum.textContent = PriceResult + price;
 })

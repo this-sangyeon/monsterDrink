@@ -76,10 +76,10 @@ section:nth-of-type(2){
     width: 30%;height: 100%; display: flex; justify-content: end; align-items: center; 
 }
 .product-container .product-content .product-text .text-wrap .calculation-area .product-num .drink-price span{
-    font-family: 'Orbitron', sans-serif; font-size: 1.5rem;  
+    font-family: 'Orbitron', sans-serif; font-size: 1.5rem;  color:#ffffff
 }
 .product-container .product-content .product-text .text-wrap .calculation-area .product-num .drink-price span:first-of-type{
-    font-family: 'Orbitron', sans-serif; font-size: 1.5rem;  margin-right:5%;
+    font-family: 'Orbitron', sans-serif; font-size: 1.5rem;  margin-right:5%;color:#ffffff
 }
 
 .product-container .product-content .product-text .text-wrap .calculation-area .cart-area{
@@ -275,123 +275,4 @@ section:nth-of-type(2){
 .buyit-popup .popup-area .addcart-btn button p{
     position: absolute;top:50%; left: 50%;transform: translate(-50%, -50%); color:white; width: 100%;
     font-size: 1rem; font-weight: 400; font-family: 'Noto Sans KR', sans-serif;
-}
-
-
-.cart-container {
-    width: 30%; height: 100%; background-color: rgb(255, 255, 255);
-    position: absolute; z-index: 6000; right:0; top:0;overflow: hidden;
-}
-.cart-container .cart-content-wrap{
-    width: 100%; height: 100%; position: relative; top:0%;
-    display:flex; align-items: center;  justify-content: center;
-}
-.cart-container .cart-content-wrap .cart-close-btn{
-    width: 50px; height: 50px; position: absolute; top:5%;
-    right:5%; transform: translateY(-50%);
-}
-.cart-container .cart-content-wrap .cart-close-btn > button{
-    width: 100%; height: 100%; position: relative;  background: none; border:none; outline: none;
-}
-.cart-container .cart-content-wrap .cart-close-btn > button span{
-    width: 70%; height: 1px; position: absolute; background-color: rgb(0, 0, 0);
-    top:50%; left:50%;transform: translate(-50%,-50%);
-}
-.cart-container .cart-content-wrap .cart-close-btn > button span:first-of-type{
-    transform: translate(-50%,-50%) rotate(-45deg);
-}
-.cart-container .cart-content-wrap .cart-close-btn > button span:last-of-type{
-    transform: translate(-50%,-50%) rotate(45deg);
-}
-.cart-container .cart-content-wrap .cart-content{
-    width: 85%; height: 95%; position: relative; top:2%;
-    display: flex; flex-direction: column;
-}
-
-.cart-container .cart-content-wrap .cart-content .cart-title {
-    width: 75%; height: 5%; position: relative; margin-bottom:2%;
-}
-.cart-container .cart-content-wrap .cart-content .cart-title h1{
-   position: absolute; top:50%; transform: translateY(-50%); color:black;
-   font-family: 'Orbitron', sans-serif; font-size: 1.5rem; font-weight: 500; text-transform: uppercase;
-}
-
-.cart-container .cart-content-wrap .cart-content .cart-area{
-    width: 100%; height: 75%; display: flex; 
-    /* position: absolute; */
-    /* left:50%; transform: translateX(-50%); */
-}
-
-.cart-container .cart-content-wrap .cart-content .cart-area .cart-list-wrap{
-    width: 100%; height: 100%;
-   
-}
-.cart-container .cart-content-wrap  .cart-content .cart-area .cart-list-wrap ul{
-    width: 100%; height: 100%; 
-
-}
-.cart-container .cart-content-wrap .cart-content .cart-area .cart-list-wrap li{
-    width: 100%; height: 20%; background-color: rgb(12, 139, 0); list-style: none;
-    display: flex; justify-content: center; align-items: center;
-}
-.cart-container .cart-content-wrap .cart-content .cart-area .cart-list-wrap li .cart-product-area {
-    width: 95%; height: 90%; display: flex; 
-}
-.cart-container .cart-content-wrap .cart-content .cart-area .cart-list-wrap li .cart-product-area .cart-product-image{
-   width: 25%; background-color: darkgoldenrod;
-}
-.cart-container .cart-content-wrap .cart-content .cart-area .cart-list-wrap li .cart-product-area .cart-product-name{
-    width: 25%; background-color: rgb(11, 184, 25);
- }
-.cart-container .cart-content-wrap .cart-content .cart-area .cart-list-wrap li .cart-product-area .cart-product-num{
-    width: 25%; background-color: rgb(152, 184, 11);
- }
- .cart-container .cart-content-wrap .cart-content .cart-area .cart-list-wrap li .cart-product-area .cart-product-price{
-    width: 25%; background-color: rgb(121, 11, 184);
- }
-
- .cart-container .cart-content-wrap .cart-content .cart-total{
-    width: 100%; height: 5%;  margin-top: 2%;
- }
-.cart-container .cart-content-wrap .cart-content .cart-total .price-total{
-    width: 100%;height: 100%;
-    display: flex; justify-content: space-between; align-items: center;
-}
-.cart-container .cart-content-wrap .cart-content .cart-total .price-total p, span{
-    color:black;
-    font-family: 'Orbitron', sans-serif; font-size: 1.5rem; font-weight: 500; text-transform: uppercase;
-}
-.cart-container .cart-content-wrap .cart-content .product-buy-btn{
-    margin-top: 2%;cursor: pointer;
-    width: 100%;height: 5%; background-color: rgb(152, 184, 11);
-}
-.cart-container .cart-content-wrap .cart-content .product-buy-btn > button{
-    cursor: pointer;
-    width: 100%;height: 100%; background-color: rgb(0, 0, 0); border:none; outline: none;
-}
-.cart-container .cart-content-wrap .cart-content .product-buy-btn > button > p{
-    font-family: 'Orbitron', sans-serif; font-size: 1.5rem; font-weight: 500; text-transform: uppercase;
-    color:white;
-}
-
-.cart-container .cart-content-wrap .buy-Completion-popup{
-    width: 100%; height: 100%; position:absolute;
-   top:0; background-color: rgba(0, 0, 0, 0.426);
-}
-.cart-container .cart-content-wrap .buy-Completion-popup > .popup-area{
-    width: 65%; height: 20%; position:relative; background-color: rgb(255, 255, 255);
-    top:50%; left:50%;transform: translate(-50%,-50%); display:flex; flex-direction: column;
-    justify-content: center; align-items: center; border-radius: 30px;
-}
-.cart-container .cart-content-wrap .buy-Completion-popup > .popup-area > p{
-    height: 20%;
-   color:black;
-   font-family: 'Noto Sans KR', sans-serif; font-size: 1rem;
-}
-.cart-container .cart-content-wrap .buy-Completion-popup > .popup-area button{
-    width: 50%; height: 20%; position: absolute; bottom: 15%;
-    background-color: rgb(0, 0, 0); border:none; outline: none;
-}
-.cart-container .cart-content-wrap .buy-Completion-popup > .popup-area button p{
-    color:#ffffff;  font-family: 'Noto Sans KR', sans-serif; font-size: 1rem;
 }
