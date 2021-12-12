@@ -26,6 +26,11 @@ const totalPrice = document.querySelector('.total-right > span:last-of-type');
 const buyCompletionPopup = document.querySelector('.buy-Completion-popup');
 const popupCloseBtn = document.querySelector('.buy-Completion-popup > .popup-area > button');
 
+const ingredientCloseBtn = document.querySelector('.ingredient-close-btn > button');
+const ingredientPopupBG = document.querySelector('.ingredient-popup');
+const ingredientPopup = document.querySelector('.ingredient-popup > .ingredient-popup-area');
+const ingredientBtn = document.querySelector('.drink-info > .nutrition-info:first-of-type > p');
+
 productDrinkNavList = Array.prototype.slice.call(productDrinkNavList);
 let productInfoLink =[
     {
@@ -96,8 +101,6 @@ for(let i = 0; i < productDrinkNavList.length; i++){
 cartButton.addEventListener('click', ()=>{
     console.log('cartButton');
     cartPopupSection.classList.add('active');
-    
-
 })
 buyButton.addEventListener('click', ()=>{
     console.log('buyButton');
@@ -155,7 +158,6 @@ addMinusBtn.addEventListener('click', ()=>{
        minus--;
        addDrinkNum.textContent = minus;
        addPriceNum.textContent = PriceResult  - price;
-
     }
 })
 
@@ -166,4 +168,17 @@ addPlusBtn.addEventListener('click', ()=>{
     plus++;
     addDrinkNum.textContent = plus;
     addPriceNum.textContent = PriceResult + price;
+})
+
+
+ingredientBtn.addEventListener('click', ()=>{
+    ingredientPopupBG.classList.add('active');
+    setTimeout(()=>{
+        ingredientPopup.classList.add('active');
+    }, 200)
+  
+})
+ingredientCloseBtn.addEventListener('click', ()=>{
+    ingredientPopupBG.classList.remove('active');
+    ingredientPopup.classList.remove('active');
 })
