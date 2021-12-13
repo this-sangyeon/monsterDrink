@@ -39,7 +39,7 @@ let ingredientTable = [
         VitaminN:'비타민 B2',
         VitaminG:'2.6mg',
         VitaminP:'186%',
-        VitaminTwelG:'9mg',
+        VitaminTwelG:'9μg',
         VitaminTwelP:'375%',
     },
     {   // 망고로코
@@ -57,7 +57,7 @@ let ingredientTable = [
         VitaminN:'비타민 B2',
         VitaminG:'2.6mg',
         VitaminP:'186%',
-        VitaminTwelG:'9mg',
+        VitaminTwelG:'9μg',
         VitaminTwelP:'375%',
     },
     { // 파이프펀치
@@ -75,7 +75,7 @@ let ingredientTable = [
         VitaminN:'비타민 B2',
         VitaminG:'2.6mg',
         VitaminP:'186%',
-        VitaminTwelG:'9mg',
+        VitaminTwelG:'9μg',
         VitaminTwelP:'375%',
     },
     { // 울트라
@@ -93,7 +93,7 @@ let ingredientTable = [
         VitaminN:'펜토펜산(비타민 B5)',
         VitaminG:'15mg',
         VitaminP:'300%',
-        VitaminTwelG:'9mg',
+        VitaminTwelG:'9μg',
         VitaminTwelP:'375%',
     },
     { // 울트라 시트라
@@ -111,7 +111,7 @@ let ingredientTable = [
         VitaminN:'펜토펜산(비타민 B5)',
         VitaminG:'15mg',
         VitaminP:'300%',
-        VitaminTwelG:'9mg',
+        VitaminTwelG:'9μg',
         VitaminTwelP:'375%',
     },
     { // 울트라 파라다이스
@@ -129,7 +129,7 @@ let ingredientTable = [
         VitaminN:'펜토펜산(비타민 B5)',
         VitaminG:'15mg',
         VitaminP:'300%',
-        VitaminTwelG:'8mg',
+        VitaminTwelG:'8μg',
         VitaminTwelP:'333%',
     }
 ]
