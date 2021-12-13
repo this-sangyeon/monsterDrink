@@ -31,6 +31,11 @@ const ingredientPopupBG = document.querySelector('.ingredient-popup');
 const ingredientPopup = document.querySelector('.ingredient-popup > .ingredient-popup-area');
 const ingredientBtn = document.querySelector('.drink-info > .nutrition-info:first-of-type > p');
 
+const nutritionBtn = document.querySelector('.drink-info > .nutrition-info:last-of-type > p');
+const nutritionPopupBG = document.querySelector('.nutrition-popup');
+const nutritionPopup = document.querySelector('.nutrition-popup > .nutrition-popup-area');
+const nutritionCloseBtn = document.querySelector('.nutrition-close-btn > button');
+
 productDrinkNavList = Array.prototype.slice.call(productDrinkNavList);
 let productInfoLink =[
     {
@@ -181,4 +186,21 @@ ingredientBtn.addEventListener('click', ()=>{
 ingredientCloseBtn.addEventListener('click', ()=>{
     ingredientPopupBG.classList.remove('active');
     ingredientPopup.classList.remove('active');
+})
+
+// const nutritionBtn = document.querySelector('.drink-info > .nutrition-info:last-of-type > p');
+// const nutritionPopupBG = document.querySelector('.nutrition-popup');
+// const nutritionPopup = document.querySelector('.nutrition-popup > .nutrition-popup-area');
+// const nutritionCloseBtn = document.querySelector('.nutrition-close-btn > button');
+
+nutritionBtn.addEventListener('click', ()=>{
+    nutritionPopupBG.classList.add('active');
+    setTimeout(()=>{
+        nutritionPopup.classList.add('active');
+    }, 200)
+  
+})
+nutritionCloseBtn.addEventListener('click', ()=>{
+    nutritionPopupBG.classList.remove('active');
+    nutritionPopup.classList.remove('active');
 })
