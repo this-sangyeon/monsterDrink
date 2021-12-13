@@ -77,7 +77,7 @@
 }
 
 .nutrition-popup > .nutrition-popup-area{
-    width: 30%; height: 30%; background-color: rgb(0, 0, 0); position: relative;
+    width: 30%; height: 35%; background-color: rgb(0, 0, 0); position: relative;
     top:50%; left:50%;transform: translate(-50%,-40%);
     display: flex;  align-items: center;flex-direction: column;
     border: solid 2px white; opacity: 0; visibility: hidden; transition: 0.3s ease-in-out;
@@ -89,7 +89,7 @@
     width: 100%; height: 20%; background-color: #95ff00;  position: relative;
 }
 .nutrition-popup > .nutrition-popup-area .nutrition-title-main > .nutrition-close-btn{
-    width: 50px; height: 50px;  position: absolute; right:5%; top:50%; transform: translateY(-50%);
+    width: 50px; height: 50px;  position: absolute; right:5%; top:50%; transform: translateY(-50%); cursor: pointer;
 }
 .nutrition-popup > .nutrition-popup-area .nutrition-title-main > .nutrition-close-btn button{
     width: 100%; height: 100%;  position: relative; border:none; background: none; outline: none;
@@ -108,11 +108,11 @@
     font-family: 'Noto Sans KR', sans-serif;font-size: 2rem; font-weight:500; margin-left: 5%;
 }
 .nutrition-popup > .nutrition-popup-area .nutrition-content{
-    width: 100%; height: 80%;  position: relative;
+    width: 100%;  height: 90%; position: relative;
 }
 .nutrition-popup > .nutrition-popup-area .nutrition-content > p{
-    width: 90%; height: 85%;  position: absolute; top:50%; left: 50%; transform: translate(-50%,-50%);
-    font-family: 'Noto Sans KR', sans-serif; color:white; line-height: 1.7rem; font-size: 1rem; font-weight: 100;
+    width: 90%; height: 90%;  position: absolute; top:50%; left: 50%; transform: translate(-50%,-50%);
+    font-family: 'Noto Sans KR', sans-serif; color:white; line-height: 1.5rem; font-size: 1rem; font-weight: 100;
 }
 
 

@@ -97,6 +97,24 @@ for(let i = 0; i < productDrinkNavList.length; i++){
             productInfoText.innerText = productInfoLink[productIndex].text;
             productSubInfo.innerText = productInfoLink[productIndex].sub;
             productDrinkImages.setAttribute('src', productInfoLink[productIndex].img);
+
+            ingredienKcal.innerText = ingredientTable[productIndex].kcal;
+            SodiumGram.innerText = ingredientTable[productIndex].sodiumG;
+            SodiumPer.innerText = ingredientTable[productIndex].sodiumP;
+            CarbohydrateGram.innerText = ingredientTable[productIndex].CarbohydrateG;
+            SugarGram.innerText = ingredientTable[productIndex].SugarG;
+            SugarPer.innerText = ingredientTable[productIndex].SugarP;
+            fatGram.innerText = ingredientTable[productIndex].FatG;
+            fatPer.innerText = ingredientTable[productIndex].FatP;
+            ProteinGram.innerText = ingredientTable[productIndex].ProteinG;
+            ProteinPer.innerText = ingredientTable[productIndex].ProteinP;
+            VitaminName.innerText = ingredientTable[productIndex].VitaminN;
+            VitaminGram.innerText = ingredientTable[productIndex].VitaminG;
+            VitaminPer.innerText = ingredientTable[productIndex].VitaminP;
+            VitaminTweleveGram.innerText = ingredientTable[productIndex].VitaminTwelG;
+            VitaminTwelevePer.innerText = ingredientTable[productIndex].VitaminTwelP;
+
+            nutritionText.innerText = nutritionLink[productIndex].text;
         }
     })
 }
@@ -188,10 +206,6 @@ ingredientCloseBtn.addEventListener('click', ()=>{
     ingredientPopup.classList.remove('active');
 })
 
-// const nutritionBtn = document.querySelector('.drink-info > .nutrition-info:last-of-type > p');
-// const nutritionPopupBG = document.querySelector('.nutrition-popup');
-// const nutritionPopup = document.querySelector('.nutrition-popup > .nutrition-popup-area');
-// const nutritionCloseBtn = document.querySelector('.nutrition-close-btn > button');
 
 nutritionBtn.addEventListener('click', ()=>{
     nutritionPopupBG.classList.add('active');
