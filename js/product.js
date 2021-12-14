@@ -38,6 +38,8 @@ const nutritionCloseBtn = document.querySelector('.nutrition-close-btn > button'
 
 const cartListWrap = document.querySelector('.cart-list-wrap ul');
 
+const cartPriceTotal = document.querySelector('.total-right > span:last-of-type');
+
 productDrinkNavList = Array.prototype.slice.call(productDrinkNavList);
 let productInfoLink =[
     {
@@ -106,6 +108,8 @@ let price = 2200;
 let total = 0;
 let priceTotal;
 let productTotal;
+// let totalPrice;
+
 
 
 for(let i = 0; i < productDrinkNavList.length; i++){
@@ -172,11 +176,60 @@ cartButton.addEventListener('click', ()=>{
                 <p>${priceTotal}</p>
             </div>
         </div>
-    </li>`;
+    </li>`; 
+    let totalPrice = productTotal * priceTotal;
+    cartPriceTotal.innerHTML =
+    `<span>${totalPrice}</span>`;
+    
+    
 })
 
+// function totalUpdatePrice(){
+//     const cart = [];
+//     // const product = {name, price, qty}
+//     function addItem(name, price){
+//         const item = {name:name, price:price, qty:1};
+//         cart.push(item);
+//         for(let i = 0; i < cart.length; i += 1){
+//             if(cart[i].name === name){
+//                 cart[i].qty += 1
+//                 return
+//             }
+//         }
+//     }
+//     function showItems(){
+//         let qty = 0;
+//         for(let i = 0; i < cart.length; i += 1){
+//             qty += cart[i].qty
+//         }
+//         // console.log(`you have ${qty} items in your cart`);
+//         // console.log(cart);
+//         // console.log(cart[0]);
+//         // console.log(cart.length);
+//         // console.log(`you have ${cart.length} items in your cart`);
+
+//         for(let i = 0; i < cart.length; i += 1){
+//             console.log(`- ${cart[i].name} $${cart[i].price} X ${cart[i].qty}`);
+//         }
+//         for(let i = 0; i < cart.length; i+= 1){
+//             total += cart[i].price * cart[i].qty
+//         }
+//         console.log(`total in cart: $${total}`);
+//     }
+//     // addItem('monsterenergy', 2200)
+//     // addItem('mangoloco', 2200)
+//     // addItem('pipelinepunch', 2200)
+//     // addItem('ultra', 2200)
+//     // addItem('ultracitra', 2200)
+//     // addItem('ultraparadise', 2200)
+//     // addItem('ultracitra', 2200)
+//     // addItem('ultraparadise', 2200)
 
 
+//     showItems();
+// }
+
+// totalUpdatePrice();
 
 buyButton.addEventListener('click', ()=>{
     console.log('buyButton');
@@ -236,6 +289,7 @@ addMinusBtn.addEventListener('click', ()=>{
        addPriceNum.textContent = PriceResult  - price;
        productTotal = addDrinkNum.textContent;
        priceTotal =  addPriceNum.textContent;
+       // let totalPrice = productTotal * priceTotal;
 
     }
 })
@@ -249,6 +303,7 @@ addPlusBtn.addEventListener('click', ()=>{
     addPriceNum.textContent = PriceResult + price;
     productTotal = addDrinkNum.textContent;
     priceTotal =  addPriceNum.textContent;
+    // let totalPrice = productTotal * priceTotal;
 })
 
 
