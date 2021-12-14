@@ -36,6 +36,8 @@ const nutritionPopupBG = document.querySelector('.nutrition-popup');
 const nutritionPopup = document.querySelector('.nutrition-popup > .nutrition-popup-area');
 const nutritionCloseBtn = document.querySelector('.nutrition-close-btn > button');
 
+const cartListWrap = document.querySelector('.cart-list-wrap ul');
+
 productDrinkNavList = Array.prototype.slice.call(productDrinkNavList);
 let productInfoLink =[
     {
@@ -82,7 +84,27 @@ let productInfoLink =[
     }
 ]
 
+const productCartImage = [
+    'img/drink/energy.png',
+    'img/drink/mango-loco.png',
+    'img/drink/punch.png',
+    'img/drink/ultra.png',
+    'img/drink/ultra-citra.png',
+    'img/drink/ultra-paradise.png'
+]
+const productCartName = [
+    'monster energy',
+    'mango loco',
+    'pipeline punch',
+    'monster energy ultra',
+    'ultra citra',
+    'ultra paradise'
+]
+
+let productIndex = 0;
 let price = 2200;
+let total = 0;
+let priceTotal;
 
 
 for(let i = 0; i < productDrinkNavList.length; i++){
@@ -90,6 +112,7 @@ for(let i = 0; i < productDrinkNavList.length; i++){
         let targetEl = e.currentTarget;
         productIndex = productDrinkNavList.indexOf(targetEl);
         console.log('productIndex',productIndex);
+
 
         for(let i = 0; i < productInfoLink.length; i++){
             productName.innerText = productInfoLink[productIndex].name;
@@ -124,7 +147,36 @@ for(let i = 0; i < productDrinkNavList.length; i++){
 cartButton.addEventListener('click', ()=>{
     console.log('cartButton');
     cartPopupSection.classList.add('active');
+
+    // const cartListEl = document.createElement('li');
+    // // li에 인풋 안의 텍스트를 담아줍니다
+    // cartListEl.appendChild(document.createTextNode(cartButton.value));
+    // cartListEl.classList.add('cartList');
+    // console.log(cartListEl);
+    // cartListWrap.appendChild(cartListEl);
+
+    cartListWrap.innerHTML +=
+    `<li class ="cartList">
+        <div class="cart-product-area">
+            <div class ="cart-product-image">
+                <img src="${productCartImage[productIndex]}" alt="">
+            </div>
+            <div class ="cart-product-name">
+                <p>${productCartName[productIndex]}</p>
+            </div>
+            <div class ="cart-product-num">
+                <p>${priceTotal[productIndex]}</p>
+            </div>
+            <div class ="cart-product-price">
+                <p>2200</p>
+            </div>
+        </div>
+    </li>`;
 })
+
+
+
+
 buyButton.addEventListener('click', ()=>{
     console.log('buyButton');
     buyPopupSection.classList.add('active');
@@ -181,6 +233,7 @@ addMinusBtn.addEventListener('click', ()=>{
        minus--;
        addDrinkNum.textContent = minus;
        addPriceNum.textContent = PriceResult  - price;
+       priceTotal = addDrinkNum.textContent;
     }
 })
 
@@ -191,6 +244,7 @@ addPlusBtn.addEventListener('click', ()=>{
     plus++;
     addDrinkNum.textContent = plus;
     addPriceNum.textContent = PriceResult + price;
+    priceTotal = addDrinkNum.textContent;
 })
 
 
