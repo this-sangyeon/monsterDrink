@@ -105,6 +105,7 @@ let productIndex = 0;
 let price = 2200;
 let total = 0;
 let priceTotal;
+let productTotal;
 
 
 for(let i = 0; i < productDrinkNavList.length; i++){
@@ -165,10 +166,10 @@ cartButton.addEventListener('click', ()=>{
                 <p>${productCartName[productIndex]}</p>
             </div>
             <div class ="cart-product-num">
-                <p>${priceTotal[productIndex]}</p>
+                <p>${productTotal}</p>
             </div>
             <div class ="cart-product-price">
-                <p>2200</p>
+                <p>${priceTotal}</p>
             </div>
         </div>
     </li>`;
@@ -233,7 +234,9 @@ addMinusBtn.addEventListener('click', ()=>{
        minus--;
        addDrinkNum.textContent = minus;
        addPriceNum.textContent = PriceResult  - price;
-       priceTotal = addDrinkNum.textContent;
+       productTotal = addDrinkNum.textContent;
+       priceTotal =  addPriceNum.textContent;
+
     }
 })
 
@@ -244,7 +247,8 @@ addPlusBtn.addEventListener('click', ()=>{
     plus++;
     addDrinkNum.textContent = plus;
     addPriceNum.textContent = PriceResult + price;
-    priceTotal = addDrinkNum.textContent;
+    productTotal = addDrinkNum.textContent;
+    priceTotal =  addPriceNum.textContent;
 })
 
 
