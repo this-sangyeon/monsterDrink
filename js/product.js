@@ -39,6 +39,7 @@ const nutritionCloseBtn = document.querySelector('.nutrition-close-btn > button'
 const cartListWrap = document.querySelector('.cart-list-wrap ul');
 
 const cartPriceTotal = document.querySelector('.total-right > span:last-of-type');
+const cartProductList = document.querySelectorAll('.cart-list-wrap ul li')
 
 productDrinkNavList = Array.prototype.slice.call(productDrinkNavList);
 let productInfoLink =[
@@ -103,12 +104,15 @@ const productCartName = [
     'ultra paradise'
 ]
 
+
+
+
 let productIndex = 0;
 let price = 2200;
 let total = 0;
-let priceTotal;
-let productTotal;
-// let totalPrice;
+let priceTotal = 2200;
+let productTotal = '1';
+// let totalPrice = productTotal * priceTotal;
 
 
 
@@ -176,11 +180,21 @@ cartButton.addEventListener('click', ()=>{
                 <p>${priceTotal}</p>
             </div>
         </div>
+        <!-- <div class ="li-remove-btn">
+            <button><span></span></button>
+        </div> -->
     </li>`; 
-    let totalPrice = productTotal * priceTotal;
-    cartPriceTotal.innerHTML =
-    `<span>${totalPrice}</span>`;
+
+    // let totalPrice =  priceTotal;
     
+        let totalPrice =  priceTotal;
+    
+        cartPriceTotal.innerHTML =
+        `<span>${totalPrice}</span>`;
+        
+    
+        // cartPriceTotal.innerHTML =
+        // `<span>${realTotalPrice}</span>`;
     
 })
 
@@ -289,7 +303,6 @@ addMinusBtn.addEventListener('click', ()=>{
        addPriceNum.textContent = PriceResult  - price;
        productTotal = addDrinkNum.textContent;
        priceTotal =  addPriceNum.textContent;
-       // let totalPrice = productTotal * priceTotal;
 
     }
 })
@@ -303,7 +316,7 @@ addPlusBtn.addEventListener('click', ()=>{
     addPriceNum.textContent = PriceResult + price;
     productTotal = addDrinkNum.textContent;
     priceTotal =  addPriceNum.textContent;
-    // let totalPrice = productTotal * priceTotal;
+
 })
 
 
