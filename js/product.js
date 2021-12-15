@@ -117,6 +117,7 @@ let priceTotal = 2200;
 let productTotal = '1';
 let realtotal = 0;
 let finalTotal = 0;
+let numberReset;
 // let totalPrice = productTotal * priceTotal;
 
 
@@ -157,6 +158,7 @@ for(let i = 0; i < productDrinkNavList.length; i++){
 }
 
 
+let isClick = false;
 
 cartButton.addEventListener('click', ()=>{
     console.log('cartButton');
@@ -208,9 +210,15 @@ cartButton.addEventListener('click', ()=>{
                 const targetEl = cartListWrap.children[productIndex];
                 const targetPrice = targetEl.querySelector('.cart-product-price p').innerText;
                 cartListWrap.removeChild(targetEl);
-                finalTotal = Number(finalTotal - totalPrice);
+                finalTotal = Number(finalTotal - targetPrice);
                 cartPriceTotal.innerHTML = `<span>${finalTotal}</span>`;
+                
             })
+        }
+        
+        if(isClick === false){
+            addDrinkNum.innerText = '1';
+            addPriceNum.innerText = Number(price);
         }
     
 })
