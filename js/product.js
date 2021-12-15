@@ -109,9 +109,11 @@ const productCartName = [
 
 let productIndex = 0;
 let price = 2200;
-let total = 0;
+let total = 1;
+// let total = 0;
 let priceTotal = 2200;
 let productTotal = '1';
+let realtotal = 0;
 // let totalPrice = productTotal * priceTotal;
 
 
@@ -187,17 +189,53 @@ cartButton.addEventListener('click', ()=>{
 
     // let totalPrice =  priceTotal;
     
-        let totalPrice =  priceTotal;
-    
+        let totalPrice = priceTotal;
+        // let qty = 0;
+        // for(let i = 0; cartProductList.length; i++){
+        //     // totalPrice += i;
+        // let total= 0;
+        // total = totalPrice;
+        totalPrice *= total;
+        //     // totalPrice += priceTotal.price + priceTotal.productTotal;
+        //     // totalPrice = cartProductList[i].totalPrice[i] + cartProductList[i].totalPrice[i];
+        //     // total += cart[i].price * cart[i].qty
+        // }
         cartPriceTotal.innerHTML =
         `<span>${totalPrice}</span>`;
-        
-    
-        // cartPriceTotal.innerHTML =
-        // `<span>${realTotalPrice}</span>`;
+        // console.log(cartProductList[0].totalPrice[0]);
+        // console.log(cartProductList[1].totalPrice[1]);
+        // console.log(cartProductList[2].totalPrice[2]);
     
 })
 
+// 제품 숫자 추가 (증가)버튼
+addMinusBtn.addEventListener('click', ()=>{
+    console.log('addMinusBtn');
+    if(Number(addDrinkNum.textContent > 1)){
+        let minus = Number(addDrinkNum.innerText);
+        let PriceResult = Number(addPriceNum.innerText);
+       minus--;
+       addDrinkNum.textContent = minus;
+       addPriceNum.textContent = PriceResult  - price;
+       productTotal = addDrinkNum.textContent;
+       priceTotal =  addPriceNum.textContent;
+
+    }
+})
+// 제품 숫자 추가 (증감)버튼
+addPlusBtn.addEventListener('click', ()=>{
+    console.log('addPlusBtn');
+    let plus = Number(addDrinkNum.innerText);
+    let PriceResult  = Number(addPriceNum.innerText);
+    plus++;
+    addDrinkNum.textContent = plus;
+    addPriceNum.textContent = PriceResult + price;
+    productTotal = addDrinkNum.textContent;
+    priceTotal =  addPriceNum.textContent;
+
+})
+// ㄱㅏㅇ으ㅣ 따따라라해해본본거
+// 지지우기
 // function totalUpdatePrice(){
 //     const cart = [];
 //     // const product = {name, price, qty}
@@ -293,31 +331,31 @@ popupCloseBtn.addEventListener('click',()=>{
     buyCompletionPopup.classList.remove('active');
 })
 
-addMinusBtn.addEventListener('click', ()=>{
-    console.log('addMinusBtn');
-    if(Number(addDrinkNum.textContent > 1)){
-        let minus = Number(addDrinkNum.innerText);
-        let PriceResult = Number(addPriceNum.innerText);
-       minus--;
-       addDrinkNum.textContent = minus;
-       addPriceNum.textContent = PriceResult  - price;
-       productTotal = addDrinkNum.textContent;
-       priceTotal =  addPriceNum.textContent;
+// addMinusBtn.addEventListener('click', ()=>{
+//     console.log('addMinusBtn');
+//     if(Number(addDrinkNum.textContent > 1)){
+//         let minus = Number(addDrinkNum.innerText);
+//         let PriceResult = Number(addPriceNum.innerText);
+//        minus--;
+//        addDrinkNum.textContent = minus;
+//        addPriceNum.textContent = PriceResult  - price;
+//        productTotal = addDrinkNum.textContent;
+//        priceTotal =  addPriceNum.textContent;
 
-    }
-})
+//     }
+// })
 
-addPlusBtn.addEventListener('click', ()=>{
-    console.log('addPlusBtn');
-    let plus = Number(addDrinkNum.innerText);
-    let PriceResult  = Number(addPriceNum.innerText);
-    plus++;
-    addDrinkNum.textContent = plus;
-    addPriceNum.textContent = PriceResult + price;
-    productTotal = addDrinkNum.textContent;
-    priceTotal =  addPriceNum.textContent;
+// addPlusBtn.addEventListener('click', ()=>{
+//     console.log('addPlusBtn');
+//     let plus = Number(addDrinkNum.innerText);
+//     let PriceResult  = Number(addPriceNum.innerText);
+//     plus++;
+//     addDrinkNum.textContent = plus;
+//     addPriceNum.textContent = PriceResult + price;
+//     productTotal = addDrinkNum.textContent;
+//     priceTotal =  addPriceNum.textContent;
 
-})
+// })
 
 
 ingredientBtn.addEventListener('click', ()=>{
