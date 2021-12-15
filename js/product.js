@@ -43,6 +43,7 @@ const cartProductList = document.querySelectorAll('.cart-list-wrap ul li')
 // const cartProducCloseBtn = document.querySelectorAll('.li-remove-btn');
 
 productDrinkNavList = Array.prototype.slice.call(productDrinkNavList);
+ //  cartProducCloseBtn = Array.prototype.slice.call(cartProducCloseBtn);
 let productInfoLink =[
     {
         name: 'monster energy',
