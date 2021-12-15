@@ -116,6 +116,7 @@ let total = 1;
 let priceTotal = 2200;
 let productTotal = '1';
 let realtotal = 0;
+let finalTotal = 0;
 // let totalPrice = productTotal * priceTotal;
 
 
@@ -189,36 +190,26 @@ cartButton.addEventListener('click', ()=>{
         </div>
     </li>`; 
 
-    let totalPrice =  priceTotal;
-    
-       
-        // let qty = 0;
-        // for(let i = 0; cartProductList.length; i++){
-        //     // totalPrice += i;
-        // let total= 0;
-        // total = totalPrice;
-        // totalPrice *= total;
-        //     // totalPrice += priceTotal.price + priceTotal.productTotal;
-        //     // totalPrice = cartProductList[i].totalPrice[i] + cartProductList[i].totalPrice[i];
-        //     // total += cart[i].price * cart[i].qty
-        // }
+    // let totalPrice =  priceTotal;
+   let totalPrice = Number(priceTotal);
+   finalTotal = Number(finalTotal + totalPrice);
+    cartPriceTotal.innerHTML = `<span>${finalTotal}</span>`;
         
-        cartPriceTotal.innerHTML =
-            `<span>${totalPrice}</span>`;
-        // console.log(cartProductList[0].totalPrice[0]);
-        // console.log(cartProductList[1].totalPrice[1]);
-        // console.log(cartProductList[2].totalPrice[2]);
 
-        //  const cartProducCloseBtn = document.querySelectorAll('.li-remove-btn');
-         let cartProducCloseBtn = document.querySelectorAll('.li-remove-btn');
-        //  cartProducCloseBtn = Array.prototype.slice.call(cartProducCloseBtn);
+        let cartProducCloseBtn = document.querySelectorAll('.li-remove-btn');
+     
         for(let i = 0; i < cartProducCloseBtn.length; i++){
             cartProducCloseBtn[i].addEventListener('click',(e)=>{
-                // let cartProducCloseBtn = document.querySelectorAll('.li-remove-btn');
-                cartProducCloseBtn = Array.prototype.slice.call(cartProducCloseBtn);
+             let closeBtn = document.querySelectorAll('.li-remove-btn');
+                closeBtn  = Array.prototype.slice.call(cartProducCloseBtn);
                 target = e.currentTarget;
-                let productIndex = cartProducCloseBtn.indexOf(target);  
-                cartListWrap.removeChild(cartListWrap.childNodes[productIndex]);
+                let productIndex = closeBtn.indexOf(target);  
+
+                const targetEl = cartListWrap.children[productIndex];
+                const targetPrice = targetEl.querySelector('.cart-product-price p').innerText;
+                cartListWrap.removeChild(targetEl);
+                finalTotal = Number(finalTotal - totalPrice);
+                cartPriceTotal.innerHTML = `<span>${finalTotal}</span>`;
             })
         }
     
