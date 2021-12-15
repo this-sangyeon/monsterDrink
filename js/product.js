@@ -40,6 +40,7 @@ const cartListWrap = document.querySelector('.cart-list-wrap ul');
 
 const cartPriceTotal = document.querySelector('.total-right > span:last-of-type');
 const cartProductList = document.querySelectorAll('.cart-list-wrap ul li')
+// const cartProducCloseBtn = document.querySelectorAll('.li-remove-btn');
 
 productDrinkNavList = Array.prototype.slice.call(productDrinkNavList);
 let productInfoLink =[
@@ -182,29 +183,43 @@ cartButton.addEventListener('click', ()=>{
                 <p>${priceTotal}</p>
             </div>
         </div>
-        <!-- <div class ="li-remove-btn">
-            <button><span></span></button>
-        </div> -->
+        <div class ="li-remove-btn">
+            <button><span></span><span></span></button>
+        </div>
     </li>`; 
 
-    // let totalPrice =  priceTotal;
+    let totalPrice =  priceTotal;
     
-        let totalPrice = priceTotal;
+       
         // let qty = 0;
         // for(let i = 0; cartProductList.length; i++){
         //     // totalPrice += i;
         // let total= 0;
         // total = totalPrice;
-        totalPrice *= total;
+        // totalPrice *= total;
         //     // totalPrice += priceTotal.price + priceTotal.productTotal;
         //     // totalPrice = cartProductList[i].totalPrice[i] + cartProductList[i].totalPrice[i];
         //     // total += cart[i].price * cart[i].qty
         // }
+        
         cartPriceTotal.innerHTML =
-        `<span>${totalPrice}</span>`;
+            `<span>${totalPrice}</span>`;
         // console.log(cartProductList[0].totalPrice[0]);
         // console.log(cartProductList[1].totalPrice[1]);
         // console.log(cartProductList[2].totalPrice[2]);
+
+        //  const cartProducCloseBtn = document.querySelectorAll('.li-remove-btn');
+         let cartProducCloseBtn = document.querySelectorAll('.li-remove-btn');
+        //  cartProducCloseBtn = Array.prototype.slice.call(cartProducCloseBtn);
+        for(let i = 0; i < cartProducCloseBtn.length; i++){
+            cartProducCloseBtn[i].addEventListener('click',(e)=>{
+                // let cartProducCloseBtn = document.querySelectorAll('.li-remove-btn');
+                cartProducCloseBtn = Array.prototype.slice.call(cartProducCloseBtn);
+                target = e.currentTarget;
+                let productIndex = cartProducCloseBtn.indexOf(target);  
+                cartListWrap.removeChild(cartListWrap.childNodes[productIndex]);
+            })
+        }
     
 })
 
@@ -234,6 +249,9 @@ addPlusBtn.addEventListener('click', ()=>{
     priceTotal =  addPriceNum.textContent;
 
 })
+// cartProducCloseBtn.addEventListener('click', ()=>{
+//     console.log(cartProducCloseBtn.length);
+// })
 // ㄱㅏㅇ으ㅣ 따따라라해해본본거
 // 지지우기
 // function totalUpdatePrice(){

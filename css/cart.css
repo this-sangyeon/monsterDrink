@@ -89,17 +89,31 @@
  }
 
  .cart-container .cart-content-wrap .cart-content .cart-area .cart-list-wrap li.cartList > .li-remove-btn{
-    width: 20px; height: 20px; position: absolute; bottom:10%; right:2%;
-    background-color: blanchedalmond; border-radius: 50%;
+    width: 20px; height: 90%; position: absolute; top:50%; right:-5%;transform: translate(-50%,-50%);
+    background-color: #95ff00; visibility:hidden; opacity:0; transition: 0.3s ease-in-out;
  }
+ .cart-container .cart-content-wrap .cart-content .cart-area .cart-list-wrap li.cartList:hover > .li-remove-btn{
+    width: 20px; height: 90%; position: absolute; top:50%; right:-7%;transform: translate(-50%,-50%);
+    background-color: #95ff00;opacity:1; transition: 0.3s ease-in-out;visibility:visible;
+ }
+ /* .cart-container .cart-content-wrap .cart-content .cart-area .cart-list-wrap li.cartList > .li-remove-btn{
+    width: 20px; height: 20px; position: absolute; top:50%; right:0%;transform: translate(-50%,-50%);
+    background-color: blanchedalmond; border-radius: 50%;
+ } */
  .cart-container .cart-content-wrap .cart-content .cart-area .cart-list-wrap li.cartList > .li-remove-btn > button{
     width: 100%; height: 100%; position: relative;
-    background-color: blanchedalmond; border-radius: 50%;
+    background-color: #95ff00;
     outline:none; border: none;
  }
  .cart-container .cart-content-wrap .cart-content .cart-area .cart-list-wrap li.cartList > .li-remove-btn > button > span{
-    width: 80%; height: 1px; position: absolute;
-    
+     position: absolute;  width: 20px; height: 1px;
+     background-color: black; top:50%; left:50%;transform: translate(-50%,-50%);
+ }
+ .cart-container .cart-content-wrap .cart-content .cart-area .cart-list-wrap li.cartList > .li-remove-btn > button > span:first-of-type{
+   transform: translate(-50%,-50%) rotate(-45deg);
+}
+.cart-container .cart-content-wrap .cart-content .cart-area .cart-list-wrap li.cartList > .li-remove-btn > button > span:last-of-type{
+    transform: translate(-50%,-50%) rotate(45deg);
  }
 
  .cart-container .cart-content-wrap .cart-content .cart-total{
@@ -152,6 +166,7 @@
 }
 .cart-container .cart-content-wrap .buy-Completion-popup > .popup-area button p{
     color:#ffffff;  font-family: 'Noto Sans KR', sans-serif; font-size: 1rem;
+
 }
 
 
