@@ -41,6 +41,7 @@ const cartListWrap = document.querySelector('.cart-list-wrap ul');
 const cartPriceTotal = document.querySelector('.total-right > span:last-of-type');
 const cartProductList = document.querySelectorAll('.cart-list-wrap ul li')
 // const cartProducCloseBtn = document.querySelectorAll('.li-remove-btn');
+const cartEmptyList = document.querySelector('.empty-list');
 
 productDrinkNavList = Array.prototype.slice.call(productDrinkNavList);
  //  cartProducCloseBtn = Array.prototype.slice.call(cartProducCloseBtn);
@@ -119,7 +120,7 @@ let realtotal = 0;
 let finalTotal = 0;
 let numberReset;
 // let totalPrice = productTotal * priceTotal;
-
+let isClick = false;
 
 
 for(let i = 0; i < productDrinkNavList.length; i++){
@@ -153,12 +154,17 @@ for(let i = 0; i < productDrinkNavList.length; i++){
             VitaminTwelevePer.innerText = ingredientTable[productIndex].VitaminTwelP;
 
             nutritionText.innerText = nutritionLink[productIndex].text;
+
+            if(isClick === false){
+                addDrinkNum.innerText = '1';
+                addPriceNum.innerText = Number(price);
+            }
         }
     })
 }
 
 
-let isClick = false;
+
 
 cartButton.addEventListener('click', ()=>{
     console.log('cartButton');
@@ -171,38 +177,46 @@ cartButton.addEventListener('click', ()=>{
     // console.log(cartListEl);
     // cartListWrap.appendChild(cartListEl);
 
-    cartListWrap.innerHTML +=
-    `<li class ="cartList">
-        <div class="cart-product-area">
-            <div class ="cart-product-image">
-                <img src="${productCartImage[productIndex]}" alt="">
-            </div>
-            <div class ="cart-product-name">
-                <p>${productCartName[productIndex]}</p>
-            </div>
-            <div class ="cart-product-num">
-                <p>${productTotal}</p>
-            </div>
-            <div class ="cart-product-price">
-                <p>${priceTotal}</p>
-            </div>
-        </div>
-        <div class ="li-remove-btn">
-            <button><span></span><span></span></button>
-        </div>
-    </li>`; 
+    // cartEmptyList.classList.remove('active');
+    
+    if(cartListWrap.children.length < 5){
 
-    // let totalPrice =  priceTotal;
-   let totalPrice = Number(priceTotal);
-   finalTotal = Number(finalTotal + totalPrice);
-    cartPriceTotal.innerHTML = `<span>${finalTotal}</span>`;
-        
+       cartEmptyList.style.display = 'none';
+       cartEmptyList.style.visibility = 'visible';
+       cartEmptyList.style.opacity = 0;
+
+        cartListWrap.innerHTML +=
+        `<li class ="cartList">
+            <div class="cart-product-area">
+                <div class ="cart-product-image">
+                    <img src="${productCartImage[productIndex]}" alt="">
+                </div>
+                <div class ="cart-product-name">
+                    <p>${productCartName[productIndex]}</p>
+                </div>
+                <div class ="cart-product-num">
+                    <p>${productTotal}</p>
+                </div>
+                <div class ="cart-product-price">
+                    <p>${priceTotal}</p>
+                </div>
+            </div>
+            <div class ="li-remove-btn">
+                <button><span></span><span></span></button>
+            </div>
+        </li>`; 
+
+        // let totalPrice =  priceTotal;
+    let totalPrice = Number(priceTotal);
+    finalTotal = Number(finalTotal + totalPrice);
+        cartPriceTotal.innerHTML = `<span>${finalTotal}</span>`;
+            
 
         let cartProducCloseBtn = document.querySelectorAll('.li-remove-btn');
-     
+
         for(let i = 0; i < cartProducCloseBtn.length; i++){
             cartProducCloseBtn[i].addEventListener('click',(e)=>{
-             let closeBtn = document.querySelectorAll('.li-remove-btn');
+                let closeBtn = document.querySelectorAll('.li-remove-btn');
                 closeBtn  = Array.prototype.slice.call(cartProducCloseBtn);
                 target = e.currentTarget;
                 let productIndex = closeBtn.indexOf(target);  
@@ -212,15 +226,21 @@ cartButton.addEventListener('click', ()=>{
                 cartListWrap.removeChild(targetEl);
                 finalTotal = Number(finalTotal - targetPrice);
                 cartPriceTotal.innerHTML = `<span>${finalTotal}</span>`;
-                
+
+                if(cartListWrap.children.length === 0){
+                    setTimeout(()=>{
+                        cartEmptyList.style.display = 'block';
+                        cartEmptyList.style.visibility = 'visible';
+                        cartEmptyList.style.opacity = 1;
+                    },500)
+                }
             })
         }
-        
         if(isClick === false){
             addDrinkNum.innerText = '1';
             addPriceNum.innerText = Number(price);
         }
-    
+    }
 })
 
 // 제품 숫자 추가 (증가)버튼
@@ -249,57 +269,6 @@ addPlusBtn.addEventListener('click', ()=>{
     priceTotal =  addPriceNum.textContent;
 
 })
-// cartProducCloseBtn.addEventListener('click', ()=>{
-//     console.log(cartProducCloseBtn.length);
-// })
-// ㄱㅏㅇ으ㅣ 따따라라해해본본거
-// 지지우기
-// function totalUpdatePrice(){
-//     const cart = [];
-//     // const product = {name, price, qty}
-//     function addItem(name, price){
-//         const item = {name:name, price:price, qty:1};
-//         cart.push(item);
-//         for(let i = 0; i < cart.length; i += 1){
-//             if(cart[i].name === name){
-//                 cart[i].qty += 1
-//                 return
-//             }
-//         }
-//     }
-//     function showItems(){
-//         let qty = 0;
-//         for(let i = 0; i < cart.length; i += 1){
-//             qty += cart[i].qty
-//         }
-//         // console.log(`you have ${qty} items in your cart`);
-//         // console.log(cart);
-//         // console.log(cart[0]);
-//         // console.log(cart.length);
-//         // console.log(`you have ${cart.length} items in your cart`);
-
-//         for(let i = 0; i < cart.length; i += 1){
-//             console.log(`- ${cart[i].name} $${cart[i].price} X ${cart[i].qty}`);
-//         }
-//         for(let i = 0; i < cart.length; i+= 1){
-//             total += cart[i].price * cart[i].qty
-//         }
-//         console.log(`total in cart: $${total}`);
-//     }
-//     // addItem('monsterenergy', 2200)
-//     // addItem('mangoloco', 2200)
-//     // addItem('pipelinepunch', 2200)
-//     // addItem('ultra', 2200)
-//     // addItem('ultracitra', 2200)
-//     // addItem('ultraparadise', 2200)
-//     // addItem('ultracitra', 2200)
-//     // addItem('ultraparadise', 2200)
-
-
-//     showItems();
-// }
-
-// totalUpdatePrice();
 
 buyButton.addEventListener('click', ()=>{
     console.log('buyButton');
@@ -348,32 +317,6 @@ productBuyBtn.addEventListener('click', ()=>{
 popupCloseBtn.addEventListener('click',()=>{
     buyCompletionPopup.classList.remove('active');
 })
-
-// addMinusBtn.addEventListener('click', ()=>{
-//     console.log('addMinusBtn');
-//     if(Number(addDrinkNum.textContent > 1)){
-//         let minus = Number(addDrinkNum.innerText);
-//         let PriceResult = Number(addPriceNum.innerText);
-//        minus--;
-//        addDrinkNum.textContent = minus;
-//        addPriceNum.textContent = PriceResult  - price;
-//        productTotal = addDrinkNum.textContent;
-//        priceTotal =  addPriceNum.textContent;
-
-//     }
-// })
-
-// addPlusBtn.addEventListener('click', ()=>{
-//     console.log('addPlusBtn');
-//     let plus = Number(addDrinkNum.innerText);
-//     let PriceResult  = Number(addPriceNum.innerText);
-//     plus++;
-//     addDrinkNum.textContent = plus;
-//     addPriceNum.textContent = PriceResult + price;
-//     productTotal = addDrinkNum.textContent;
-//     priceTotal =  addPriceNum.textContent;
-
-// })
 
 
 ingredientBtn.addEventListener('click', ()=>{
