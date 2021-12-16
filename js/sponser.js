@@ -22,6 +22,8 @@ const gamerName = document.querySelector('.gamer-container > .support-content > 
 const gamerInfo = document.querySelector('.gamer-container > .support-content > .support-text > .support-info > p');
 const gamerImage = document.querySelector('.gamer-container > .support-content > .support-image > img');
 let gamerSns = document.querySelectorAll('.gamer-container > .support-content > .support-text > .support-sns > .sns-imgs > ul > li > a');
+const gamerSnsUl = document.querySelector('.gamer-container > .support-content > .support-text > .support-sns > .sns-imgs > ul');
+const gamerSnsLi = document.querySelector('.gamer-container > .support-content > .support-text > .support-sns > .sns-imgs > ul > li:last-of-type > a > img');
 
 
 
@@ -87,31 +89,31 @@ let musicianInfoLInk =[
 
 let gamerSnsLInk =[
     {
-        link:['https://www.facebook.com/ItsAyanis/','https://twitter.com/itsayanis','https://www.youtube.com/channel/UCub1pJJMovgpKBGrjJiIVNA','https://www.instagram.com/ayanis/']
+        link:['https://www.facebook.com/sc0utPUBGMobile/','https://twitter.com/scouttanmay','https://www.youtube.com/c/sc0utop','https://www.instagram.com/scoutop/','https://loco.gg/streamers/sc0utop']
     },
     {
-        link:['https://www.facebook.com/thebloodybeetroots','https://twitter.com/bloodybeetroots','https://www.youtube.com/channel/UCVpnCPbd_jmm2c4WGg9qzqg','https://www.instagram.com/thebloodybeetrootsofficial/']
+        link:['https://www.facebook.com/theAllianceGG','https://twitter.com/theAllianceGG','https://www.youtube.com/user/thealliancegg','https://www.instagram.com/thealliancegg/', 'https://www.twitch.tv/team/alliance']
     },
     {
-        link:['https://www.facebook.com/fivefingerdeathpunch/','https://twitter.com/FFDP','https://www.youtube.com/channel/UCQjw3b3Ay5zMmEHUAxL93Rw','https://www.instagram.com/ayanis/']
+        link:['https://www.facebook.com/EvilGeniuses','https://twitter.com/evilgeniuses','https://www.youtube.com/channel/UCQCuF3-MPYBSu-l8Mf-PXsA','https://www.instagram.com/evilgeniuses/','https://www.twitch.tv/evilgeniuses']
     },
     {
-        link:['https://www.facebook.com/madballNYC/','https://twitter.com/madballnyc','https://www.youtube.com/channel/UCyzNMY8kAe2ujNisB4_GNOg','https://www.instagram.com/madballnyc/']
+        link:['https://www.facebook.com/fnatic','https://twitter.com/madballnyc','https://www.youtube.com/channel/UCxo56gzJQ_fhb6svPqTSewg','https://www.instagram.com/fnatic.lol/', 'https://www.twitch.tv/team/fnatic']
     },
     {
-        link:['https://www.facebook.com/triberizenet/','https://twitter.com/RIZE_official','https://www.youtube.com/user/RizeVEVO/videos','https://instagram.com/rize_official/']
+        link:['https://www.facebook.com/teamliquid','https://twitter.com/teamliquid','https://www.youtube.com/c/TeamLiquid','https://instagram.com/teamliquid/', 'https://www.twitch.tv/team/teamliquid']
     },
     {
-        link:['https://www.facebook.com/suicidaltendencies/','https://twitter.com/officialSTIG','https://www.youtube.com/channel/UCZdqIc7pGX_STMKbvFr01fQ','https://instagram.com/suicidaltendencies?utm_medium=copy_link']
+        link:['https://www.facebook.com/NatusVincere','https://twitter.com/NatusVincere','https://www.youtube.com/user/natusvinceretv','https://www.instagram.com/natus_vincere_official/', 'https://www.twitch.tv/team/navi']
     },
     {
-        link:['https://www.facebook.com/suicidaltendencies/','https://twitter.com/officialSTIG','https://www.youtube.com/channel/UCZdqIc7pGX_STMKbvFr01fQ','https://instagram.com/suicidaltendencies?utm_medium=copy_link']
+        link:['https://www.facebook.com/iijeriichoii','https://twitter.com/JERICHO','https://www.youtube.com/channel/UCZdqIc7pGX_STMKbvFr01fQ','https://www.instagram.com/iijeriichoii/', 'https://www.twitch.tv/jericho']
     },
     {
-        link:['https://www.facebook.com/suicidaltendencies/','https://twitter.com/officialSTIG','https://www.youtube.com/channel/UCZdqIc7pGX_STMKbvFr01fQ','https://instagram.com/suicidaltendencies?utm_medium=copy_link']
+        link:['https://www.facebook.com/lolrenee','https://twitter.com/renee','https://www.youtube.com/user/lolrenaynay','https://www.instagram.com/renee/', 'https://www.twitch.tv/renee']
     },
     {
-        link:['https://www.facebook.com/suicidaltendencies/','https://twitter.com/officialSTIG','https://www.youtube.com/channel/UCZdqIc7pGX_STMKbvFr01fQ','https://instagram.com/suicidaltendencies?utm_medium=copy_link']
+        link:['https://www.facebook.com/wizzite/','https://twitter.com/wizzite/','https://www.youtube.com/user/SyKoClanHD','https://www.instagram.com/wizzite/', 'https://www.twitch.tv/wizzite']
     }
 ]
 
@@ -164,6 +166,18 @@ let gamerInfoLink = [
 
 ]
 
+let gamerSnsImg = [
+    {img:'img/musician/sns/sns-loco.png'},
+    {img:'img/musician/sns/sns-twich.png'},
+    {img:'img/musician/sns/sns-twich.png'},
+    {img:'img/musician/sns/sns-twich.png'},
+    {img:'img/musician/sns/sns-twich.png'},
+    {img:'img/musician/sns/sns-twich.png'},
+    {img:'img/musician/sns/sns-twich.png'},
+    {img:'img/musician/sns/sns-twich.png'},
+    {img:'img/musician/sns/sns-twich.png'}
+];
+
 let musicIndex = 0;
 let musicianInfoLInkIndex = 0;
 let musicianLength = musicianInfoLInk.length;
@@ -171,6 +185,7 @@ let musicianLength = musicianInfoLInk.length;
 let gamerIndex = 0;
 let gamerInfoLInkIndex = 0;
 let gamerLength = gamerInfoLink.length;
+
 
 for(let i = 0; i < sponserNavList.length; i++){
     sponserNavList[i].addEventListener('click',()=>{
@@ -236,9 +251,9 @@ for(let i = 0; i < gamerist.length; i++){
             gamerName.innerText = gamerInfoLink[gamerIndex].name;
             gamerInfo.innerText = gamerInfoLink[gamerIndex].info;
             gamerImage.setAttribute('src', gamerInfoLink[gamerIndex].img);
+            gamerSnsLi.setAttribute('src', gamerSnsImg[gamerIndex].img);
             gamerSnsLink();
         }
-
     }) 
 }
 gamerContentBtn.addEventListener('click',()=>{
