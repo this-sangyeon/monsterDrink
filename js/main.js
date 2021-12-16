@@ -53,5 +53,7 @@ for(let i = 0; i < monsterNavList.length; i++){
             section[i].classList.remove('active');
         }
         section[i].classList.add('active');
+        musicianContainer.classList.remove('active');
+        gamerContainer.classList.remove('active');
     })
 }

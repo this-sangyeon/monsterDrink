@@ -193,6 +193,8 @@ for(let i = 0; i < sponserNavList.length; i++){
             sponserArea[i].classList.remove('active');
         }
         sponserArea[i].classList.add('active');
+        musicianContainer.classList.remove('active');
+        gamerContainer.classList.remove('active');
     })
 }
 for(let i = 0; i < musicianList.length; i++){

@@ -257,5 +257,5 @@ section:nth-of-type(3){
   width: 15%; list-style: none;
  }
  .support-container .support-content .support-text .support-sns .sns-imgs ul li img{
-    height: 45px; margin-right: 5%; cursor: pointer;
+    height: 35px; margin-right: 5%; cursor: pointer;
 }
