@@ -199,12 +199,12 @@ section.active {
 .top-btn-area .top-btn{
     width: 10%; height: 50%; position: absolute;
     top: 50%; right: 5%; transform:translateY(-50%) ;
-    font-family: 'Montserrat', sans-serif; cursor: pointer;
-    font-weight: 500;font-size: 2rem; 
+    font-family: 'Orbitron', sans-serif;  cursor: pointer;
+    font-weight: 500;font-size: 2rem; text-transform: uppercase;
 }
 .top-btn-area .top-btn #back-to-top{ 
     position: absolute;color:#ffffff; text-decoration: none;
-   top: 50%; left: 50%; transform:translate(-50%, -50%) ;
+   top: 50%; left: 50%; transform:translate(-50%, -50%) ;letter-spacing: 2px;
 }
 
 
