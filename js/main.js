@@ -6,7 +6,10 @@ const aboutContentText = document.querySelector('.about-content-text');
 const aboutContentImages = document.querySelectorAll('.monster-about-images > img');
 const aboutContentSvgs  = document.querySelectorAll('.svg-stars > svg');
 
-
+const btt = document.getElementById('back-to-top');
+let scrollPos;
+let docHeight; 
+docHeight = Math.max(mainContainer.scrollHeight,mainContainer.offsetHeight);
 
 mainContainer.addEventListener('scroll',()=>{
     value = mainContainer.scrollTop;
@@ -66,3 +69,21 @@ for(let i = 0; i < monsterNavList.length; i++){
         gamerContainer.classList.remove('active');
     })
 }
+
+function scrollToTop(){
+    var scrollInterval = setInterval(()=>{
+        scrollPos = mainContainer.scrollTop;
+        if(scrollPos != 0){
+            mainContainer.scrollBy(0, -55);
+        }else{
+            clearInterval(scrollInterval);
+        }
+    }, 15);
+}
+
+btt.addEventListener('click', (e)=>{
+    e.preventDefault();
+    scrollToTop();
+});
+
+
