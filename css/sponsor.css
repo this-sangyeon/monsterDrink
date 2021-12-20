@@ -3,36 +3,36 @@ section:nth-of-type(3){
     background: black;  pointer-events: none;
 }
 
-.sponser-container{
+.sponsor-container{
     width: 100%; height: 100%; position: relative;
 }
-.sponser-container .sponser-content{
+.sponsor-container .sponsor-content{
     width: 100%; height: 100%; display: flex; position: relative;
 }
-.sponser-container .sponser-content .sponser-nav{
+.sponsor-container .sponsor-content .sponsor-nav{
     width: 30%; height: 100%; display: flex; position: absolute;
    
 }
-.sponser-container .sponser-content .sponser-nav .nav-area{
+.sponsor-container .sponsor-content .sponsor-nav .nav-area{
     width: 50%; height: 70%;  position: absolute;
     display: flex; flex-direction: column; top:40%; right: 10%;transform: translateY(-40%);
 }
 
-.sponser-container .sponser-content .sponser-nav .nav-area h1{
+.sponsor-container .sponsor-content .sponsor-nav .nav-area h1{
     font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 3rem; text-transform: uppercase;
 }
-.sponser-container .sponser-content .sponser-nav .nav-area nav{
+.sponsor-container .sponsor-content .sponsor-nav .nav-area nav{
      margin-top:10%;
 }
-.sponser-container .sponser-content .sponser-nav .nav-area nav li{
+.sponsor-container .sponsor-content .sponsor-nav .nav-area nav li{
     font-family: 'Orbitron', sans-serif; font-weight: 100; font-size: 1.5rem; margin-bottom:7%;text-transform: uppercase; letter-spacing: 1px;
     cursor: pointer;pointer-events: auto;
 }
-.sponser-container .sponser-content .sponser-area{
+.sponsor-container .sponsor-content .sponsor-area{
     width: 70%;height: 100%;position: absolute;opacity: 0; visibility: hidden;
     right: 0; background-color: black;
 }
-.sponser-container .sponser-content .sponser-area.active{
+.sponsor-container .sponsor-content .sponsor-area.active{
     width: 70%;height: 100%;position: absolute;
     right: 0; opacity: 1; visibility: visible; 
     z-index: 1000;pointer-events: auto;
@@ -42,7 +42,7 @@ section:nth-of-type(3){
     right: 0; 
 } */
 
-.sponser-container .sponser-content .sponser-area .sponser-kind{
+.sponsor-container .sponsor-content .sponsor-area .sponsor-kind{
     width: 100%;height: 100%; position: relative;  left:50%; transform: translateX(-50%);
     display: flex; flex-direction: column; margin-top:10%;
 }
@@ -50,101 +50,101 @@ section:nth-of-type(3){
     width: 100%;height: 100%; position: relative;  left:50%; transform: translateX(-50%);
     display: flex; flex-direction: column; margin-top:10%; opacity: 1; visibility: visible;
 } */
-.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-title{
+.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-title{
     width: 100%;  margin-left:3%;
     display: flex; flex-direction: row; position: relative; z-index: 600; align-items: center;
 }
-.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-title h2{
+.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-title h2{
     font-family: 'Orbitron', sans-serif; font-size: 1.5rem; margin-right:3%; font-weight: 400;
 }
-.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-title p{
+.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-title p{
     font-family: 'Noto Sans KR', sans-serif; font-size: 1rem; font-weight: 100;
 }
-.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list.music{
+.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.music{
     width: 100%;height: 100%;   
     position: relative; overflow-y: scroll;top:3%;
 }
-.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list.music ul{
+.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.music ul{
     width: 100%; height: 800px; position: relative;   
     display: flex; flex-wrap: wrap; justify-content: center;  flex-direction: row; 
 }
-.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list.music li{
+.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.music li{
     width:320px;  height: 320px;  padding: 0; list-style: none;
     margin-right:1%;margin-left:1%; border: solid 1px #95ff00; background: none; cursor: pointer;
 }
 
- .sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list.music li figure{
+.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.music li figure{
     width:100%;height: 100%; position: relative; display: flex; justify-content: center;align-items: center; justify-items: center;
 }
-.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list.music li figure img{
+.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.music li figure img{
     width: 90%; object-fit: cover; transition: 0.3s ease-in-out;
     filter: grayscale(100%) blur(2px); 
 }
 
-.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list.music li:hover figure img{
+.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.music li:hover figure img{
     width: 100%; object-fit: cover; transition: 0.3s ease-in-out;
     filter: grayscale(0) blur(0); 
 }
 
-.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list.music li figure figcaption{
+.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.music li figure figcaption{
      position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); width: 70%;
      font-family: 'Orbitron', sans-serif; font-size: 1.5rem; text-align: center; line-height: 2rem;
      text-transform: uppercase;letter-spacing: 1px; visibility:visible; opacity: 1; transition: 0.3s ease-in-out;
 }
-.sponser-container .sponser-content .sponser-area .sponser-kind  .sponser-list.music li:hover figure figcaption{
+.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.music li:hover figure figcaption{
     visibility:hidden; opacity: 0; transition: 0.3s ease-in-out;
 }
 
 
-.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list.game{
+.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.game{
     width: 100%;height: 100%;   
     position: relative; overflow-y: scroll;top:3%;
 } 
-.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list.game ul{
+.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.game ul{
     width: 100%; height: 1400px; position: relative;   
     display: flex; flex-wrap: wrap; justify-content: center;  flex-direction: row; 
 }
-.sponser-container .sponser-content .sponser-area .sponser-kind .game li{
+.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .game li{
     width:320px;  height: 320px;  padding: 0; list-style: none;
     margin-right:1%;margin-left:1%; border: solid 1px #95ff00; background: none; cursor: pointer;
 }
- .sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list.game li:nth-of-type(7){
+.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.game li:nth-of-type(7){
     margin-bottom: 100px; 
 }
-.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list.game li:nth-of-type(8){
+.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.game li:nth-of-type(8){
     margin-bottom: 100px; 
  }
- .sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list.game li:nth-of-type(9){
+.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.game li:nth-of-type(9){
     margin-bottom: 200px; 
  }
- .sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list.game li figure{
+ .sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.game li figure{
     width:100%;height: 100%; position: relative; display: flex; justify-content: center;align-items: center; justify-items: center;
 }
 
- .sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list.game li figure img{
+.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.game li figure img{
     width: 80%; object-fit: cover; transition: 0.3s ease-in-out;
     filter: grayscale(100%) blur(2px); 
 }
 
-.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list.game li:hover figure img{
+.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.game li:hover figure img{
     width: 90%; object-fit: cover; transition: 0.3s ease-in-out;
     filter: grayscale(0) blur(0); 
 }
-.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list.game li:first-of-type figure img{
+.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.game li:first-of-type figure img{
     width: 90%; object-fit: cover; transition: 0.3s ease-in-out;
     filter: grayscale(100%) blur(2px); 
 }
-.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list.game li:first-of-type:hover figure img{
+.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.game li:first-of-type:hover figure img{
     width: 100%; object-fit: cover; transition: 0.3s ease-in-out;
     filter: grayscale(0) blur(0); 
 }
 
-.sponser-container .sponser-content .sponser-area .sponser-kind .sponser-list.game li figure figcaption{
+.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.game li figure figcaption{
     position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); width: 70%;
     font-family: 'Orbitron', sans-serif; font-size: 1.5rem; text-align: center; line-height: 2rem;
     text-transform: uppercase;letter-spacing: 1px; visibility:visible; opacity: 1; transition: 0.3s ease-in-out;
 }
-.sponser-container .sponser-content .sponser-area .sponser-kind  .sponser-list.game li:hover figure figcaption{
+.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.game li:hover figure figcaption{
    visibility:hidden; opacity: 0; transition: 0.3s ease-in-out;
 }
 

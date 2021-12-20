@@ -1,8 +1,6 @@
-const sponserNavList = document.querySelectorAll('.sponser-content>.sponser-nav > .nav-area > nav > ul > li');
-const sponserArea = document.querySelectorAll('.sponser-area');
-
-
-let musicianList = document.querySelectorAll('.sponser-area > .sponser-kind  > .music > ul > li ');
+const sponsorNavList = document.querySelectorAll('.sponsor-content > .sponsor-nav > .nav-area > nav > ul > li');
+const sponsorArea = document.querySelectorAll('.sponsor-area');
+let musicianList = document.querySelectorAll('.sponsor-area > .sponsor-kind  > .music > ul > li ');
 const musicianContainer = document.querySelector('.musician-container');
 const musiciancontentBtn = document.querySelector('.musician-container > .support-content > .support-text > .support-btn-area');
 const musicianPrevBtn = document.querySelector('.musician-container > .support-content > .support-text > .support-title > .support-btn > button.prev');
@@ -13,7 +11,7 @@ const musicianImage = document.querySelector('.musician-container > .support-con
 let musicianSns = document.querySelectorAll('.musician-container > .support-content > .support-text > .support-sns > .sns-imgs > ul > li > a');
 
 
-let gamerist = document.querySelectorAll('.sponser-area > .sponser-kind  > .game > ul > li ');
+let gamerist = document.querySelectorAll('.sponsor-area > .sponsor-kind  > .game > ul > li ');
 const gamerContainer = document.querySelector('.gamer-container');
 const gamerContentBtn = document.querySelector('.gamer-container > .support-content > .support-text > .support-btn-area');
 const gamerPrevBtn = document.querySelector('.gamer-container > .support-content > .support-text > .support-title > .support-btn > button.prev');
@@ -187,12 +185,12 @@ let gamerInfoLInkIndex = 0;
 let gamerLength = gamerInfoLink.length;
 
 
-for(let i = 0; i < sponserNavList.length; i++){
-    sponserNavList[i].addEventListener('click',()=>{
-        for(let i = 0; i < sponserArea.length; i++){
-            sponserArea[i].classList.remove('active');
+for(let i = 0; i < sponsorNavList.length; i++){
+    sponsorNavList[i].addEventListener('click',()=>{
+        for(let i = 0; i < sponsorArea.length; i++){
+            sponsorArea[i].classList.remove('active');
         }
-        sponserArea[i].classList.add('active');
+        sponsorArea[i].classList.add('active');
         musicianContainer.classList.remove('active');
         gamerContainer.classList.remove('active');
     })
