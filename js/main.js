@@ -2,10 +2,12 @@ const monsterNavList = document.querySelectorAll('.monster-nav > ul > li > a');
 let section = document.querySelectorAll('section');
 const mainContainer = document.querySelector('.main-container');
 const monsterMainImg = document.querySelector('.monster-main-images > img');
+const monsterScrollIntend = document.querySelector('.monster-main-area > .scroll-intend');
 const aboutContentText = document.querySelector('.about-content-text');
 const aboutContentImages = document.querySelectorAll('.monster-about-images > img');
 const aboutContentSvgs  = document.querySelectorAll('.svg-stars > svg');
 const productContent = document.querySelector('.product-container > .product-content >.product-text');
+
 
 const btt = document.getElementById('back-to-top');
 let scrollPos;
@@ -23,6 +25,16 @@ mainContainer.addEventListener('scroll',()=>{
         aboutContentSvgs[1].classList.remove('active');
         aboutContentSvgs[2].classList.remove('active');
         monsterNavList[0].classList.remove('active');
+        
+    }
+    if(value >= 200 && value < 300){
+        setTimeout(()=>{
+            monsterScrollIntend.classList.add('active');
+        }, 300)
+      
+    }
+    if(value >= 300 && value < 700){
+        monsterMainImg.classList.remove('active');
     }
     if(value >= 700 && value < 800){
         monsterMainImg.classList.remove('active');
@@ -33,6 +45,7 @@ mainContainer.addEventListener('scroll',()=>{
         aboutContentSvgs[1].classList.remove('active');
         aboutContentSvgs[2].classList.remove('active');
         monsterNavList[0].classList.add('active');
+        monsterScrollIntend.classList.remove('active');
     }
     if(value >= 800 && value < 1000){
         aboutContentText.classList.add('active');

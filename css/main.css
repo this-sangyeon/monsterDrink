@@ -95,6 +95,32 @@ section.active {
    transition: 0.3s ease-in; transform: translate(-10%, -50%) rotate(10deg);
 }
 
+.main-container .main-scroll .monster-main-area .scroll-intend{
+    position: absolute; bottom:5%; right: 5%;
+    visibility: hidden; opacity: 0; transition: 0.3s ease-in;
+}
+.main-container .main-scroll .monster-main-area .scroll-intend.active{
+    position: absolute; bottom:10%; right: 5%;
+    visibility: visible; opacity: 1; transition: 0.3s ease-in;
+}
+.main-container .main-scroll .monster-main-area .scroll-intend > p{
+    font-family: 'Orbitron', sans-serif;  cursor: pointer;
+    font-weight: 500;font-size: 1.5rem; text-transform: uppercase;
+    color:#00FF89; letter-spacing: 2px;
+    animation: text 1s infinite linear;
+}
+
+@keyframes text{
+    0% {
+        opacity: 0; 
+    }
+    50% {
+        opacity: 1; 
+    }
+    100% {
+        opacity: 0; 
+    }
+}
  .monster-about-area{
     position: relative;
    width: 100%; height: 100%;
@@ -206,6 +232,7 @@ section.active {
     position: absolute;color:#ffffff; text-decoration: none;
    top: 50%; left: 50%; transform:translate(-50%, -50%) ;letter-spacing: 2px;
 }
+
 
 
 
