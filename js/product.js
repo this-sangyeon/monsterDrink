@@ -1,4 +1,5 @@
 let productDrinkNavList = document.querySelectorAll('.product-drink-nav > ul > li')
+
 const productName = document.querySelector('.product-text > .text-wrap > h1');
 const productFlavor = document.querySelector('.product-text > .text-wrap > p:nth-of-type(2) > span');
 const productInfoText = document.querySelector('.product-text > .text-wrap > p:nth-of-type(3)');
@@ -120,6 +121,9 @@ let finalTotal = 0;
 let numberReset;
 // let totalPrice = productTotal * priceTotal;
 let isClick = false;
+
+
+
 
 
 for(let i = 0; i < productDrinkNavList.length; i++){
