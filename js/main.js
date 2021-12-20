@@ -5,6 +5,7 @@ const monsterMainImg = document.querySelector('.monster-main-images > img');
 const aboutContentText = document.querySelector('.about-content-text');
 const aboutContentImages = document.querySelectorAll('.monster-about-images > img');
 const aboutContentSvgs  = document.querySelectorAll('.svg-stars > svg');
+const productContent = document.querySelector('.product-container > .product-content >.product-text');
 
 const btt = document.getElementById('back-to-top');
 let scrollPos;
@@ -56,6 +57,9 @@ for(let i = 0; i < monsterNavList.length; i++){
     monsterNavList[i].addEventListener('click',(e)=>{
         e.preventDefault();
         console.log(e.target);
+        let target = e.currentTarget;
+        // monsterNavIndex = monsterNavList.indexOf(target);
+        console.log('target', target);
         for(let i = 0; i < section.length; i++){
             section[i].classList.remove('active');
 
@@ -67,8 +71,24 @@ for(let i = 0; i < monsterNavList.length; i++){
         section[i].classList.add('active');
         musicianContainer.classList.remove('active');
         gamerContainer.classList.remove('active');
+
+
+        
     })
 }
+
+monsterNavList[1].addEventListener('click',()=>{
+    console.log('click');
+    setTimeout(()=>{
+        productContent.classList.add('active');
+    },55);
+})
+monsterNavList[2].addEventListener('click',()=>{
+    console.log('click');
+    setTimeout(()=>{
+        productContent.classList.remove('active');
+    },55);
+})
 
 function scrollToTop(){
     var scrollInterval = setInterval(()=>{
