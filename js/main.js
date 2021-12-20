@@ -77,6 +77,7 @@ for(let i = 0; i < monsterNavList.length; i++){
     })
 }
 
+
 monsterNavList[1].addEventListener('click',()=>{
     console.log('click');
     setTimeout(()=>{
