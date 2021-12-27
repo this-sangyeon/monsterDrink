@@ -24,7 +24,7 @@
         /* display: inline-block; */
     }
     .product-container .product-content .product-text .text-wrap h1{
-        width: 80%;font-size: 3rem;
+        width: 90%;font-size: 3rem;
     }
     .product-container .product-content .product-text .text-wrap p:first-of-type{
        display: none;
@@ -39,14 +39,24 @@
         width: 100%; height: 10%;  position: relative; top:5%;
     }
     .product-container .product-content .product-drink-nav ul{
-        width: 80%;  position: absolute;top:70%; left: 50%;transform: translate(-50%, -70%);
+        width: 80%;  position: absolute;top:70%; left: 50%;transform: translate(-50%, -70%);height: 100%;
         display: flex; flex-direction: row; align-items: center; justify-content: center; justify-items: center;
     }
     .product-container .product-content .product-drink-nav ul li{
-        width: 100%;height: 100%; display: flex; list-style: none; margin-bottom:3%;cursor: pointer;
+        width: 100%;height: 100%; display: flex; list-style: none;cursor: pointer; flex-direction: column;
+    }
+    .product-container .product-content .product-drink-nav ul li span{
+        width: 70px; height: 70px; border-radius: 50%;  position: absolute;
+        visibility: hidden; opacity: 0; transition: 0.3s ease-in; top:5%;
+     }
+     .product-container .product-content .product-drink-nav ul li p{
+        margin-top:10% ; font-size: 1rem; height: 30%;text-align: center;
+    }
+    .product-container .product-content .product-drink-nav ul li:hover p{
+        margin-top:10% ; font-size: 1rem; text-align: center; line-height: 1rem;
     }
     .product-container .product-content .product-drink-nav ul .drink-left{
-        flex-direction: column; align-items: center; justify-content:flex-start;  
+        flex-direction: column;
     }
     .product-container .product-content .product-drink-nav ul .drink-left > p{
        margin-right: 0px;
@@ -55,7 +65,7 @@
         transform: rotate(0deg);
     }
     .product-container .product-content .product-drink-nav ul .drink-right{
-        flex-direction: column; align-items: center; justify-content:flex-start;  
+        flex-direction: column; 
     }
     .product-container .product-content .product-drink-nav ul .drink-right img{
         transform: rotate(0deg);
@@ -75,9 +85,11 @@
       display: none;
      }
      .product-container .product-content .product-images .image-area img:nth-of-type(3){
-         z-index: 500;height: auto;width: 10%; top:5%; right: 20%;transform: translate(-50%, -50%) rotate(-30deg);
+         z-index: 500;height: auto;width: 30%; right:-5%; top: 60%;transform: translate(0%, 0%) rotate(-30deg);
      }
-
+     .product-container .product-content .product-images .image-area .monster-sticker{
+       display: none;
+    }
      
      .product-container .product-content .product-text .text-wrap .calculation-area .cart-area{
         width: 100%; height: 30%; display: flex; justify-content: space-between; margin-top:3%;
@@ -92,5 +104,67 @@
     }
     .product-container .product-content .product-text .text-wrap .calculation-area .product-num .num-area .drink-num p{
         position: absolute; top:50%; left: 50%;transform: translate(-50%, -50%); display: block; 
+    }
+
+    /* sponsor */
+    .sponsor-container .sponsor-content .sponsor-nav .nav-area h1{
+        font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 2rem; text-transform: uppercase;
+    }
+    .sponsor-container .sponsor-content .sponsor-nav .nav-area nav li{
+        font-family: 'Orbitron', sans-serif; font-weight: 100; font-size: 1.5rem; margin-bottom:10%;text-transform: uppercase; letter-spacing: 1px;
+        cursor: pointer;pointer-events: auto;
+    }
+    .sponsor-container .sponsor-content .sponsor-area .sponsor-kind{
+        width: 100%;height: 100%; position: relative;  left:50%; transform: translateX(-50%);
+        display: flex; flex-direction: column; margin-top:23%;
+    }
+    .sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.music ul{
+        width: 100%; height: 1080px; position: relative;   
+        display: flex; flex-wrap: wrap; justify-content: center;  flex-direction: row; 
+    }
+    .sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.game ul{
+        width: 100%; height: 2000px; position: relative;   
+        display: flex; flex-wrap: wrap; justify-content: center;  flex-direction: row; 
+    }
+    .sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.game li:nth-of-type(9){
+        margin-top:-100px; 
+    }
+
+    .support-content{
+        width: 100%; height: 100%; position: relative;
+        display: flex;   flex-direction: column;
+    } 
+    .support-container .support-content .support-image{
+        width:100%; height: 30%; 
+       position: relative;
+    } 
+    .support-container .support-content .support-image img{
+        position: absolute; top: 50%; left: 50%; transform: translateX(-55% );
+        width: 70%; height: auto;z-index: 700;
+     }
+     .support-container .support-content .support-image span {
+        border: solid 1px #95ff00;
+        position: absolute; position: absolute; top: 55%; left: 50%; transform: translateX(-50% );
+        width: 500px; height: 500px;
+    }
+     .support-container .support-content .support-text{
+        width: 80%; height: 50%; margin-left: 2%;top:15%;
+         position: relative; display: flex; flex-direction: column;
+     }
+     .support-container .support-content .support-text .support-btn-area{
+        width: 50px; height: 50px; position: absolute;
+        top:-70%; right:0%; cursor: pointer;
+    } 
+    .product-container .product-content .product-text .text-wrap .calculation-area .drink-info{
+        width: 100%; height: 30%; display:flex;margin-top:3%; z-index: 1000; position: relative;
+     }
+     .product-container .product-content .product-text .text-wrap .calculation-area .drink-info .nutrition-info{
+      width: 50%; height: 100%; color:white; 
+     }
+     .product-container .product-content .product-text .text-wrap .calculation-area .drink-info .nutrition-info p{
+        letter-spacing: 1px; color:white; display: block; 
+     }
+     .ingredient-popup > .ingredient-popup-area, .nutrition-popup > .nutrition-popup-area{
+        width: 60%;
     }
 }
