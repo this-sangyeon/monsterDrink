@@ -6,144 +6,131 @@ section:nth-of-type(3){
 .sponsor-container{
     width: 100%; height: 100%; position: relative;
 }
-.sponsor-container .sponsor-content{
+.sponsor-content{
     width: 100%; height: 100%; display: flex; position: relative;
 }
-.sponsor-container .sponsor-content .sponsor-nav{
+.sponsor-nav{
     width: 30%; height: 100%; display: flex; position: absolute;
-   
 }
-.sponsor-container .sponsor-content .sponsor-nav .nav-area{
+.sponsor-nav .nav-area{
     width: 50%; height: 70%;  position: absolute;
     display: flex; flex-direction: column; top:40%; right: 10%;transform: translateY(-40%);
 }
-
-.sponsor-container .sponsor-content .sponsor-nav .nav-area h1{
+.sponsor-nav .nav-area h1{
     font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 3rem; text-transform: uppercase;
 }
-.sponsor-container .sponsor-content .sponsor-nav .nav-area nav{
+.sponsor-nav .nav-area nav{
      margin-top:10%;
 }
-.sponsor-container .sponsor-content .sponsor-nav .nav-area nav li{
+.sponsor-nav .nav-area nav li{
     font-family: 'Orbitron', sans-serif; font-weight: 100; font-size: 1.5rem; margin-bottom:7%;text-transform: uppercase; letter-spacing: 1px;
     cursor: pointer;pointer-events: auto;
 }
-.sponsor-container .sponsor-content .sponsor-area{
+.sponsor-area{
     width: 70%;height: 100%;position: absolute;opacity: 0; visibility: hidden;
     right: 0; background-color: black;
 }
-.sponsor-container .sponsor-content .sponsor-area.active{
+.sponsor-area.active{
     width: 70%;height: 100%;position: absolute;
     right: 0; opacity: 1; visibility: visible; 
     z-index: 1000;pointer-events: auto;
 }
 
 
-.sponsor-container .sponsor-content .sponsor-area .sponsor-kind{
+.sponsor-kind{
     width: 100%;height: 100%; position: relative;  left:50%; transform: translateX(-50%);
     display: flex; flex-direction: column; margin-top:10%;
 }
 
-.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-title{
+.sponsor-title{
     width: 100%;  margin-left:3%;
     display: flex; flex-direction: row; position: relative; z-index: 600; align-items: center;
 }
-.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-title h2{
+.sponsor-title h2{
     font-family: 'Orbitron', sans-serif; font-size: 1.5rem; margin-right:3%; font-weight: 400;
 }
-.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-title p{
+.sponsor-title p{
     font-family: 'Noto Sans KR', sans-serif; font-size: 1rem; font-weight: 100;
 }
-.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.music{
+.sponsor-list.music{
     width: 100%;height: 100%;   
     position: relative; overflow-y: scroll;top:3%;
 }
-.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.music ul{
+.sponsor-list.music ul{
     width: 100%; height: 800px; position: relative;   
     display: flex; flex-wrap: wrap; justify-content: center;  flex-direction: row; 
 }
-.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.music li{
+.sponsor-list.music li{
     width:320px;  height: 320px;  padding: 0; list-style: none;
     margin-right:1%;margin-left:1%; border: solid 1px #95ff00; background: none; cursor: pointer;
 }
-
-.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.music li figure{
+.sponsor-list.music li figure{
     width:100%;height: 100%; position: relative; display: flex; justify-content: center;align-items: center; justify-items: center;
 }
-.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.music li figure img{
+.sponsor-list.music li figure img{
     width: 90%; object-fit: cover; transition: 0.3s ease-in-out;
     filter: grayscale(100%) blur(2px); 
 }
-
-.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.music li:hover figure img{
+.sponsor-list.music li:hover figure img{
     width: 100%; object-fit: cover; transition: 0.3s ease-in-out;
     filter: grayscale(0) blur(0); 
 }
-
-.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.music li figure figcaption{
+.sponsor-list.music li figure figcaption{
      position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); width: 70%;
      font-family: 'Orbitron', sans-serif; font-size: 1.5rem; text-align: center; line-height: 2rem;
      text-transform: uppercase;letter-spacing: 1px; visibility:visible; opacity: 1; transition: 0.3s ease-in-out;
 }
-.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.music li:hover figure figcaption{
+.sponsor-list.music li:hover figure figcaption{
     visibility:hidden; opacity: 0; transition: 0.3s ease-in-out;
 }
-
-
-.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.game{
+.sponsor-list.game{
     width: 100%;height: 100%;   
     position: relative; overflow-y: scroll;top:3%;
 } 
-.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.game ul{
+.sponsor-list.game ul{
     width: 100%; height: 1400px; position: relative;   
     display: flex; flex-wrap: wrap; justify-content: center;  flex-direction: row; 
 }
-.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .game li{
+.sponsor-kind .game li{
     width:320px;  height: 320px;  padding: 0; list-style: none;
     margin-right:1%;margin-left:1%; border: solid 1px #95ff00; background: none; cursor: pointer;
 }
-.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.game li:nth-of-type(7){
+.sponsor-list.game li:nth-of-type(7){
     margin-bottom: 100px; 
 }
-.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.game li:nth-of-type(8){
+.sponsor-list.game li:nth-of-type(8){
     margin-bottom: 100px; 
  }
-.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.game li:nth-of-type(9){
+.sponsor-list.game li:nth-of-type(9){
     margin-bottom: 200px; 
  }
- .sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.game li figure{
+.sponsor-list.game li figure{
     width:100%;height: 100%; position: relative; display: flex; justify-content: center;align-items: center; justify-items: center;
 }
-
-.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.game li figure img{
+.sponsor-list.game li figure img{
     width: 80%; object-fit: cover; transition: 0.3s ease-in-out;
     filter: grayscale(100%) blur(2px); 
 }
-
-.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.game li:hover figure img{
+.sponsor-list.game li:hover figure img{
     width: 90%; object-fit: cover; transition: 0.3s ease-in-out;
     filter: grayscale(0) blur(0); 
 }
-.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.game li:first-of-type figure img{
+.sponsor-list.game li:first-of-type figure img{
     width: 90%; object-fit: cover; transition: 0.3s ease-in-out;
     filter: grayscale(100%) blur(2px); 
 }
-.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.game li:first-of-type:hover figure img{
+.sponsor-list.game li:first-of-type:hover figure img{
     width: 100%; object-fit: cover; transition: 0.3s ease-in-out;
     filter: grayscale(0) blur(0); 
 }
-
-.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.game li figure figcaption{
+.sponsor-list.game li figure figcaption{
     position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); width: 70%;
     font-family: 'Orbitron', sans-serif; font-size: 1.5rem; text-align: center; line-height: 2rem;
     text-transform: uppercase;letter-spacing: 1px; visibility:visible; opacity: 1; transition: 0.3s ease-in-out;
 }
-.sponsor-container .sponsor-content .sponsor-area .sponsor-kind .sponsor-list.game li:hover figure figcaption{
+.sponsor-list.game li:hover figure figcaption{
    visibility:hidden; opacity: 0; transition: 0.3s ease-in-out;
 }
-
-
-
 
 
 .support-container{
@@ -158,98 +145,92 @@ section:nth-of-type(3){
     width: 100%; height: 100%; position: relative;
     display: flex;  align-items: center;
 } 
-
-.support-container .support-content .support-image{
+.support-image{
     width: 40%; height: 50%; 
    position: relative;
 } 
-
-.support-container .support-content .support-image img{
+.support-image img{
    position: absolute; top: 40%; left: 50%; transform: translate(-50%,-40% );
    width: 90%; height: auto;z-index: 700;
 } 
-.support-container .support-content .support-image span {
+.support-image span {
     border: solid 1px #95ff00; width: 90%; height: 90%;
     position: absolute; top:50%; left: 50%; transform: translate(-45%,-45% );
 }
-.support-container .support-content .support-text{
+.support-text{
    width: 50%; height: 80%; margin-left: 2%;
     position: relative; display: flex; flex-direction: column;
 }
-.support-container .support-content .support-text .support-btn-area{
+.support-btn-area{
     width: 50px; height: 50px; position: absolute;
     top:5%; right:0%; cursor: pointer;
 } 
-.support-container .support-content .support-text .support-btn-area button{
+.support-btn-area button{
    width: 100%; height: 100%; position: relative; border: none; background: none;
 } 
-.support-container .support-content .support-text .support-btn-area button span{
+.support-btn-area button span{
     width: 80%; height: 1px; background-color: white; position: absolute;
     top:50%; left: 50%; transform: translate(-50%, -50%);
  } 
- .support-container .support-content .support-text .support-btn-area button span:first-of-type{
+.support-btn-area button span:first-of-type{
     transform: translate(-50%, -50%) rotate(-45deg);
  } 
- .support-container .support-content .support-text .support-btn-area button span:last-of-type{
+.support-btn-area button span:last-of-type{
     transform: translate(-50%, -50%) rotate(45deg);
  } 
- .support-container .support-content .support-text .support-title{
+.support-title{
     width: 100%; height: 7%;  display: flex; justify-content: space-between;
     align-items: center; margin-top: 25%;
 }
-.support-container .support-content .support-text .support-title .support-btn{
+.support-btn{
    width: 20%; height: 100%; 
    display: flex; justify-content: space-between;
 }
-.support-container .support-content .support-text .support-title .support-btn{
-    width: 20%; height: 80%; 
-    display: flex; justify-content: space-between;
- }
- .support-container .support-content .support-text .support-title .support-btn button{
+.support-btn button{
    width:40%;height: 100%; padding:0; background: none; border: none; outline: none;
    position: relative; cursor: pointer;
  }
- .support-container .support-content .support-text .support-title .support-btn button span{
+.support-btn button span{
     position: absolute; clip-path: polygon(100% 0, 0 50%, 100% 100%);
     background-color: white;  width: 50%; height: 100%; top:0;transition: 0.3s ease-in-out;
-  }
-.support-container .support-content .support-text .support-title .support-btn button:hover span{
+}
+.support-btn button:hover span{
     background-color: #95ff00;transition: 0.3s ease-in-out;
 }
-.support-container .support-content .support-text .support-title .support-btn button:last-of-type span{
+.support-btn button:last-of-type span{
     transform: scale(-1);
-  }
-  .support-container .support-content .support-text .support-title  h3{
+}
+.support-title  h3{
     font-family: 'Orbitron', sans-serif; font-size: 2rem; color:#95ff00;
 }
-.support-container .support-content .support-text .support-info{
+.support-info{
     width: 100%; height: 50%; display: flex; flex-direction: column;
     margin-top:2%;
 }
-.support-container .support-content .support-text .support-info h4{
+.support-info h4{
     font-family: 'Orbitron', sans-serif; font-size: 1.2rem; font-weight: 300;
     margin-bottom:2%;
 }
-.support-container .support-content .support-text .support-info p{
+.support-info p{
     font-family: 'Noto Sans KR', sans-serif; font-size: 0.9rem; font-weight: 100; line-height: 1.2rem;
     text-align: justify; width: 100%; height: 85%; overflow-y: scroll;
 }
-.support-container .support-content .support-text .support-sns h4{
+.support-sns h4{
     font-family: 'Orbitron', sans-serif; font-size: 1.2rem; font-weight: 300;
     margin-bottom:2%;
 }
-.support-container .support-content .support-text .support-sns {
+.support-sns {
     height: 20%; width: 100%;
 }
-.support-container .support-content .support-text .support-sns .sns-imgs{
+.support-sns .sns-imgs{
     height: 100%; width: 100%;
 }
-.support-container .support-content .support-text .support-sns .sns-imgs ul{
+.support-sns .sns-imgs ul{
    height: 100%;width: 100%;display: flex; 
 }
-.support-container .support-content .support-text .support-sns .sns-imgs ul li {
+.support-sns .sns-imgs ul li {
   width: 15%; list-style: none;
  }
- .support-container .support-content .support-text .support-sns .sns-imgs ul li img{
+.support-sns .sns-imgs ul li img{
     height: 35px; margin-right: 5%; cursor: pointer;
 }
