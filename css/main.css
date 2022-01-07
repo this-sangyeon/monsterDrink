@@ -2,31 +2,22 @@ html,
 body{
     width: 100%; height: 100%;
     margin:0; padding:0;
-    background: rgb(140, 13, 13); 
+    background: rgb(0, 0, 0); 
     color:white; overflow: hidden; 
-    
 }
 .wrap{
     width: 100%; height: 100%;position: relative;
     background: black;overflow: hidden; 
-   
 }
-
 section{
     width: 100%; height: 100%; position: absolute;
     background-color: black; z-index: 1500;display:none;
 }
-/* section:first-of-type {
-    width: 100%; height: 100%; position: absolute;
-    background-color: black; z-index: 400;
-    visibility: hidden; opacity: 0; transition: 0.5s ease-in;
-} */
 section.active {
     width: 100%; height: 100%; position: absolute;
     background-color: black; z-index: 400;
-     display:block; opacity: 1; 
+    display:block;
 }
-
 .main-container {
     width: 100%; height:100vh; position: absolute;
     overflow-y: scroll;
@@ -72,44 +63,42 @@ section.active {
     to { transform: translateX(35); }
 }
 
-.main-container .main-scroll{
+.main-scroll{
     width: 100%; height: 100%;
     position: absolute;
 }
-.main-container .main-scroll .monster-main-area{
+.monster-main-area{
     position: relative;width: 100%; height:100%;
     display: flex; flex-direction: column;
 }
 
-.main-container .main-scroll .monster-main-area .monster-main-images{
+.monster-main-images{
     z-index: 300; pointer-events: none;
     position: fixed; height: 100%; width: 50%; left:50%;transform: translateX( -50%);
 }
-.main-container .main-scroll .monster-main-area .monster-main-images img{
+.monster-main-images img{
     position: fixed; width: 250px; height: auto;
     top:50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg);
     z-index: 300; transition: 0.3s ease-in; 
 }
-.main-container .main-scroll .monster-main-area .monster-main-images img.active{
+.monster-main-images img.active{
    animation: move 2s infinite linear;left: 10%;
    transition: 0.3s ease-in; transform: translate(-10%, -50%) rotate(10deg);
 }
-
-.main-container .main-scroll .monster-main-area .scroll-intend{
+.scroll-intend{
     position: absolute; bottom:5%; right: 5%;
     visibility: hidden; opacity: 0; transition: 0.3s ease-in;
 }
-.main-container .main-scroll .monster-main-area .scroll-intend.active{
+.scroll-intend.active{
     position: absolute; bottom:10%; right: 5%;
     visibility: visible; opacity: 1; transition: 0.3s ease-in;
 }
-.main-container .main-scroll .monster-main-area .scroll-intend > p{
+.scroll-intend > p{
     font-family: 'Orbitron', sans-serif;  cursor: pointer;
     font-weight: 500;font-size: 1.5rem; text-transform: uppercase;
     color:#00FF89; letter-spacing: 2px;
     animation: text 1s infinite linear;
 }
-
 @keyframes text{
     0% {
         opacity: 0; 
@@ -126,86 +115,82 @@ section.active {
    width: 100%; height: 100%;
     display: flex;
 }
-.monster-about-area .monster-about-images{
+.monster-about-images{
     width: 45%; height: 100%; 
     position: relative;
 }
-.monster-about-area .monster-about-images .svg-stars svg{
+.monster-about-images .svg-stars svg{
     position: absolute;
 }
 
-.monster-about-area .monster-about-images .svg-stars svg:first-of-type{
+.monster-about-images .svg-stars svg:first-of-type{
     width: 30px; fill:#C2FF21; top:20%; left: 30%; transform: rotate(-10deg);animation: rotate 3s infinite linear;
     visibility: hidden; opacity: 0; transition: 0.3s ease-in;
  }
- .monster-about-area .monster-about-images .svg-stars svg:nth-of-type(2){
+.monster-about-images .svg-stars svg:nth-of-type(2){
     width: 60px; fill:white; bottom:25%; left: 20%; animation: rotate 3s infinite linear;
     visibility: hidden; opacity: 0; transition: 0.3s ease-in;
 }
-.monster-about-area .monster-about-images .svg-stars svg:nth-of-type(3){
+.monster-about-images .svg-stars svg:nth-of-type(3){
     width: 80px; fill:#00FF89; bottom:15%; right: -5%;animation: rotate 5s infinite linear;
     visibility: hidden; opacity: 0; transition: 0.3s ease-in;
 }
-.monster-about-area .monster-about-images .svg-stars svg:first-of-type.active{
+.monster-about-images .svg-stars svg:first-of-type.active{
     width: 30px; fill:#C2FF21; top:20%; left: 30%; transform: rotate(-10deg);animation: rotate 3s infinite linear;
     visibility: visible; opacity: 1; transition: 0.3s ease-in;
 }
- .monster-about-area .monster-about-images .svg-stars svg:nth-of-type(2).active{
+.monster-about-images .svg-stars svg:nth-of-type(2).active{
     width: 60px; fill:white; bottom:25%; left: 20%; animation: rotate 3s infinite linear;
     visibility: visible; opacity: 1; transition: 0.3s ease-in;
 }
-.monster-about-area .monster-about-images .svg-stars svg:nth-of-type(3).active{
+.monster-about-images .svg-stars svg:nth-of-type(3).active{
     width: 80px; fill:#00FF89; bottom:15%; right: -5%;animation: rotate 5s infinite linear;
     visibility: visible; opacity: 1; transition: 0.3s ease-in;
 }
-
 @keyframes rotate{
     from { transform: rotate(0deg); }
     from { transform: rotate(360deg); }
 }
-.monster-about-area .monster-about-images img:first-of-type{
+.monster-about-images img:first-of-type{
     position: absolute; top:70%; left:50%; transform: translate(-50%, -50%) rotate(-0deg);
     transition: 0.3s ease-in;
     visibility: hidden; opacity: 0;
  }
-.monster-about-area .monster-about-images img:first-of-type.active{
+.monster-about-images img:first-of-type.active{
     position: absolute; top:70%; left:40%; transform: translate(-50%, -50%) rotate(-25deg);
     transition: 0.3s ease-in;
     visibility:visible; opacity: 1;
  }
- .monster-about-area .monster-about-images img:last-of-type{
+.monster-about-images img:last-of-type{
     position: absolute; top:40%; left:65%; transform: translate(-50%, -50%) rotate(-0deg);
     transition: 0.3s ease-in;
     visibility: hidden; opacity: 0;
  }
- .monster-about-area .monster-about-images img:last-of-type.active{
+.monster-about-images img:last-of-type.active{
     position: absolute; top:40%; left:95%; transform: translate(-50%, -50%) rotate(15deg);
     transition: 0.3s ease-in; 
     visibility:visible; opacity: 1;
  }
-.monster-about-area .monster-about-content{
+.monster-about-content{
     width: 55%; height: 100%; position: relative;
 }
-.monster-about-area .monster-about-content .about-content-text{
+.about-content-text{
     width: 65%; position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); transition: 0.3s ease-in;
     visibility: hidden; opacity: 0; 
 }
-.monster-about-area .monster-about-content .about-content-text.active{
+.about-content-text.active{
     transform: translate(-50%, -60%);transition: 0.3s ease-in;
     visibility: hidden; opacity: 0;visibility: visible; opacity: 1;
 }
-.monster-about-area .monster-about-content .about-content-text .about-text-area{
+.about-text-area{
    width: 100%; height: 100%; display: flex; flex-direction: column;
 }
-.monster-about-area .monster-about-content .about-content-text .about-text-area h1{
+.about-text-area h1{
     font-family: 'Orbitron', sans-serif; font-weight: 500; font-size: 4rem; margin-bottom:7%;
  }
- .monster-about-area .monster-about-content .about-content-text .about-text-area p{
+.about-text-area p{
     font-size: 1rem; font-weight: 100; font-family: 'Noto Sans KR', sans-serif; line-height: 1.5rem;
  }
-
-
-
 @keyframes move{
     0% {
         transform: translate(-50%, -50%)  rotate(-10deg) 
@@ -217,8 +202,6 @@ section.active {
         transform: translate(-50%, -50%)  rotate(-10deg) 
     }
 }
-
-
 .top-btn-area{
     width: 100%; height: 100px; bottom: 2%; position: absolute;
 }
@@ -232,13 +215,8 @@ section.active {
     position: absolute;color:#ffffff; text-decoration: none;
    top: 50%; left: 50%; transform:translate(-50%, -50%) ;letter-spacing: 2px;
 }
-
-
-
-
 footer{
-    width: 50%; z-index: 1000; height: 5%;
-    position: fixed; bottom:7%;
+    width: 50%; z-index: 1000; height: 5%;position: fixed; bottom:7%;
 }
 footer .monster-footer{
     width: 100%; height: 100%; position: absolute; left:10%;
@@ -247,9 +225,7 @@ footer .monster-footer ul{
     width: 100%; 
  }
 footer .monster-footer ul li{
-    float:left;
-    margin-left:5%;
-    list-style: none;
+    float:left;margin-left:5%;list-style: none;
 }
 footer .monster-footer ul li a > img{
     width: 30px;
