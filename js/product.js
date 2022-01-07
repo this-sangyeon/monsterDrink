@@ -39,16 +39,11 @@ const nutritionPopup = document.querySelector('.nutrition-popup > .nutrition-pop
 const nutritionCloseBtn = document.querySelector('.nutrition-close-btn > button');
 
 const cartListWrap = document.querySelector('.cart-list-wrap ul');
-
 const cartPriceTotal = document.querySelector('.total-right > span:last-of-type');
 const cartProductList = document.querySelectorAll('.cart-list-wrap ul li')
-// const cartProducCloseBtn = document.querySelectorAll('.li-remove-btn');
 const cartEmptyList = document.querySelector('.empty-list');
-
 const fullCartList = document.querySelector('.full-cart-list');
-
 productDrinkNavList = Array.prototype.slice.call(productDrinkNavList);
- //  cartProducCloseBtn = Array.prototype.slice.call(cartProducCloseBtn);
 let productInfoLink =[
     {
         name: 'monster energy',
@@ -99,7 +94,6 @@ let productInfoLink =[
         fruit:'img/source/kiwi.png'
     }
 ]
-
 const productCartImage = [
     'img/drink/energy.png',
     'img/drink/mango-loco.png',
@@ -116,30 +110,20 @@ const productCartName = [
     'ultra citra',
     'ultra paradise'
 ]
-
 let productIndex = 0;
 let price = 2200;
 let total = 1;
-// let total = 0;
 let priceTotal = 2200;
 let productTotal = '1';
 let realtotal = 0;
 let finalTotal = 0;
 let numberReset;
-// let totalPrice = productTotal * priceTotal;
 let isClick = false;
-
-
-
-
-
 for(let i = 0; i < productDrinkNavList.length; i++){
     productDrinkNavList[i].addEventListener('click',(e)=>{
         let targetEl = e.currentTarget;
         productIndex = productDrinkNavList.indexOf(targetEl);
         console.log('productIndex',productIndex);
-
-
         for(let i = 0; i < productInfoLink.length; i++){
             productName.innerText = productInfoLink[productIndex].name;
             productFlavor.innerText = productInfoLink[productIndex].flavor;
@@ -163,9 +147,7 @@ for(let i = 0; i < productDrinkNavList.length; i++){
             VitaminPer.innerText = ingredientTable[productIndex].VitaminP;
             VitaminTweleveGram.innerText = ingredientTable[productIndex].VitaminTwelG;
             VitaminTwelevePer.innerText = ingredientTable[productIndex].VitaminTwelP;
-
             nutritionText.innerText = nutritionLink[productIndex].text;
-
             if(isClick === false){
                 addDrinkNum.innerText = '1';
                 addPriceNum.innerText = Number(price);
@@ -173,20 +155,13 @@ for(let i = 0; i < productDrinkNavList.length; i++){
         }
     })
 }
-
-
-
-
 cartButton.addEventListener('click', ()=>{
     console.log('cartButton');
     cartPopupSection.classList.add('active');
-    
     if(cartListWrap.children.length < 5){
-
-       cartEmptyList.style.display = 'none';
-       cartEmptyList.style.visibility = 'visible';
-       cartEmptyList.style.opacity = 0;
-
+        cartEmptyList.style.display = 'none';
+        cartEmptyList.style.visibility = 'visible';
+        cartEmptyList.style.opacity = 0;
         cartListWrap.innerHTML +=
         `<li class ="cartList">
             <div class="cart-product-area">
@@ -207,28 +182,21 @@ cartButton.addEventListener('click', ()=>{
                 <button><span></span><span></span></button>
             </div>
         </li>`; 
-
-        // let totalPrice =  priceTotal;
-    let totalPrice = Number(priceTotal);
-    finalTotal = Number(finalTotal + totalPrice);
-        cartPriceTotal.innerHTML = `<span>${finalTotal}</span>`;
-            
-
+        let totalPrice = Number(priceTotal);
+        finalTotal = Number(finalTotal + totalPrice);
+        cartPriceTotal.innerHTML = `<span>${finalTotal}</span>`;    
         let cartProducCloseBtn = document.querySelectorAll('.li-remove-btn');
-
         for(let i = 0; i < cartProducCloseBtn.length; i++){
             cartProducCloseBtn[i].addEventListener('click',(e)=>{
                 let closeBtn = document.querySelectorAll('.li-remove-btn');
                 closeBtn  = Array.prototype.slice.call(cartProducCloseBtn);
                 target = e.currentTarget;
                 let productIndex = closeBtn.indexOf(target);  
-
                 const targetEl = cartListWrap.children[productIndex];
                 const targetPrice = targetEl.querySelector('.cart-product-price p').innerText;
                 cartListWrap.removeChild(targetEl);
                 finalTotal = Number(finalTotal - targetPrice);
                 cartPriceTotal.innerHTML = `<span>${finalTotal}</span>`;
-
                 if(cartListWrap.children.length === 0){
                     setTimeout(()=>{
                         cartEmptyList.style.display = 'block';
@@ -242,7 +210,6 @@ cartButton.addEventListener('click', ()=>{
             addDrinkNum.innerText = '1';
             addPriceNum.innerText = Number(price);
         }
-
         if(cartListWrap.children.length === 5){
             console.log('5');
             cartPopupSection.classList.remove('active');
@@ -250,11 +217,9 @@ cartButton.addEventListener('click', ()=>{
             setTimeout(()=>{
                 fullCartList.classList.remove('active');
             },1500)
-        }
-        
+        } 
     }
 })
-
 // 제품 숫자 추가 (증가)버튼
 addMinusBtn.addEventListener('click', ()=>{
     console.log('addMinusBtn');
@@ -266,7 +231,6 @@ addMinusBtn.addEventListener('click', ()=>{
        addPriceNum.textContent = PriceResult  - price;
        productTotal = addDrinkNum.textContent;
        priceTotal =  addPriceNum.textContent;
-
     }
 })
 // 제품 숫자 추가 (증감)버튼
@@ -279,14 +243,12 @@ addPlusBtn.addEventListener('click', ()=>{
     addPriceNum.textContent = PriceResult + price;
     productTotal = addDrinkNum.textContent;
     priceTotal =  addPriceNum.textContent;
-
 })
 
 buyButton.addEventListener('click', ()=>{
     console.log('buyButton');
     buyPopupSection.classList.add('active');
 })
-
 cartPopupCloseBtn.addEventListener('click', ()=>{
     console.log('cartPopupCloseBtn');
     cartPopupSection.classList.remove('active');
@@ -309,9 +271,6 @@ buyGoingBtn.addEventListener('click', ()=>{
     buyPopupSection.classList.remove('active');
     cartContainer.classList.add('active');
 })
-
-
-
 cartMainBtn.addEventListener('click',()=>{
     cartContainer.classList.add('active');
     console.log('click');
@@ -329,27 +288,21 @@ productBuyBtn.addEventListener('click', ()=>{
 popupCloseBtn.addEventListener('click',()=>{
     buyCompletionPopup.classList.remove('active');
 })
-
-
 ingredientBtn.addEventListener('click', ()=>{
     ingredientPopupBG.classList.add('active');
     setTimeout(()=>{
         ingredientPopup.classList.add('active');
     }, 200)
-  
 })
 ingredientCloseBtn.addEventListener('click', ()=>{
     ingredientPopupBG.classList.remove('active');
     ingredientPopup.classList.remove('active');
 })
-
-
 nutritionBtn.addEventListener('click', ()=>{
     nutritionPopupBG.classList.add('active');
     setTimeout(()=>{
         nutritionPopup.classList.add('active');
     }, 200)
-  
 })
 nutritionCloseBtn.addEventListener('click', ()=>{
     nutritionPopupBG.classList.remove('active');
