@@ -117,10 +117,10 @@
     .monster-sticker{
        display: none;
     }
-    .calculation-area .cart-area{
+    .product-container .product-content .product-text .text-wrap .calculation-area .cart-area{
         width: 100%; height: 30%; display: flex; justify-content: space-between; margin-top:3%;
     }
-    .calculation-area .cart-area button{
+    .product-container .product-content .product-text .text-wrap .calculation-area .cart-area button{
         height: 100%;display: flex; justify-content: center; align-self: center; justify-items: center;padding: 1%; cursor: pointer; width: 49%;
         position: relative;
     }
