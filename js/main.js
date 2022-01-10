@@ -90,12 +90,38 @@ for(let i = 0; i < monsterNavList.length; i++){
     })
 }
 
-
+let isSecond = false;
 monsterNavList[1].addEventListener('click',()=>{
     console.log('click');
     setTimeout(()=>{
         productContent.classList.add('active');
     },55);
+    if(isSecond === false){
+        let first = 0;
+        productName.innerText = productInfoLink[first].name;
+        productFlavor.innerText = productInfoLink[first].flavor;
+        productInfoText.innerText = productInfoLink[first].text;
+        productSubInfo.innerText = productInfoLink[first].sub;
+        productDrinkImages.setAttribute('src', productInfoLink[first].img);
+        productFruitImages.setAttribute('src', productInfoLink[first].fruit )
+
+        ingredienKcal.innerText = ingredientTable[first].kcal;
+        SodiumGram.innerText = ingredientTable[first].sodiumG;
+        SodiumPer.innerText = ingredientTable[first].sodiumP;
+        CarbohydrateGram.innerText = ingredientTable[first].CarbohydrateG;
+        SugarGram.innerText = ingredientTable[first].SugarG;
+        SugarPer.innerText = ingredientTable[first].SugarP;
+        fatGram.innerText = ingredientTable[first].FatG;
+        fatPer.innerText = ingredientTable[first].FatP;
+        ProteinGram.innerText = ingredientTable[first].ProteinG;
+        ProteinPer.innerText = ingredientTable[first].ProteinP;
+        VitaminName.innerText = ingredientTable[first].VitaminN;
+        VitaminGram.innerText = ingredientTable[first].VitaminG;
+        VitaminPer.innerText = ingredientTable[first].VitaminP;
+        VitaminTweleveGram.innerText = ingredientTable[first].VitaminTwelG;
+        VitaminTwelevePer.innerText = ingredientTable[first].VitaminTwelP;
+        nutritionText.innerText = nutritionLink[first].text;
+    }
 })
 monsterNavList[2].addEventListener('click',()=>{
     console.log('click');
