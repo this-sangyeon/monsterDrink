@@ -1,4 +1,5 @@
 const monsterNavList = document.querySelectorAll('.monster-nav > ul > li > a');
+const monsterNav = document.querySelector('.monster-nav');
 let section = document.querySelectorAll('section');
 const mainContainer = document.querySelector('.main-container');
 const monsterMainImg = document.querySelector('.monster-main-images > img');
@@ -7,12 +8,18 @@ const aboutContentText = document.querySelector('.about-content-text');
 const aboutContentImages = document.querySelectorAll('.monster-about-images > img');
 const aboutContentSvgs  = document.querySelectorAll('.svg-stars > svg');
 const productContent = document.querySelector('.product-container > .product-content >.product-text');
+const bugerContainer = document.querySelector('.buger-container');
+const bugerCover = document.querySelector('.buger-cover');
+let bugerMonsterList = document.querySelectorAll('.buger-monster-list > ul > li')
+const monsterHamBtn = document.querySelector('.monster-ham-btn');
+const btnLine = document.querySelectorAll('.btn-line > span');
 
-
+bugerMonsterList = Array.prototype.slice.call(bugerMonsterList);
 const btt = document.getElementById('back-to-top');
 let scrollPos;
 let docHeight; 
 docHeight = Math.max(mainContainer.scrollHeight,mainContainer.offsetHeight);
+
 
 mainContainer.addEventListener('scroll',()=>{
     value = mainContainer.scrollTop;
@@ -146,4 +153,31 @@ btt.addEventListener('click', (e)=>{
     scrollToTop();
 });
 
+if(matchMedia("screen and (max-width : 500px) and (max-height: 1000px)").matches){
+    monsterNav.classList.add('active');
+    
+    monsterHamBtn.addEventListener('click',()=>{
+        console.log('click!');
+        bugerContainer.classList.toggle('active');
+        bugerCover.classList.toggle('active');
+
+    })
+
+    for(let i = 0; i < bugerMonsterList.length; i++){
+        bugerMonsterList[i].addEventListener('click',()=>{
+            for(let i = 0; i < section.length; i++){
+                section[i].classList.remove('active');
+            }
+            console.log('click');
+            section[i].classList.add('active');
+            setTimeout(()=>{
+                bugerContainer.classList.remove('active');
+                bugerCover.classList.remove('active');
+            },1000)
+            // bugerCover.classList.remove('active');
+            // bugerContainer.classList.remove('active');
+            
+        })
+    }
+}
 
