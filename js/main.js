@@ -13,7 +13,7 @@ const bugerCover = document.querySelector('.buger-cover');
 let bugerMonsterList = document.querySelectorAll('.buger-monster-list > ul > li')
 const monsterHamBtn = document.querySelector('.monster-ham-btn');
 const btnLine = document.querySelectorAll('.btn-line > span');
-
+const cartResponsiveBtn = document.querySelector('.cartResponsiveBtn > a')
 bugerMonsterList = Array.prototype.slice.call(bugerMonsterList);
 const btt = document.getElementById('back-to-top');
 let scrollPos;
@@ -72,6 +72,7 @@ mainContainer.addEventListener('scroll',()=>{
     }
 
 })
+
 
 for(let i = 0; i < monsterNavList.length; i++){
     monsterNavList[i].addEventListener('click',(e)=>{
@@ -153,7 +154,9 @@ btt.addEventListener('click', (e)=>{
     scrollToTop();
 });
 
-if(matchMedia("screen and (max-width : 500px) and (max-height: 1000px)").matches){
+
+
+if(matchMedia("screen and (max-width : 600px) and (max-height: 1080px)").matches){
     monsterNav.classList.add('active');
     
     monsterHamBtn.addEventListener('click',()=>{
@@ -171,13 +174,15 @@ if(matchMedia("screen and (max-width : 500px) and (max-height: 1000px)").matches
             console.log('click');
             section[i].classList.add('active');
             setTimeout(()=>{
-                bugerContainer.classList.remove('active');
-                bugerCover.classList.remove('active');
+                bugerContainer.classList.toggle('active');
+                bugerCover.classList.toggle('active');
             },1000)
-            // bugerCover.classList.remove('active');
-            // bugerContainer.classList.remove('active');
-            
         })
     }
+    cartResponsiveBtn.addEventListener('click',()=>{
+        cartContainer.classList.add('active');
+        bugerContainer.classList.toggle('active');
+        bugerCover.classList.toggle('active');
+    })
 }
 
