@@ -186,3 +186,22 @@ if(matchMedia("screen and (max-width : 600px) and (max-height: 1080px)").matches
     })
 }
 
+window.addEventListener('resize',()=>{
+    if(matchMedia("screen and (max-width : 601px)").matches){
+        console.log('cdfsddfsds');
+        productContent.style.visibility= 'visible';
+        productContent.style.opacity= '1';
+        
+
+
+        monsterNav.classList.add('active');
+
+        
+    }
+    if(matchMedia("screen and (max-width : 1024px)").matches){
+        console.log('cdfsddfsds');
+        productContent.style.visibility= 'visible';
+        productContent.style.opacity= '1';
+    }
+})
+

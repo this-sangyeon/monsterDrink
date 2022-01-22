@@ -52,7 +52,7 @@
     }
     
     .product-container .product-content .product-text{
-        width: 50%; height: 50%; flex: auto;position: absolute; top:30%;
+        width: 50%; height: 50%; flex: auto;position: absolute; top:30%; 
     }
     .product-container .product-content .product-text.active {
         width: 50%; height: 50%; display: flex; flex-direction: row;
@@ -111,14 +111,14 @@
         width: 40%; height: 50%; flex: auto; position: relative; top:20%;
     }
     .product-images .image-area img:first-of-type{
-        z-index: 1000;height: auto;width: 50%; top:45%; left: 60%;transform: translate(-50%, -50%);
+        z-index: 1000;height: auto;width: 230px; top:45%; left: 60%;transform: translate(-50%, -50%);
         animation:none;
      }
     .product-images .image-area img:nth-of-type(2){
         display: none;
      }
     .product-images .image-area img:nth-of-type(3){
-         z-index: 500;height: auto;width: 30%; right:-5%; top: 60%;transform: translate(0%, 0%) rotate(-30deg);
+        display: none;
      }
     .monster-sticker{
        display: none;
@@ -272,9 +272,11 @@
         flex-wrap: nowrap; height: 1200px; width: 100%;
     }
     .product-container .product-content .product-text{
-        width: 100%; height: 60%; display: flex; flex-direction: column; order: 2;justify-content: center;  z-index: 9999;
+        position: absolute;top:50%;left:50%;transform: translateX(-50%);
+        width: 100%; height: 60%; display: flex; flex-direction: column; order: 2;justify-content: center;  z-index: 5000; visibility: visible; opacity: 1;
     }
     .product-container .product-content .product-text.active {
+        position: absolute;top:50%;left:50%;transform: translateX(-50%); 
         width: 100%; height: 60%;  display: flex; flex-direction: column; order: 2; justify-content: center; 
     }
     .product-container{
@@ -316,7 +318,9 @@
     .product-container .product-content .product-text .text-wrap #line{
         width: 100%; height: 1px; background-color: rgb(255, 255, 255);
     }
-    
+    .product-drink-nav{
+        z-index: 5000;
+    }
     .product-drink-nav ul li{
        width: 16%;
    }
