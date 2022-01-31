@@ -2,7 +2,7 @@
 header{
     margin:0;
     background-color:none;
-    position: fixed;z-index: 5000;left: 0; top:0%;width: 100%;height: 7%;
+    position: fixed;z-index: 5000;left: 0; top:0%;width: 100%;height: 10%;
     display: flex; flex-direction: row; 
     align-items: center; justify-content: space-between;
 }
@@ -16,21 +16,17 @@ header .logo > a {
     height: 100%;  display:flex; align-items: center;  justify-content:center; 
 }
 header .logo > a > img {
-    width: 60px;
+    width: 30px;
 }
 header .monster-nav{
-    width: 100%; height: 100%;  display: flex; 
+    width: 100%; height: 100%;  display: flex; position: relative;
 }
 
 header .monster-nav ul{
-   padding:0;position: absolute; top: 25%;  transform: translateY(-25%);
-    display: flex; flex-direction: row; right: 5%; align-items: center;  width: 30%;
+   padding:0;position: absolute; top: 50%;  transform: translateY(-50%);
+    display: flex; flex-direction: row; left: 5%; align-items: center;  width: 40%; margin: 0;
 }
-header .monster-nav ul li {
-    /* width: 100%; */
-    margin-left: 5%; margin-right: 5%;
-}
-
+header .monster-nav ul li { margin-left: 5%; margin-right: 5%;}
 header .monster-nav ul li > a{
     font-family: 'Orbitron', sans-serif; cursor: pointer;
     font-weight: 500;font-size: 1rem; color:#ffffff; letter-spacing: 2px;
@@ -42,8 +38,8 @@ header .monster-nav ul li > a.active{
 }
 
 header .monster-nav .cartMainBtn{
-    top: 25%;  transform: translateY(-25%);
-    position: absolute; right:4%;
+    top: 50%;  transform: translateY(-50%);
+    position: absolute;right: 5%;
 }
 header .monster-nav .cartMainBtn > a{
     font-family: 'Orbitron', sans-serif; cursor: pointer;

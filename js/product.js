@@ -4,6 +4,7 @@ const productName = document.querySelector('.product-text > .text-wrap > h1');
 const productFlavor = document.querySelector('.product-text > .text-wrap > p:nth-of-type(2) > span');
 const productInfoText = document.querySelector('.product-text > .text-wrap > p:nth-of-type(3)');
 const productSubInfo = document.querySelector('.product-text > .text-wrap > p:nth-of-type(4)');
+const productImages =document.querySelector('.product-images > .image-area');
 const productDrinkImages = document.querySelector('.product-images > .image-area > img:first-of-type')
 const productFruitImages = document.querySelector('.product-images > .image-area > img:last-of-type')
 const addMinusBtn = document.querySelector('.num-area > .minus-btn');

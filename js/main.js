@@ -7,6 +7,7 @@ const monsterScrollIntend = document.querySelector('.monster-main-area > .scroll
 const aboutContentText = document.querySelector('.about-content-text');
 const aboutContentImages = document.querySelectorAll('.monster-about-images > img');
 const aboutContentSvgs  = document.querySelectorAll('.svg-stars > svg');
+const productContentContainer =  document.querySelector('.product-container > .product-content');
 const productContent = document.querySelector('.product-container > .product-content >.product-text');
 const bugerContainer = document.querySelector('.buger-container');
 const bugerCover = document.querySelector('.buger-cover');
@@ -156,7 +157,7 @@ btt.addEventListener('click', (e)=>{
 
 
 
-if(matchMedia("screen and (max-width : 600px) and (max-height: 1080px)").matches){
+if(matchMedia("screen and (max-width : 600px)").matches){
     monsterNav.classList.add('active');
     
     monsterHamBtn.addEventListener('click',()=>{
@@ -167,7 +168,9 @@ if(matchMedia("screen and (max-width : 600px) and (max-height: 1080px)").matches
     })
 
     for(let i = 0; i < bugerMonsterList.length; i++){
-        bugerMonsterList[i].addEventListener('click',()=>{
+        bugerMonsterList[i].addEventListener('click',(e)=>{
+            let targetIndex = e.currentTarget;
+            navListIndex = bugerMonsterList.indexOf(targetIndex);
             for(let i = 0; i < section.length; i++){
                 section[i].classList.remove('active');
             }
@@ -187,21 +190,22 @@ if(matchMedia("screen and (max-width : 600px) and (max-height: 1080px)").matches
 }
 
 window.addEventListener('resize',()=>{
-    if(matchMedia("screen and (max-width : 601px)").matches){
+    if(matchMedia("screen and (min-width : 601px)and (max-width : 1024px)").matches){
         console.log('cdfsddfsds');
         productContent.style.visibility= 'visible';
         productContent.style.opacity= '1';
-        
-
-
-        monsterNav.classList.add('active');
-
-        
+        // productContentContainer.style.background ='red'; 
+        // productImages.style.background ='green';
+        // productImages.style.width ='50%';
+        // productContent.style.order ='0';
+        // productContent.style.background ='blue';
     }
-    if(matchMedia("screen and (max-width : 1024px)").matches){
+    if(matchMedia("screen and (max-width : 600px)").matches){
         console.log('cdfsddfsds');
-        productContent.style.visibility= 'visible';
-        productContent.style.opacity= '1';
+        // productContent.style.visibility= 'visible';
+        // productContent.style.opacity= '1';
+        // monsterNav.classList.add('active');
+        // productContent.style.order ='2';
     }
+  
 })
-
