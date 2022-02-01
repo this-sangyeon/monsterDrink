@@ -198,12 +198,12 @@ window.addEventListener('resize',()=>{
         // productImages.style.background ='green';
         // productImages.style.width ='50%';
         // productContent.style.order ='0';
-        // productContent.style.background ='blue';
+        productContent.style.position ='relative';
     }
     if(matchMedia("screen and (max-width : 600px)").matches){
         console.log('cdfsddfsds');
-        // productContent.style.visibility= 'visible';
-        // productContent.style.opacity= '1';
+        productContent.style.visibility= 'visible';
+        productContent.style.opacity= '1';
         // monsterNav.classList.add('active');
         // productContent.style.order ='2';
     }
