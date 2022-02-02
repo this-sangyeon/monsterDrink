@@ -159,7 +159,6 @@ btt.addEventListener('click', (e)=>{
 
 if(matchMedia("screen and (max-width : 600px)").matches){
     monsterNav.classList.add('active');
-    
     monsterHamBtn.addEventListener('click',()=>{
         console.log('click!');
         bugerContainer.classList.toggle('active');
@@ -194,18 +193,15 @@ window.addEventListener('resize',()=>{
         console.log('cdfsddfsds');
         productContent.style.visibility= 'visible';
         productContent.style.opacity= '1';
-        // productContentContainer.style.background ='red'; 
-        // productImages.style.background ='green';
-        // productImages.style.width ='50%';
-        // productContent.style.order ='0';
+       
         productContent.style.position ='relative';
     }
     if(matchMedia("screen and (max-width : 600px)").matches){
         console.log('cdfsddfsds');
         productContent.style.visibility= 'visible';
         productContent.style.opacity= '1';
-        // monsterNav.classList.add('active');
-        // productContent.style.order ='2';
+        
+
     }
   
 })

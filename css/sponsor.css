@@ -17,7 +17,7 @@ section:nth-of-type(3){
     display: flex; flex-direction: column; top:40%; right: 10%;transform: translateY(-40%);
 }
 .sponsor-nav .nav-area h1{
-    font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 3rem; text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 3rem; text-transform: uppercase;transition: 0.3s ease-in-out;
 }
 .sponsor-nav .nav-area nav{
      margin-top:10%;
@@ -28,7 +28,7 @@ section:nth-of-type(3){
 }
 .sponsor-area{
     width: 70%;height: 100%;position: absolute;opacity: 0; visibility: hidden;
-    right: 0; background-color: black;
+    right: 0; 
 }
 .sponsor-area.active{
     width: 70%;height: 100%;position: absolute;
