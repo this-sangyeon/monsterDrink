@@ -135,7 +135,7 @@ section:nth-of-type(3){
 
 .support-container{
     width: 70%; height: 100%; position: absolute;z-index: 1600;
-    background: rgb(0, 0, 0);right:0; opacity: 0; visibility: hidden; pointer-events: none;
+    right:0; opacity: 0; visibility: hidden; pointer-events: none;
 }
 .support-container.active{
     width: 70%; height: 100%; position: absolute;z-index: 1600;
