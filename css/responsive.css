@@ -482,6 +482,13 @@
         width: 60px; fill:white; bottom:-10%; left: 20%; animation: rotate 3s infinite linear;
         visibility: visible; opacity: 1; transition: 0.3s ease-in;
     }
+    .monster-about-images .svg-stars svg:nth-of-type(3){
+        right: 2%;
+        
+    }
+    .monster-about-images .svg-stars svg:nth-of-type(3).active{
+        right: 5%;
+    }
     .about-text-area h1{
         font-size: 2rem;
     }
@@ -645,3 +652,10 @@
         font-size: 0.9rem; 
      }
 }
+
+/* @media screen and (max-height: 810px){
+    .monster-main-images img{
+        width: 150px;top:50%;
+       left: 50%;transform: translate(-50%, -50%) rotate(10deg);
+     }
+} */

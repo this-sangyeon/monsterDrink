@@ -75,6 +75,7 @@ mainContainer.addEventListener('scroll',()=>{
 })
 
 
+
 for(let i = 0; i < monsterNavList.length; i++){
     monsterNavList[i].addEventListener('click',(e)=>{
         e.preventDefault();
