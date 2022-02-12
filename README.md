@@ -13,7 +13,7 @@
 
 ### Chapter 1 - Main page
 
-    <img width="750" alt="monster1" src="https://user-images.githubusercontent.com/92290951/153712169-8d46b644-a1d9-4903-b512-e104ccecdc4e.png">
+<img width="750" alt="monster1" src="https://user-images.githubusercontent.com/92290951/153712169-8d46b644-a1d9-4903-b512-e104ccecdc4e.png">
     
     메인 페이지인만큼 블랙과 대조되는 네온 그린을 메인컬러로 사용하여 몬스터 에너지 특유의 강렬함이 돋보일 수 있도록 노력하였고, monster energy가 가지고 있는 슬로건 "UNLEASH THE BEAST"을 marquee 태그를 활용하여 흘러가도록 작업하였습니다.
     
