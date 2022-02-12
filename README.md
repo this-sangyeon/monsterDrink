@@ -16,7 +16,11 @@
 
 총 4가지의 목표를 잡고 직접 디자인을 한 시안을 토대로 제작단계에 돌입했습니다.
 
+
+
 ### Chapter 1 - Main page
+
+------------------------------------------------
 
 <img width="750" alt="monster1" src="https://user-images.githubusercontent.com/92290951/153712169-8d46b644-a1d9-4903-b512-e104ccecdc4e.png">
 
@@ -31,6 +35,8 @@ monster energy가 가지고 있는 슬로건 "UNLEASH THE BEAST"을 marquee 태�
 
 ### Chapter 2 - Product page
 
+------------------------------------------------
+
 <img width="750" alt="monster2" src="https://user-images.githubusercontent.com/92290951/153712724-97223315-238b-46c9-a3cf-04ddf12ab629.png">
 
 
@@ -43,6 +49,7 @@ monster energy가 가지고 있는 슬로건 "UNLEASH THE BEAST"을 marquee 태�
 
 +또는 - 버튼을 눌렀을 때 제품 갯수가 추가되며 각각의 가격의 + - 되는 작업코드 
 // 아래의 코드는 값이 감소되는 식
+
 
 
 ```Javascript
@@ -66,7 +73,11 @@ addMinusBtn.addEventListener('click', ()=>{
 })
 ```
 
+
+
 ### Chapter 3 - sponsor page 
+
+------------------------------------------------
 
 <img width="750" alt="monster_sponsor1" src="https://user-images.githubusercontent.com/92290951/153713110-5edfdf5a-fa99-412c-bcb8-1cdc03e292c5.png">
 
@@ -86,6 +97,8 @@ javascript의 배열을 활용하여 버튼 클릭 시 텍스트와 이미지가
 
 
 ### Chapter 4 - cart page 
+
+------------------------------------------------
 
 <img width="750" alt="monster4" src="https://user-images.githubusercontent.com/92290951/153713372-da15e07c-edb5-4b4c-8a51-47707afa1ffb.png">
 
@@ -150,6 +163,9 @@ javascript의 배열을 활용하여 버튼 클릭 시 텍스트와 이미지가
                 finalTotal = Number(finalTotal - targetPrice);
                 cartPriceTotal.innerHTML = `<span>${finalTotal}</span>`;
 ```
+
+
+
 
 ## 작업 후기
 
