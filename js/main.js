@@ -94,9 +94,6 @@ for(let i = 0; i < monsterNavList.length; i++){
         section[i].classList.add('active');
         musicianContainer.classList.remove('active');
         gamerContainer.classList.remove('active');
-
-
-        
     })
 }
 
@@ -164,9 +161,7 @@ if(matchMedia("screen and (max-width : 600px)").matches){
         console.log('click!');
         bugerContainer.classList.toggle('active');
         bugerCover.classList.toggle('active');
-
     })
-
     for(let i = 0; i < bugerMonsterList.length; i++){
         bugerMonsterList[i].addEventListener('click',(e)=>{
             let targetIndex = e.currentTarget;
@@ -189,20 +184,47 @@ if(matchMedia("screen and (max-width : 600px)").matches){
     })
 }
 
+
 window.addEventListener('resize',()=>{
     if(matchMedia("screen and (min-width : 601px)and (max-width : 1024px)").matches){
         console.log('cdfsddfsds');
         productContent.style.visibility= 'visible';
         productContent.style.opacity= '1';
-       
         productContent.style.position ='relative';
     }
     if(matchMedia("screen and (max-width : 600px)").matches){
+        let isBtnClick = false;
         console.log('cdfsddfsds');
         productContent.style.visibility= 'visible';
         productContent.style.opacity= '1';
-        
 
+        monsterHamBtn.addEventListener('click',()=>{
+            if(isBtnClick === false){
+                console.log('clicksddf');
+                bugerContainer.classList.toggle('active');
+                bugerCover.classList.toggle('active');
+                for(let i = 0; i < bugerMonsterList.length; i++){
+                    bugerMonsterList[i].addEventListener('click',(e)=>{
+                        let targetIndex = e.currentTarget;
+                        navListIndex = bugerMonsterList.indexOf(targetIndex);
+                        for(let i = 0; i < section.length; i++){
+                            section[i].classList.remove('active');
+                        }
+                        console.log('click');
+                        section[i].classList.add('active');
+                        setTimeout(()=>{
+                            bugerContainer.classList.toggle('active');
+                            bugerCover.classList.toggle('active');
+                        },1000)
+                    })
+                }
+                isBtnClick = true;
+            }else{
+                console.log('clicksddsdfsddsddf');
+                bugerContainer.classList.toggle('active');
+                bugerCover.classList.toggle('active');
+                isBtnClick = false;
+            }
+        })
     }
-  
 })

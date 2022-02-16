@@ -52,7 +52,7 @@ let productInfoLink =[
         text:'미국에서 태어나 전 세계로 뻗어나가고 있는 몬스터 에너지를 그대로 느껴보세요. 우리는 무엇보다 강력한 에너지 드링크, 몬스터 에너지를 개발하였습니다. 몬스터 에너지는 역동적이며 여러분들의 가슴을 부드럽게 뛰게 해 줄 매력적인 맛을 담고 있습니다. 다양한 액션 스포츠 선수들, 뮤지션, 아티스트, 그리고 전 세계의 모든 몬스터 팬들이 열광하는 이유를 직접 느껴보세요!',
         sub: '고카페인 함유 (100mg/ 캔) 355ml (168kcal)',
         img: 'img/drink/energy.png',
-        fruit:'img/source/kiwi.png'
+        fruit:'img/source/heart.png'
     },
     {
         name: 'mango loco',
@@ -60,7 +60,7 @@ let productInfoLink =[
         text: '멕시코에서는 매년 할로윈 이후 `"죽은 자의 날"`을 기념합니다. 신비한 분위기 속의 메리골드 꽃과 추억들은떠난 이들을 축제로 이끕니다. 누구나 매혹될 이국적인 천사의 주스 블렌드, 망고 로코. 환상적인 맛과 몬스터 에너지 만의 마법으로 파티는 계속될 것입니다.',
         sub: '고카페인 함유 (100mg/ 캔) 355ml (175kcal)',
         img: 'img/drink/mango-loco.png',
-        fruit:'img/source/kiwi.png'
+        fruit:'img/source/mango.png'
     },
     {
         name: 'pipeline punch',
@@ -71,12 +71,12 @@ let productInfoLink =[
         fruit:'img/source/Fashionfruits.png'
     },
     {
-        name: 'monster energy ultra',
+        name: 'ultra',
         flavor: '저칼로리로 가볍고 시원한 맛',
         text: '어떤 경우에도 만족하지 못하는 사람들이 있습니다. 사람들은 늘 새로운 것, 더 좋은 것을 원하죠. Monster 팀과 Girl 들도 마찬가지라서, 남들과 다른 제품, 이전에 없던 제품에 대한 힌트를 던져주고는 합니다. 그래서 에너지 드링크의 설탕을 빼고 칼로리를 확 줄였습니다. 하지만 몬스터 에너지 블렌드만의 폭발적인 기운은 그대로 담았죠! 몬스터의 새로운 트렌드는 화이트입니다. 몬스터 에너지 울트라로 칼로리 부담 없이 내 안의 야성을 깨워보세요!',
         sub: '고카페인 함유 (100mg/ 캔) 355ml (14kcal)',
         img: 'img/drink/ultra.png',
-        fruit:'img/source/kiwi.png'
+        fruit:'img/source/orange.png'
     },
     {
         name: 'ultra citra',
@@ -84,7 +84,7 @@ let productInfoLink =[
         text: '몬스터 시트라, 이 이름은 특이하게 생긴 프랑스 자동차나 스칸디나비아 보드카에서 온 것은 아닙니다. 고대부터 유래된 과일 시트론에서 영감을 받아 태어난 이 제품은 레몬과 비슷하지만 더 원초적이고 투박합니다. 마치 몬스터 에너지처럼요. 이 고대의 과일과 선조들에게서 영감을 얻은 우리는 전형적인 드링크를 새롭게 해석한 울트라 시트라를 만들었습니다. 울트라 시트라는 새콤달콤한 맛이 입안에서 잔잔하게 퍼지며 상쾌한 맛으로 마무리하죠. 저칼로리에 무설탕이지만 몬스터 에너지만의 블렌드는 변함없이 가득 담겨있답니다.',
         sub: '고카페인 함유 (100mg/ 캔) 355ml (11kcal)',
         img: 'img/drink/ultra-citra.png',
-        fruit:'img/source/orange.png'
+        fruit:'img/source/lemon.png'
     },
     {
         name: 'ultra paradise',
