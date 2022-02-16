@@ -183,24 +183,22 @@ if(matchMedia("screen and (max-width : 600px)").matches){
         bugerCover.classList.toggle('active');
     })
 }
-
-
 window.addEventListener('resize',()=>{
     if(matchMedia("screen and (min-width : 601px)and (max-width : 1024px)").matches){
-        console.log('cdfsddfsds');
+        console.log('resize1');
         productContent.style.visibility= 'visible';
         productContent.style.opacity= '1';
         productContent.style.position ='relative';
     }
     if(matchMedia("screen and (max-width : 600px)").matches){
         let isBtnClick = false;
-        console.log('cdfsddfsds');
+        console.log('resize2');
         productContent.style.visibility= 'visible';
         productContent.style.opacity= '1';
 
         monsterHamBtn.addEventListener('click',()=>{
             if(isBtnClick === false){
-                console.log('clicksddf');
+                console.log('resize3');
                 bugerContainer.classList.toggle('active');
                 bugerCover.classList.toggle('active');
                 for(let i = 0; i < bugerMonsterList.length; i++){
@@ -220,7 +218,7 @@ window.addEventListener('resize',()=>{
                 }
                 isBtnClick = true;
             }else{
-                console.log('clicksddsdfsddsddf');
+                console.log('resize4');
                 bugerContainer.classList.toggle('active');
                 bugerCover.classList.toggle('active');
                 isBtnClick = false;

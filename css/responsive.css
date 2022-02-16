@@ -699,9 +699,9 @@
      }
 }
 
-/* @media screen and (max-height: 810px){
+@media screen and (max-height: 810px){
     .monster-main-images img{
         width: 150px;top:50%;
        left: 50%;transform: translate(-50%, -50%) rotate(10deg);
      }
-} */
+}
