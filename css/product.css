@@ -43,7 +43,7 @@ section:nth-of-type(2){
     width: 85%; height: 15%; 
 }
 .product-container .product-content .product-text .text-wrap p:nth-of-type(4){
-     font-weight: 400;margin-top: 30%;
+     font-weight: 400;margin-top: 20%;
 }
 .product-container .product-content .product-text .text-wrap #line{
     width: 85%; height: 1px; background-color: rgb(255, 255, 255);
